@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="ImmunizationOverview" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/ImmunizationOverview" />
+  <name value="ImmunizationOverview" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Profile on the List resource which represents the immunizationoverview conform information standard ['Immunization'](https://informatiestandaarden.nictiz.nl/wiki/Immu:V0.1_Ontwerpen)" />
+  <purpose value="To define the immunization overview as stated in the information standard Immunization." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="List" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/List" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="List">
+      <path value="List" />
+      <short value="DocumentData" />
+      <alias value="Documentgegevens" />
+      <mapping>
+        <identity value="Medication-Process-v9-2-0-0" />
+        <map value="mp-dataelement920-500" />
+        <comment value="DocumentData" />
+      </mapping>
+    </element>
+    <element id="List.extension">
+      <path value="List.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="List.extension:verification">
+      <path value="List.extension" />
+      <sliceName value="verification" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-MedicationOverview.Verification" />
+      </type>
+    </element>
+    <element id="List.code">
+      <path value="List.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="11181000146103" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="List.subject">
+      <path value="List.subject" />
+      <short value="Patient" />
+      <alias value="Patient" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+      </type>
+      <mapping>
+        <identity value="Medication-Process-v9-2-0-0" />
+        <map value="mp-dataelement920-1" />
+        <comment value="Patient" />
+      </mapping>
+    </element>
+    <element id="List.date">
+      <path value="List.date" />
+      <short value="DocumentDate" />
+      <definition value="The date that the immunization overview was prepared." />
+      <alias value="DocumentDatum" />
+      <min value="1" />
+    </element>
+    <element id="List.source">
+      <path value="List.source" />
+      <short value="Author" />
+      <alias value="Auteur" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+      </type>
+      <mapping>
+        <identity value="Medication-Process-v9-2-0-0" />
+        <map value="mp-dataelement920-502" />
+        <comment value="Author" />
+      </mapping>
+      <mapping>
+        <identity value="Medication-Process-v9-2-0-0" />
+        <map value="mp-dataelement920-503" />
+        <comment value="AuthorIsPatient" />
+      </mapping>
+    </element>
+    <element id="List.source.extension">
+      <path value="List.source.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="List.source.extension:organization">
+      <path value="List.source.extension" />
+      <sliceName value="organization" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-MedicationOverview.SourceOrganization" />
+      </type>
+    </element>
+    <element id="List.entry">
+      <path value="List.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="item.reference.resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="List.entry:vaccination-event">
+      <path value="List.entry" />
+      <sliceName value="vaccination-event" />
+    </element>
+    <element id="List.entry:vaccination-event.item">
+      <path value="List.entry.item" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
