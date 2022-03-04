@@ -16,8 +16,8 @@
     </telecom>
   </contact>
   <description value="The *Immunization-Overview* operation provides a simple method for a client to request a its current Immunization Overview based on the information standard ['Immunization'](https://informatiestandaarden.nictiz.nl/wiki/Immu:V0.1_Ontwerpen).
-    The response is a Bundle of type 'searchset' and needs to conform to the profile listed in the operationdefinition-profile extension. At a minimum, an instance of the Bundle resource is returned, along with any Immunization resources that the server has available for the Immunization Overview. The server also returns whatever resources are needed to support the Immunization Overview - e.g. linked practitioners, organizations etc.    
-    If there are no immnunization related clinical resources, this operation SHALL return an empty Bundle resource containing an appropriate value for the `.emptyReason` element."/>
+    The response is a Bundle of type 'searchset' and needs to conform to the profile listed in the operationdefinition-profile extension. At a minimum, an instance of the List resource and Patient resource is returned, along with any Immunization resources that the server has available for the Immunization Overview. The server also returns whatever resources are needed to support the Immunization Overview - e.g. linked practitioners, organizations etc.    
+    If there are no immnunization related clinical resources, this operation SHALL return an empty List resource containing an appropriate value for the `.emptyReason` element."/>
   <purpose value="To describe how to retrieve and provide a Immunization Overview conform the Immunization information standard. 
     This operation removes the complexity of requesting the Immunization Overview from the client to the server." />
   <code value="immunization-overview"/>
