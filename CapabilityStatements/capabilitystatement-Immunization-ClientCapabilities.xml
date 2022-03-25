@@ -72,9 +72,5 @@
         <code value="search-type" />
       </interaction>
     </resource>
-    <operation>
-      <name value="Immunization-Overview"/>
-      <definition value="http://nictiz.nl/fhir/OperationDefinition/Immunization-Overview"/>
-    </operation>
   </rest>
 </CapabilityStatement>
