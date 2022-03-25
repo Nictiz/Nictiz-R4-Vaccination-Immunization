@@ -72,9 +72,5 @@
         <code value="read" />
       </interaction>
     </resource>
-    <operation>
-      <name value="Retrieve-Vaccination-Records"/>
-      <definition value="http://nictiz.nl/fhir/OperationDefinition/Retrieve-Vaccination-Records"/>
-    </operation>
   </rest>
 </CapabilityStatement>
