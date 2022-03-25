@@ -1,5 +1,5 @@
 {
-    "name": "nictiz.fhir.nl.r4.Immunization",
+    "name": "nictiz.fhir.nl.r4.immunization",
     "version": "0.1.0",
     "canonical": null,
     "url": "https://informatiestandaarden.nictiz.nl/wiki/MedMij:Vdraft/OntwerpVaccinaties",
