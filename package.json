@@ -1,6 +1,6 @@
 {
     "name": "nictiz.fhir.nl.r4.Immunization",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "canonical": null,
     "url": "https://informatiestandaarden.nictiz.nl/wiki/MedMij:Vdraft/OntwerpVaccinaties",
     "title": "Nictiz FHIR NL R4 Immunization",
