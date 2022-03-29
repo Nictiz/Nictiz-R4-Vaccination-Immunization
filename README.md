@@ -1,6 +1,6 @@
 # Nictiz-R4-Immunization
 
-This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for the information standaard [Immunization](https://informatiestandaarden.nictiz.nl/wiki/Immu:V0.1_Ontwerpen).
+This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for the information standard [Immunization](https://informatiestandaarden.nictiz.nl/wiki/Immu:V0.1_Ontwerpen).
 
 This repository has a dependency on the [zib2020 package](https://simplifier.net/NictizR4-Zib2020/~packages).
 
