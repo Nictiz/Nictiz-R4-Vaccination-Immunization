@@ -24,5 +24,6 @@
     "dependencies": {
         "hl7.fhir.r4.core": "4.0.1",
         "nictiz.fhir.nl.r4.zib2020": "0.2.0-beta1"
-    }
+    },
+    "fhirVersions": ["4.0.1"]
 }
