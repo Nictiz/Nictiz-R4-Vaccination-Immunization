@@ -272,12 +272,6 @@
                 </type>
                 <name value="GGD Testlocatie 1234" />
                 <telecom>
-                    <system value="http://hl7.org/fhir/contact-point-system" />
-                    <code value="phone"/>
-                    <value value="+31182435770" />
-                    <use value="work" />
-                </telecom>
-                <telecom>
                     <system value="phone">
                         <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
                             <valueCodeableConcept>
@@ -295,11 +289,6 @@
                 <telecom>
                     <system value="email" />
                     <value value="info@erasmus.nl" />
-                    <use value="work" />
-                </telecom>
-                <telecom>
-                    <system value="email" />
-                    <value value="info@cdz.nl" />
                     <use value="work" />
                 </telecom>
                 <address>
