@@ -127,7 +127,7 @@
     <entry>
         <resource>
             <Patient>
-                <id value="local-patient" />
+                <id value="nl-core-patient-01" />
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
                 </meta>
