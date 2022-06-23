@@ -38,7 +38,7 @@
                     <display value="Johanna Petronella Maria (Jo) van Putten-van der Giessen" />
                 </patient>
                 <!--  VaccinatieDatumTijd  -->
-                <occurrenceDateTime value="2021-06-19T16:17:00" />
+                <occurrenceDateTime value="2021-06-19T16:17:00+01:00" />
                 <!--  AnatomischeLocatie  -->
                 <site>
                     <coding>
@@ -57,7 +57,7 @@
                 </route>
                 <!--  Dosis  -->
                 <doseQuantity>
-                    <value value="0,3" />
+                    <value value="0.3" />
                     <unit value="milliliter" />
                     <system value="http://unitsofmeasure.org" />
                     <code value="mL" />
