@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Immunization xmlns="http://hl7.org/fhir">
+   <id value="imm-Immunization-05_01"/>
+   <meta>
+      <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
+   </meta>
+   <!-- FarmaceutischProduct -->
+   <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct" >
+      <valueReference >
+         <reference value="Medication/imm-PharmaceuticalProduct-05_01"/>
+      </valueReference>
+   </extension>
+   <identifier>
+      <value value="A21CA260A"/>
+   </identifier>
+   <status value="completed"/>
+   <occurrenceDateTime value="2007-04-12T00:00:00+02:00"/>
+   <site>
+      <coding>
+         <code value="bovenarm"/>
+      </coding>
+      <coding>
+         <system value="http://snomed.info/sct"/>
+         <code value="7771000"/>
+         <display value="links"/>
+      </coding>
+   </site>
+   <route>
+      <coding>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
+         <code value="intramusculair"/>
+      </coding>
+   </route>
+   <performer>
+      <function>
+         <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
+            <code value="AP"/>
+         </coding>
+      </function>
+      <actor>
+         <reference value="Organization/imm-HealthProfessional-PractitionerRole-01"/>
+         <type value="PractionorRole"/>
+      </actor>
+   </performer>
+   <note>
+      <text value="rechterbovenarm in gips"/>
+   </note>
+   <reasonCode>
+      <coding>
+         <system value="http://snomed.info/sct"/>
+         <code value="159741000146107"/>
+         <display value="Immunisatie nodig vanuit vaccinatieprogramma (situatie)"/>
+      </coding>
+   </reasonCode>
+   <reasonCode>
+      <coding>
+         <system value="http://snomed.info/sct"/>
+         <code value="159731000146104"/>
+         <display value="Immunisatie nodig vanuit rijksvaccinatieprogramma (situatie)"/>
+      </coding>
+   </reasonCode>
+   <reasonCode>
+      <coding>
+         <system value="http://snomed.info/sct"/>
+         <code value="404904002"/>
+         <display value="Kwetsbare oudere (bevinding)"/>
+      </coding>
+   </reasonCode>
+   <reasonCode>
+      <coding>
+         <system value="http://snomed.info/sct"/>
+         <code value="19829001"/>
+         <display value="Aandoening van long (aandoening)"/>
+      </coding>
+   </reasonCode>
+   <protocolApplied>
+      <targetDisease>
+         <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="6142004"/>
+            <display value="Influenza (aandoening)"/>
+         </coding>
+      </targetDisease>
+      <doseNumber value="n/a"/>
+   </protocolApplied>
+   <protocolApplied>
+      <targetDisease>
+         <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="128241005"/>
+            <display value="Hepatitis (aandoening)"/>
+         </coding>
+      </targetDisease>
+      <doseNumber value="n/a"/>
+   </protocolApplied>
+</Immunization>
