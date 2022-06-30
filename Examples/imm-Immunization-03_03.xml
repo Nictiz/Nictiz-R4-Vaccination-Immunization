@@ -15,13 +15,17 @@
    <status value="completed"/>
    <occurrenceDateTime value="2021-12-22T14:52:00+01:00"/>
    <site>
+      <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality">
+         <valueCodeableConcept>
+            <coding>
+               <system value="http://snomed.info/sct"/>
+               <code value="7771000"/>
+               <display value="links"/>
+            </coding>
+         </valueCodeableConcept>
+      </extension>
       <coding>
          <code value="bovenarm"/>
-      </coding>
-      <coding>
-         <system value="http://snomed.info/sct"/>
-         <code value="7771000"/>
-         <display value="links"/>
       </coding>
    </site>
    <route>
