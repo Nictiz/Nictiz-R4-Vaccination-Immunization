@@ -1,30 +1,41 @@
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="bundle-example-05"/> 
-    <meta> 
-        <lastUpdated value="2022-06-20T00:00:00Z"/> 
-        <!--    when the search was executed    --> 
-    </meta>  
-    <type value="searchset"/>   
-    <!--  datumtijd van bericht staat ook in HL7v3 wrapper  -->
-    <timestamp value="2022-02-28T16:07:25+01:00" />
+<Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir https://hl7.org/fhir/r4/fhir-single.xsd" xmlns="http://hl7.org/fhir">
+    <id value="bundle-example-05"/>
+    <type value="searchset"/>
     <entry>
         <resource>
             <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-05_01"/>
+                <id value="imm-Immunization-05-01"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
                 <!-- FarmaceutischProduct -->
-                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct" >
-                    <valueReference >
-                        <reference value="Medication/imm-PharmaceuticalProduct-05_01"/>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
+                    <valueReference>
+                        <reference value="Medication/imm-PharmaceuticalProduct-05-01"/>
                     </valueReference>
                 </extension>
                 <identifier>
-                    <value value="A21CA260A"/>
+                    <system value="urn:oid:2.16.528.1.1007.3.3.1234567.1"/>
+                    <value value="54657"/>
                 </identifier>
                 <status value="completed"/>
+                <vaccineCode>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+                    </coding>
+                </vaccineCode>
+                <!-- Referentie Patient -->
+                <patient>
+                    <reference value="Patient/imm-Patient-05"/>
+                    <type value="Patient"/>
+                    <display value="Patient, Helena Maria (Lena) van der Voorden-der Teeuwen"/>
+                </patient>
                 <occurrenceDateTime value="2007-04-12T00:00:00+02:00"/>
+                <location>
+                    <reference value="Location/imm-HealthcareProvider-05"/>
+                    <type value="Location"/>
+                    <display value="Dependance JF"/>
+                </location>
                 <site>
                     <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality">
                         <valueCodeableConcept>
@@ -54,7 +65,7 @@
                     </function>
                     <actor>
                         <reference value="Organization/imm-HealthProfessional-PractitionerRole-05"/>
-                        <type value="PractionorRole"/>
+                        <type value="PractionerRole"/>
                     </actor>
                 </performer>
                 <note>
@@ -96,7 +107,7 @@
                             <display value="Influenza (aandoening)"/>
                         </coding>
                     </targetDisease>
-                    <doseNumber value="n/a"/>
+                    <doseNumberString value="n/a"/>
                 </protocolApplied>
                 <protocolApplied>
                     <targetDisease>
@@ -106,33 +117,49 @@
                             <display value="Hepatitis (aandoening)"/>
                         </coding>
                     </targetDisease>
-                    <doseNumber value="n/a"/>
+                    <doseNumberString value="n/a"/>
                 </protocolApplied>
             </Immunization>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Immunization" />
-        </request>
+        <search>
+            <mode value="match"/>
+        </search>
     </entry>
     <entry>
         <resource>
             <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-05_02"/>
+                <id value="imm-Immunization-05-02"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
                 <!-- FarmaceutischProduct -->
-                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct" >
-                    <valueReference >
-                        <reference value="Medication/imm-PharmaceuticalProduct-05_02"/>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
+                    <valueReference>
+                        <reference value="Medication/imm-PharmaceuticalProduct-05-02"/>
                     </valueReference>
                 </extension>
                 <identifier>
-                    <value value="20495"/>
+                    <system value="urn:oid:2.16.528.1.1007.3.3.1234567.1"/>
+                    <value value="54658"/>
                 </identifier>
                 <status value="completed"/>
+                <vaccineCode>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+                    </coding>
+                </vaccineCode>
+                <!-- Referentie Patient -->
+                <patient>
+                    <reference value="Patient/imm-Patient-05"/>
+                    <type value="Patient"/>
+                    <display value="Patient, Helena Maria (Lena) van der Voorden-der Teeuwen"/>
+                </patient>
                 <occurrenceDateTime value="2007-04-12T00:00:00+02:00"/>
+                <location>
+                    <reference value="Location/imm-HealthcareProvider-05"/>
+                    <type value="Location"/>
+                    <display value="Dependance JF"/>
+                </location>
                 <site>
                     <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality">
                         <valueCodeableConcept>
@@ -163,7 +190,7 @@
                     <!-- zorgverlener -->
                     <actor>
                         <reference value="Organization/imm-HealthProfessional-PractitionerRole-05"/>
-                        <type value="PractionorRole"/>
+                        <type value="PractionerRole"/>
                     </actor>
                 </performer>
                 <note>
@@ -205,33 +232,50 @@
                             <display value="Infectieziekte door Streptococcus pneumoniae (aandoening)"/>
                         </coding>
                     </targetDisease>
-                    <doseNumber value="n/a"/>
+                    <doseNumberString value="n/a"/>
                 </protocolApplied>
             </Immunization>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Immunization" />
-        </request>
+        <search>
+            <mode value="match"/>
+        </search>
     </entry>
     <entry>
         <resource>
             <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-05_03"/>
+                <id value="imm-Immunization-05-03"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
                 <!-- FarmaceutischProduct -->
-                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct" >
-                    <valueReference >
-                        <reference value="Medication/imm-PharmaceuticalProduct-05_03"/>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
+                    <valueReference>
+                        <reference value="Medication/imm-PharmaceuticalProduct-05-03"/>
                     </valueReference>
                 </extension>
                 <identifier>
-                    <value value="ABV3025"/>
+                    <system value="urn:oid:2.16.528.1.1007.3.3.1234567.1"/>
+                    <value value="54659"/>
                 </identifier>
                 <status value="completed"/>
+                <vaccineCode>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+                        <code value="2925508"/>
+                    </coding>
+                </vaccineCode>
+                <!-- Referentie Patient -->
+                <patient>
+                    <reference value="Patient/imm-Patient-05"/>
+                    <type value="Patient"/>
+                    <display value="Patient, Helena Maria (Lena) van der Voorden-der Teeuwen"/>
+                </patient>
                 <occurrenceDateTime value="2021-02-19T14:52:00+01:00"/>
+                <location>
+                    <reference value="Location/imm-HealthcareProvider-05"/>
+                    <type value="Location"/>
+                    <display value="Dependance JF"/>
+                </location>
                 <site>
                     <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality">
                         <valueCodeableConcept>
@@ -268,7 +312,7 @@
                     <!-- zorgverlener -->
                     <actor>
                         <reference value="Organization/imm-HealthProfessional-PractitionerRole-05"/>
-                        <type value="PractionorRole"/>
+                        <type value="PractionerRole"/>
                     </actor>
                 </performer>
                 <note>
@@ -310,33 +354,61 @@
                             <display value="Aandoening door infectie door 'Severe acute respiratory syndrome'-coronavirus 2 (aandoening)"/>
                         </coding>
                     </targetDisease>
-                    <doseNumber value="n/a"/>
+                    <doseNumberString value="n/a"/>
                 </protocolApplied>
             </Immunization>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Immunization" />
-        </request>
+        <search>
+            <mode value="match"/>
+        </search>
     </entry>
     <entry>
         <resource>
             <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-05_04"/>
+                <id value="imm-Immunization-05-04"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
                 <!-- FarmaceutischProduct -->
-                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct" >
-                    <valueReference >
-                        <reference value="Medication/imm-PharmaceuticalProduct-05_04"/>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
+                    <valueReference>
+                        <reference value="Medication/imm-PharmaceuticalProduct-05-04"/>
                     </valueReference>
                 </extension>
                 <identifier>
-                    <value value="PCA0021"/>
+                    <system value="urn:oid:2.16.528.1.1007.3.3.1234567.1"/>
+                    <value value="54660"/>
                 </identifier>
                 <status value="completed"/>
+                <vaccineCode>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+                        <code value="2924528"/>
+                    </coding>
+                </vaccineCode>
+                <!-- Referentie Patient -->
+                <patient>
+                    <reference value="Patient/imm-Patient-05"/>
+                    <type value="Patient"/>
+                    <display value="Patient, Helena Maria (Lena) van der Voorden-der Teeuwen"/>
+                </patient>
                 <occurrenceDateTime value="2021-12-30T00:00:00+01:00"/>
+                <location>
+                    <reference value="Location/imm-HealthcareProvider-05"/>
+                    <type value="Location"/>
+                    <display value="Dependance JF"/>
+                </location>
+                <site>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://snomed.info/sct"/>
+                                <code value="7771000"/>
+                                <display value="links"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                </site>
                 <doseQuantity>
                     <value value="0.3"/>
                     <unit value="ml"/>
@@ -353,7 +425,7 @@
                     <!-- zorgverlener -->
                     <actor>
                         <reference value="Organization/imm-HealthProfessional-PractitionerRole-05"/>
-                        <type value="PractionorRole"/>
+                        <type value="PractionerRole"/>
                     </actor>
                 </performer>
                 <note>
@@ -395,113 +467,13 @@
                             <display value="Aandoening door infectie door 'Severe acute respiratory syndrome'-coronavirus 2 (aandoening)"/>
                         </coding>
                     </targetDisease>
-                    <doseNumber value="n/a"/>
+                    <doseNumberString value="n/a"/>
                 </protocolApplied>
             </Immunization>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Immunization" />
-        </request>
-    </entry>
-    <entry>
-        <resource>
-            <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-05_02"/>
-                <meta>
-                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
-                </meta>
-                <!-- FarmaceutischProduct -->
-                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct" >
-                    <valueReference >
-                        <reference value="Medication/imm-PharmaceuticalProduct-05_02"/>
-                    </valueReference>
-                </extension>
-                <identifier>
-                    <value value="20495"/>
-                </identifier>
-                <status value="completed"/>
-                <occurrenceDateTime value="2007-04-12T00:00:00+02:00"/>
-                <site>
-                    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality">
-                        <valueCodeableConcept>
-                            <coding>
-                                <system value="http://snomed.info/sct"/>
-                                <code value="7771000"/>
-                                <display value="links"/>
-                            </coding>
-                        </valueCodeableConcept>
-                    </extension>
-                    <coding>
-                        <code value="bovenarm"/>
-                    </coding>
-                </site>
-                <route>
-                    <coding>
-                        <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
-                        <code value="intramusculair"/>
-                    </coding>
-                </route>
-                <performer>
-                    <function>
-                        <coding>
-                            <system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
-                            <code value="AP"/>
-                        </coding>
-                    </function>
-                    <!-- zorgverlener -->
-                    <actor>
-                        <reference value="Organization/imm-HealthProfessional-PractitionerRole-05"/>
-                        <type value="PractionorRole"/>
-                    </actor>
-                </performer>
-                <note>
-                    <text value="rechterbovenarm in gips"/>
-                </note>
-                <reasonCode>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="159721000146101"/>
-                        <display value="Immunisatie nodig voor werk (situatie)"/>
-                    </coding>
-                </reasonCode>
-                <reasonCode>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="33879002"/>
-                        <display value="Vaccinatie (verrichting)"/>
-                    </coding>
-                </reasonCode>
-                <reasonCode>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="404904002"/>
-                        <display value="Kwetsbare oudere (bevinding)"/>
-                    </coding>
-                </reasonCode>
-                <reasonCode>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="238131007"/>
-                        <display value="Overgewicht (bevinding)"/>
-                    </coding>
-                </reasonCode>
-                <protocolApplied>
-                    <targetDisease>
-                        <coding>
-                            <system value="http://snomed.info/sct"/>
-                            <code value="16814004"/>
-                            <display value="Infectieziekte door Streptococcus pneumoniae (aandoening)"/>
-                        </coding>
-                    </targetDisease>
-                    <doseNumber value="n/a"/>
-                </protocolApplied>
-            </Immunization>
-        </resource>
-        <request>
-            <method value="GET" />
-            <url value="Immunization" />
-        </request>
+        <search>
+            <mode value="match"/>
+        </search>
     </entry>
     <entry>
         <resource>
@@ -685,14 +657,13 @@
                 </address>
             </Patient>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Patient" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
     <entry>
         <!--  interne referentie voor de organisatie in deze bundle  -->
-        <fullUrl value="urn:uuid:local-organization" />
+        <fullUrl value="urn:uuid:local-organization"/>
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="imm-HealthcareProvider-Organization-05"/>
@@ -811,10 +782,9 @@
                 </address>
             </Organization>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Organization" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
     <entry>
         <resource>
@@ -922,12 +892,10 @@
                 </managingOrganization>
             </Location>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Location" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
-    <entry>
     <entry>
         <resource>
             <PractitionerRole xmlns="http://hl7.org/fhir">
@@ -950,10 +918,9 @@
                 </specialty>
             </PractitionerRole>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="PractitionerRole" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
     <entry>
         <resource>
@@ -1004,55 +971,66 @@
                 </name>
             </Practitioner>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Practitioner" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
     <entry>
         <resource>
             <Medication xmlns="http://hl7.org/fhir">
-                <id value="imm-PharmaceuticalProduct-05_01"/>
+                <id value="imm-PharmaceuticalProduct-05-01"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
                 </meta>
+                <code>
+                    <coding>
+                        <display value="Hib Component&#xA;Hep B Component"/>
+                    </coding>
+                    <text value="Infanrix ® Hexa (Hib-Hep B)"/>
+                </code>
                 <form>
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.11"/>
-                        <code value="injectievloeistof"/>
+                        <code value="44"/>
+                        <display value="POEDER VOOR SUSPENSIE VOOR INJECTIE"/>
                     </coding>
                 </form>
             </Medication>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Medication" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
     <entry>
         <resource>
             <Medication xmlns="http://hl7.org/fhir">
-                <id value="imm-PharmaceuticalProduct-05_02"/>
+                <id value="imm-PharmaceuticalProduct-05-02"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
                 </meta>
+                <code>
+                    <coding>
+                        <display value="Pneumokokkenvaccin in spuit"/>
+                    </coding>
+                    <text value="Prevenar"/>
+                </code>
                 <form>
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.11"/>
-                        <code value="injectievloeistof"/>
+                        <code value="44"/>
+                        <display value="POEDER VOOR SUSPENSIE VOOR INJECTIE"/>
                     </coding>
                 </form>
             </Medication>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Medication" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
     <entry>
         <resource>
             <Medication xmlns="http://hl7.org/fhir">
-                <id value="imm-PharmaceuticalProduct-05_03"/>
+                <id value="imm-PharmaceuticalProduct-05-03"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
                 </meta>
@@ -1060,25 +1038,27 @@
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
                         <code value="2925508"/>
+                        <display value="COVID-19 VACCIN ASTRAZENECA INJVLST"/>
                     </coding>
+                    <text value="COVID-19 VACCIN ASTRAZENECA INJVLST"/>
                 </code>
                 <form>
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.11"/>
-                        <code value="injectievloeistof"/>
+                        <code value="76"/>
+                        <display value="DISPERSIE VOOR INJECTIE"/>
                     </coding>
                 </form>
             </Medication>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Medication" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
     <entry>
         <resource>
             <Medication xmlns="http://hl7.org/fhir">
-                <id value="imm-PharmaceuticalProduct-05_04"/>
+                <id value="imm-PharmaceuticalProduct-05-04"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
                 </meta>
@@ -1087,18 +1067,19 @@
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
                         <code value="2924528"/>
                     </coding>
+                    <text value="COVID-19 VACCIN PFIZER INJVLST 0,3ML"/>
                 </code>
                 <form>
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.11"/>
-                        <code value="injectievloeistof"/>
+                        <code value="76"/>
+                        <display value="DISPERSIE VOOR INJECTIE"/>
                     </coding>
                 </form>
             </Medication>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Medication" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
 </Bundle>

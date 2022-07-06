@@ -1,28 +1,35 @@
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="bundle-example-03"/> 
-    <meta> 
-        <lastUpdated value="2022-06-20T00:00:00Z"/> 
-        <!--    when the search was executed    --> 
-    </meta>  
-    <type value="searchset"/>   
-    <!--  datumtijd van bericht staat ook in HL7v3 wrapper  -->
-    <timestamp value="2022-02-28T16:07:25+01:00" />
+<Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir https://hl7.org/fhir/r4/fhir-single.xsd" xmlns="http://hl7.org/fhir">
+    <id value="bundle-example-03"/>
+    <type value="searchset"/>
     <entry>
         <resource>
             <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-03_01"/>
+                <id value="imm-Immunization-03-01"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
                 <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
                     <valueReference>
-                        <reference value="Medication/imm-PharmaceuticalProduct-03_01" />
+                        <reference value="Medication/imm-PharmaceuticalProduct-03-01"/>
                     </valueReference>
                 </extension>
                 <identifier>
+                    <system value="urn:oid:2.16.528.1.1007.3.3.1234567.1"/>
                     <value value="3002184"/>
                 </identifier>
                 <status value="completed"/>
+                <vaccineCode>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+                        <code value="2924536"/>
+                    </coding>
+                </vaccineCode>
+                <!-- Referentie Patient -->
+                <patient>
+                    <reference value="Patient/imm-Patient-03"/>
+                    <type value="Patient"/>
+                    <display value="Patient, Jan Willem (Jan) Bakker"/>
+                </patient>
                 <occurrenceDateTime value="2021-05-24T14:30:00+02:00"/>
                 <site>
                     <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality">
@@ -77,32 +84,44 @@
                             <display value="Aandoening door infectie door 'Severe acute respiratory syndrome'-coronavirus 2 (aandoening)"/>
                         </coding>
                     </targetDisease>
-                    <doseNumber value="n/a"/>
+                    <doseNumberString value="n/a"/>
                 </protocolApplied>
             </Immunization>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Immunization" />
-        </request>
+        <search>
+            <mode value="match"/>
+        </search>
     </entry>
     <entry>
         <resource>
             <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-03_02"/>
+                <id value="imm-Immunization-03-02"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
                 <!-- FarmaceutischProduct -->
                 <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
                     <valueReference>
-                        <reference value="Medication/imm-PharmaceuticalProduct-03_01" />
+                        <reference value="Medication/imm-PharmaceuticalProduct-03-01"/>
                     </valueReference>
                 </extension>
                 <identifier>
+                    <system value="urn:oid:2.16.528.1.1007.3.3.1234567.1"/>
                     <value value="3003186"/>
                 </identifier>
                 <status value="completed"/>
+                <vaccineCode>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+                        <code value="2924536"/>
+                    </coding>
+                </vaccineCode>
+                <!-- Referentie Patient -->
+                <patient>
+                    <reference value="Patient/imm-Patient-03"/>
+                    <type value="Patient"/>
+                    <display value="Patient, Jan Willem (Jan) Bakker"/>
+                </patient>
                 <occurrenceDateTime value="2021-06-28T16:19:00+02:00"/>
                 <site>
                     <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality">
@@ -157,31 +176,40 @@
                             <display value="Aandoening door infectie door 'Severe acute respiratory syndrome'-coronavirus 2 (aandoening)"/>
                         </coding>
                     </targetDisease>
-                    <doseNumber value="n/a"/>
+                    <doseNumberString value="n/a"/>
                 </protocolApplied>
             </Immunization>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Immunization" />
-        </request>
     </entry>
     <entry>
         <resource>
             <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-03_03"/>
+                <id value="imm-Immunization-03-03"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
                 <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
                     <valueReference>
-                        <reference value="Medication/imm-PharmaceuticalProduct-03_02" />
+                        <reference value="Medication/imm-PharmaceuticalProduct-03-02"/>
                     </valueReference>
                 </extension>
                 <identifier>
+                    <system value="urn:oid:2.16.528.1.1007.3.3.1234567.1"/>
                     <value value="018J21ABS"/>
                 </identifier>
                 <status value="completed"/>
+                <vaccineCode>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+                        <code value="2978636"/>
+                    </coding>
+                </vaccineCode>
+                <!-- Referentie Patient -->
+                <patient>
+                    <reference value="Patient/imm-Patient-03"/>
+                    <type value="Patient"/>
+                    <display value="Patient, Jan Willem (Jan) Bakker"/>
+                </patient>
                 <occurrenceDateTime value="2021-12-22T14:52:00+01:00"/>
                 <site>
                     <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality">
@@ -236,14 +264,10 @@
                             <display value="Aandoening door infectie door 'Severe acute respiratory syndrome'-coronavirus 2 (aandoening)"/>
                         </coding>
                     </targetDisease>
-                    <doseNumber value="n/a"/>
+                    <doseNumberString value="n/a"/>
                 </protocolApplied>
             </Immunization>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Immunization" />
-        </request>
     </entry>
     <entry>
         <resource>
@@ -331,14 +355,13 @@
                 </address>
             </Patient>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Patient" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
     <entry>
         <!--  interne referentie voor de organisatie in deze bundle  -->
-        <fullUrl value="urn:uuid:local-organization" />
+        <fullUrl value="urn:uuid:local-organization"/>
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="Imm-HealthcareProvider-Organization-03"/>
@@ -360,15 +383,14 @@
                 <name value="GGD Hart voor Brabant"/>
             </Organization>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Organization" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
     <entry>
         <resource>
             <Medication xmlns="http://hl7.org/fhir">
-                <id value="imm-PharmaceuticalProduct-03_01"/>
+                <id value="imm-PharmaceuticalProduct-03-01"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
                 </meta>
@@ -386,15 +408,14 @@
                 </form>
             </Medication>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Medication" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
     <entry>
         <resource>
             <Medication xmlns="http://hl7.org/fhir">
-                <id value="imm-PharmaceuticalProduct-03_02"/>
+                <id value="imm-PharmaceuticalProduct-03-02"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
                 </meta>
@@ -412,9 +433,8 @@
                 </form>
             </Medication>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Medication" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
 </Bundle>

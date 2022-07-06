@@ -1,23 +1,29 @@
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="bundle-example-03"/> 
-    <meta> 
-        <lastUpdated value="2022-06-20T00:00:00Z"/> 
-        <!--    when the search was executed    --> 
-    </meta>  
-    <type value="searchset"/>   
-    <!--  datumtijd van bericht staat ook in HL7v3 wrapper  -->
-    <timestamp value="2022-02-28T16:07:25+01:00" />
+<Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir https://hl7.org/fhir/r4/fhir-single.xsd" xmlns="http://hl7.org/fhir">
+    <id value="bundle-example-03"/>
+    <type value="searchset"/>
     <entry>
         <resource>
             <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-04_01"/>
+                <id value="imm-Immunization-04-01"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
                 <identifier>
-                    <value value="A21CA210I"/>
+                    <system value="urn:oid:2.16.528.1.1007.3.3.1234567.1"/>
+                    <value value="54655"/>
                 </identifier>
                 <status value="completed"/>
+                <vaccineCode>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+                    </coding>
+                </vaccineCode>
+                <!-- Referentie Patient -->
+                <patient>
+                    <reference value="Patient/imm-Patient-04"/>
+                    <type value="Patient"/>
+                    <display value="Patient, Annemarie (Anna) Lucasz"/>
+                </patient>
                 <occurrenceDateTime value="2006-12-28T00:00:00+01:00"/>
                 <performer>
                     <function>
@@ -46,7 +52,7 @@
                             <display value="Influenza (aandoening)"/>
                         </coding>
                     </targetDisease>
-                    <doseNumber value="n/a"/>
+                    <doseNumberString value="n/a"/>
                 </protocolApplied>
                 <protocolApplied>
                     <targetDisease>
@@ -56,26 +62,37 @@
                             <display value="Hepatitis (aandoening)"/>
                         </coding>
                     </targetDisease>
-                    <doseNumber value="n/a"/>
+                    <doseNumberString value="n/a"/>
                 </protocolApplied>
             </Immunization>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Immunization" />
-        </request>
+        <search>
+            <mode value="match"/>
+        </search>
     </entry>
     <entry>
         <resource>
             <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-04_02"/>
+                <id value="imm-Immunization-04-02"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
                 <identifier>
-                    <value value="18954"/>
+                    <system value="urn:oid:2.16.528.1.1007.3.3.1234567.1"/>
+                    <value value="54656"/>
                 </identifier>
                 <status value="completed"/>
+                <vaccineCode>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+                    </coding>
+                </vaccineCode>
+                <!-- Referentie Patient -->
+                <patient>
+                    <reference value="Patient/imm-Patient-04"/>
+                    <type value="Patient"/>
+                    <display value="Patient, Annemarie (Anna) Lucasz"/>
+                </patient>
                 <occurrenceDateTime value="2006-12-28T00:00:00+01:00"/>
                 <performer>
                     <function>
@@ -104,18 +121,15 @@
                             <display value="Infectieziekte door Streptococcus pneumoniae (aandoening)"/>
                         </coding>
                     </targetDisease>
-                    <doseNumber value="n/a"/>
+                    <doseNumberString value="n/a"/>
                 </protocolApplied>
             </Immunization>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Immunization" />
-        </request>
     </entry>
     <entry>
         <resource>
             <Patient xmlns="http://hl7.org/fhir">
+                <id value="imm-Patient-04"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"/>
                 </meta>
@@ -144,14 +158,13 @@
                 <birthDate value="2006-09-28"/>
             </Patient>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Patient" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
     <entry>
         <!--  interne referentie voor de organisatie in deze bundle  -->
-        <fullUrl value="urn:uuid:local-organization" />
+        <fullUrl value="urn:uuid:local-organization"/>
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="imm-HealthcareProvider-Organization-04"/>
@@ -173,9 +186,8 @@
                 <name value="CB Middelburg"/>
             </Organization>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Organization" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
 </Bundle>

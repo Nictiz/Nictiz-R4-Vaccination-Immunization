@@ -1,12 +1,6 @@
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="bundle-example-02"/> 
-    <meta> 
-        <lastUpdated value="2022-06-20T00:00:00Z"/> 
-        <!--    when the search was executed    --> 
-    </meta>  
-    <type value="searchset"/>   
-    <!--  datumtijd van bericht staat ook in HL7v3 wrapper  -->
-    <timestamp value="2022-02-28T16:07:25+01:00" />
+<Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir https://hl7.org/fhir/r4/fhir-single.xsd" xmlns="http://hl7.org/fhir">
+    <id value="bundle-example-02"/>
+    <type value="searchset"/>
     <entry>
         <resource>
             <Immunization xmlns="http://hl7.org/fhir">
@@ -16,13 +10,26 @@
                 </meta>
                 <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
                     <valueReference>
-                        <reference value="Medication/imm-PharmaceuticalProduct-02" />
+                        <reference value="Medication/imm-PharmaceuticalProduct-02"/>
                     </valueReference>
                 </extension>
                 <identifier>
+                    <system value="urn:oid:2.16.528.1.1007.3.3.1234567.1"/>
                     <value value="216036BS"/>
                 </identifier>
                 <status value="completed"/>
+                <vaccineCode>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+                        <code value="2978636"/>
+                    </coding>
+                </vaccineCode>
+                <!-- Referentie Patient -->
+                <patient>
+                    <reference value="Patient/imm-Patient-02"/>
+                    <type value="Patient"/>
+                    <display value="Patient, Annemarie (Anna) Pieterse"/>
+                </patient>
                 <occurrenceDateTime value="2021-12-31T11:28:00+01:00"/>
                 <site>
                     <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality">
@@ -77,14 +84,13 @@
                             <display value="Aandoening door infectie door 'Severe acute respiratory syndrome'-coronavirus 2 (aandoening)"/>
                         </coding>
                     </targetDisease>
-                    <doseNumber value="n/a"/>
+                    <doseNumberString value="n/a"/>
                 </protocolApplied>
             </Immunization>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Immunization" />
-        </request>
+        <search>
+            <mode value="match"/>
+        </search>
     </entry>
     <entry>
         <resource>
@@ -167,14 +173,13 @@
                 </address>
             </Patient>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Patient" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
     <entry>
         <!--  interne referentie voor de organisatie in deze bundle  -->
-        <fullUrl value="urn:uuid:local-organization" />
+        <fullUrl value="urn:uuid:local-organization"/>
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="Imm-HealthcareProvider-Organization-02"/>
@@ -196,10 +201,9 @@
                 <name value="Recreatiepark Het Hulsbeek"/>
             </Organization>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Organization" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
     <entry>
         <resource>
@@ -222,9 +226,8 @@
                 </form>
             </Medication>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Medication" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
 </Bundle>

@@ -1,12 +1,6 @@
-<Bundle xmlns="http://hl7.org/fhir">
-    <id value="bundle-example-01"/> 
-    <meta> 
-        <lastUpdated value="2022-06-20T00:00:00Z"/> 
-        <!--    when the search was executed    --> 
-    </meta>  
-    <type value="searchset"/>   
-    <!--  datumtijd van bericht staat ook in HL7v3 wrapper  -->
-    <timestamp value="2022-02-28T16:07:25+01:00" />
+<Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir https://hl7.org/fhir/r4/fhir-single.xsd" xmlns="http://hl7.org/fhir">
+    <id value="bundle-example-01"/>
+    <type value="searchset"/>
     <entry>
         <resource>
             <Immunization xmlns="http://hl7.org/fhir">
@@ -14,16 +8,14 @@
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
-                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
-                    <valueReference/>
-                </extension>
                 <!-- FarmaceutischProduct -->
-                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct" >
-                    <valueReference >
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
+                    <valueReference>
                         <reference value="Medication/imm-PharmaceuticalProduct-01"/>
                     </valueReference>
                 </extension>
                 <identifier>
+                    <system value="urn:oid:2.16.528.1.1007.3.3.1234567.1"/>
                     <value value="54651"/>
                 </identifier>
                 <!-- StatusToediening -->
@@ -31,7 +23,7 @@
                 <!-- VaccineCode reflects the ProductCode in the PharmaceuticalProduct reference -->
                 <vaccineCode>
                     <coding>
-                        <system value="2.16.840.1.113883.2.4.4.7"/>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
                         <code value="2924528"/>
                     </coding>
                 </vaccineCode>
@@ -60,15 +52,14 @@
                 </performer>
             </Immunization>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Immunization" />
-        </request>
+        <search>
+            <mode value="match"/>
+        </search>
     </entry>
     <entry>
         <resource>
             <Patient xmlns="http://hl7.org/fhir">
-                <id value="Imm-Patient-01"/>
+                <id value="imm-Patient-01"/>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"/>
                 </meta>
@@ -106,14 +97,13 @@
                 <birthDate value="1934-04-28"/>
             </Patient>
         </resource>
-        <request>
-            <method value="GET" />
-            <url value="Patient" />
-        </request>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
     <entry>
         <!--  interne referentie voor de organisatie in deze bundle  -->
-        <fullUrl value="urn:uuid:local-organization" />
+        <fullUrl value="urn:uuid:local-organization"/>
         <resource>
             <Organization xmlns="http://hl7.org/fhir">
                 <id value="Imm-HealthcareProvider-Organization-01"/>
@@ -126,28 +116,26 @@
                 </identifier>
                 <name value="GGD Gelderland-Zuid"/>
             </Organization>
-            </resource>
-        <request>
-            <method value="GET" />
-            <url value="Organization" />
-        </request>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
     </entry>
     <entry>
-        <Medication xmlns="http://hl7.org/fhir">
-            <id value="imm-PharmaceuticalProduct-01"/>
-            <meta>
-                <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
-            </meta>
-            <code>
-                <coding>
-                    <system value="2.16.840.1.113883.2.4.4.7"/>
-                    <code value="2924528"/>
-                </coding>
-            </code>
-        </Medication>
-        <request>
-            <method value="GET" />
-            <url value="Medication" />
-        </request>
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="imm-PharmaceuticalProduct-01"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
+                </meta>
+                <code>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+                        <code value="2924528"/>
+                        <display value="COVID-19 VACCIN PFIZER INJVLST 0,3ML"/>
+                    </coding>
+                </code>
+            </Medication>
+        </resource>
     </entry>
 </Bundle>
