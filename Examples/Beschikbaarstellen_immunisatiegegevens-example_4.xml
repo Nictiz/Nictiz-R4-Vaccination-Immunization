@@ -1,5 +1,5 @@
 <Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir https://hl7.org/fhir/r4/fhir-single.xsd" xmlns="http://hl7.org/fhir">
-    <id value="bundle-example-03"/>
+    <id value="bundle-example-04"/>
     <type value="searchset"/>
     <entry>
         <resource>
