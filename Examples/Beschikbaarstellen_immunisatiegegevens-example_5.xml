@@ -1,17 +1,16 @@
-<Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir https://hl7.org/fhir/r4/fhir-single.xsd" xmlns="http://hl7.org/fhir">
-    <id value="bundle-example-05"/>
+<Bundle xmlns="http://hl7.org/fhir">
     <type value="searchset"/>
     <entry>
+        <fullUrl value="urn:uuid:0631c9f2-55b6-415b-ac27-022b00eda5ab"/>
         <resource>
-            <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-05-01"/>
+            <Immunization>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
                 <!-- FarmaceutischProduct -->
                 <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
                     <valueReference>
-                        <reference value="Medication/imm-PharmaceuticalProduct-05-01"/>
+                        <reference value="urn:uuid:b7cd857f-bbf9-4fcc-9570-919ca5fe2c3b"/>
                     </valueReference>
                 </extension>
                 <identifier>
@@ -26,13 +25,13 @@
                 </vaccineCode>
                 <!-- Referentie Patient -->
                 <patient>
-                    <reference value="Patient/imm-Patient-05"/>
+                    <reference value="urn:uuid:3267efca-c2a0-4b0e-9dae-292352471a24"/>
                     <type value="Patient"/>
                     <display value="Patient, Helena Maria (Lena) van der Voorden-der Teeuwen"/>
                 </patient>
                 <occurrenceDateTime value="2007-04-12T00:00:00+02:00"/>
                 <location>
-                    <reference value="Location/imm-HealthcareProvider-05"/>
+                    <reference value="urn:uuid:a376e2d6-c27b-4a24-8fe0-b151753b605d"/>
                     <type value="Location"/>
                     <display value="Dependance JF"/>
                 </location>
@@ -64,7 +63,7 @@
                         </coding>
                     </function>
                     <actor>
-                        <reference value="Organization/imm-HealthProfessional-PractitionerRole-05"/>
+                        <reference value="urn:uuid:cdb50c2e-7331-44a4-a902-0b0a8901c3ea"/>
                         <type value="PractionerRole"/>
                     </actor>
                 </performer>
@@ -126,16 +125,16 @@
         </search>
     </entry>
     <entry>
+        <fullUrl value="urn:uuid:159b8589-a096-4c73-b54c-47c09ad94bbf"/>
         <resource>
-            <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-05-02"/>
+            <Immunization>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
                 <!-- FarmaceutischProduct -->
                 <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
                     <valueReference>
-                        <reference value="Medication/imm-PharmaceuticalProduct-05-02"/>
+                        <reference value="urn:uuid:31c808c0-6568-4c55-afb9-aaa43258c052"/>
                     </valueReference>
                 </extension>
                 <identifier>
@@ -150,13 +149,13 @@
                 </vaccineCode>
                 <!-- Referentie Patient -->
                 <patient>
-                    <reference value="Patient/imm-Patient-05"/>
+                    <reference value="urn:uuid:3267efca-c2a0-4b0e-9dae-292352471a24"/>
                     <type value="Patient"/>
                     <display value="Patient, Helena Maria (Lena) van der Voorden-der Teeuwen"/>
                 </patient>
                 <occurrenceDateTime value="2007-04-12T00:00:00+02:00"/>
                 <location>
-                    <reference value="Location/imm-HealthcareProvider-05"/>
+                    <reference value="urn:uuid:a376e2d6-c27b-4a24-8fe0-b151753b605d"/>
                     <type value="Location"/>
                     <display value="Dependance JF"/>
                 </location>
@@ -189,7 +188,7 @@
                     </function>
                     <!-- zorgverlener -->
                     <actor>
-                        <reference value="Organization/imm-HealthProfessional-PractitionerRole-05"/>
+                        <reference value="urn:uuid:cdb50c2e-7331-44a4-a902-0b0a8901c3ea"/>
                         <type value="PractionerRole"/>
                     </actor>
                 </performer>
@@ -241,16 +240,16 @@
         </search>
     </entry>
     <entry>
+        <fullUrl value="urn:uuid:a1fcd5b5-0583-4709-8278-26ebf0c34841"/>
         <resource>
-            <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-05-03"/>
+            <Immunization>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
                 <!-- FarmaceutischProduct -->
                 <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
                     <valueReference>
-                        <reference value="Medication/imm-PharmaceuticalProduct-05-03"/>
+                        <reference value="urn:uuid:ee249300-b066-4f09-9ae5-1e62560c0b0c"/>
                     </valueReference>
                 </extension>
                 <identifier>
@@ -266,13 +265,13 @@
                 </vaccineCode>
                 <!-- Referentie Patient -->
                 <patient>
-                    <reference value="Patient/imm-Patient-05"/>
+                    <reference value="urn:uuid:3267efca-c2a0-4b0e-9dae-292352471a24"/>
                     <type value="Patient"/>
                     <display value="Patient, Helena Maria (Lena) van der Voorden-der Teeuwen"/>
                 </patient>
                 <occurrenceDateTime value="2021-02-19T14:52:00+01:00"/>
                 <location>
-                    <reference value="Location/imm-HealthcareProvider-05"/>
+                    <reference value="urn:uuid:a376e2d6-c27b-4a24-8fe0-b151753b605d"/>
                     <type value="Location"/>
                     <display value="Dependance JF"/>
                 </location>
@@ -311,7 +310,7 @@
                     </function>
                     <!-- zorgverlener -->
                     <actor>
-                        <reference value="Organization/imm-HealthProfessional-PractitionerRole-05"/>
+                        <reference value="urn:uuid:cdb50c2e-7331-44a4-a902-0b0a8901c3ea"/>
                         <type value="PractionerRole"/>
                     </actor>
                 </performer>
@@ -363,16 +362,16 @@
         </search>
     </entry>
     <entry>
+        <fullUrl value="urn:uuid:9df415b0-ffb7-4377-afc4-e37cc02bd7bb"/>
         <resource>
-            <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-05-04"/>
+            <Immunization>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
                 <!-- FarmaceutischProduct -->
                 <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
                     <valueReference>
-                        <reference value="Medication/imm-PharmaceuticalProduct-05-04"/>
+                        <reference value="urn:uuid:53359c16-695f-4b61-836d-80f43867e842"/>
                     </valueReference>
                 </extension>
                 <identifier>
@@ -388,13 +387,13 @@
                 </vaccineCode>
                 <!-- Referentie Patient -->
                 <patient>
-                    <reference value="Patient/imm-Patient-05"/>
+                    <reference value="urn:uuid:3267efca-c2a0-4b0e-9dae-292352471a24"/>
                     <type value="Patient"/>
                     <display value="Patient, Helena Maria (Lena) van der Voorden-der Teeuwen"/>
                 </patient>
                 <occurrenceDateTime value="2021-12-30T00:00:00+01:00"/>
                 <location>
-                    <reference value="Location/imm-HealthcareProvider-05"/>
+                    <reference value="urn:uuid:a376e2d6-c27b-4a24-8fe0-b151753b605d"/>
                     <type value="Location"/>
                     <display value="Dependance JF"/>
                 </location>
@@ -424,7 +423,7 @@
                     </function>
                     <!-- zorgverlener -->
                     <actor>
-                        <reference value="Organization/imm-HealthProfessional-PractitionerRole-05"/>
+                        <reference value="urn:uuid:cdb50c2e-7331-44a4-a902-0b0a8901c3ea"/>
                         <type value="PractionerRole"/>
                     </actor>
                 </performer>
@@ -476,9 +475,9 @@
         </search>
     </entry>
     <entry>
+        <fullUrl value="urn:uuid:3267efca-c2a0-4b0e-9dae-292352471a24"/>
         <resource>
-            <Patient xmlns="http://hl7.org/fhir">
-                <id value="imm-Patient-05"/>
+            <Patient>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"/>
                 </meta>
@@ -663,10 +662,9 @@
     </entry>
     <entry>
         <!--  interne referentie voor de organisatie in deze bundle  -->
-        <fullUrl value="urn:uuid:local-organization"/>
+        <fullUrl value="urn:uuid:fa59b590-c421-4b5a-b1ac-5ff5b18c6df4"/>
         <resource>
-            <Organization xmlns="http://hl7.org/fhir">
-                <id value="imm-HealthcareProvider-Organization-05"/>
+            <Organization>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"/>
                 </meta>
@@ -787,9 +785,9 @@
         </search>
     </entry>
     <entry>
+        <fullUrl value="urn:uuid:urn:uuid:a376e2d6-c27b-4a24-8fe0-b151753b605d"/>
         <resource>
-            <Location xmlns="http://hl7.org/fhir">
-                <id value="imm-HealthcareProvider-05"/>
+            <Location>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider"/>
                 </meta>
@@ -886,7 +884,7 @@
                     </country>
                 </address>
                 <managingOrganization>
-                    <reference value="Organization/imm-HealthcareProvider-Organization-05"/>
+                    <reference value="urn:uuid:fa59b590-c421-4b5a-b1ac-5ff5b18c6df4"/>
                     <type value="Organization"/>
                     <display value="Healthcare provider (organization), Jong Florence"/>
                 </managingOrganization>
@@ -897,14 +895,14 @@
         </search>
     </entry>
     <entry>
+        <fullUrl value="urn:uuid:cdb50c2e-7331-44a4-a902-0b0a8901c3ea"/>
         <resource>
-            <PractitionerRole xmlns="http://hl7.org/fhir">
-                <id value="imm-HealthProfessional-PractitionerRole-05"/>
+            <PractitionerRole>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"/>
                 </meta>
                 <practitioner>
-                    <reference value="Practitioner/imm-HealthProfessional-Practitioner-05"/>
+                    <reference value="urn:uuid:ffb5563e-cdd0-40e1-b8f4-8c3bea82ab8a"/>
                     <type value="Practitioner"/>
                     <display value="Healthcare professional (person), Thomas Hendrikus (Tommy) von Pickles"/>
                 </practitioner>
@@ -923,9 +921,9 @@
         </search>
     </entry>
     <entry>
+        <fullUrl value="urn:uuid:ffb5563e-cdd0-40e1-b8f4-8c3bea82ab8a"/>
         <resource>
-            <Practitioner xmlns="http://hl7.org/fhir">
-                <id value="imm-HealthProfessional-Practitioner-05"/>
+            <Practitioner>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner"/>
                 </meta>
@@ -976,9 +974,9 @@
         </search>
     </entry>
     <entry>
+        <fullUrl value="urn:uuid:b7cd857f-bbf9-4fcc-9570-919ca5fe2c3b"/>
         <resource>
-            <Medication xmlns="http://hl7.org/fhir">
-                <id value="imm-PharmaceuticalProduct-05-01"/>
+            <Medication>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
                 </meta>
@@ -1002,9 +1000,9 @@
         </search>
     </entry>
     <entry>
+        <fullUrl value="urn:uuid:31c808c0-6568-4c55-afb9-aaa43258c052"/>
         <resource>
-            <Medication xmlns="http://hl7.org/fhir">
-                <id value="imm-PharmaceuticalProduct-05-02"/>
+            <Medication>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
                 </meta>
@@ -1028,9 +1026,9 @@
         </search>
     </entry>
     <entry>
+        <fullUrl value="urn:uuid:ee249300-b066-4f09-9ae5-1e62560c0b0c"/>
         <resource>
-            <Medication xmlns="http://hl7.org/fhir">
-                <id value="imm-PharmaceuticalProduct-05-03"/>
+            <Medication>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
                 </meta>
@@ -1056,9 +1054,9 @@
         </search>
     </entry>
     <entry>
+        <fullUrl value="urn:uuid:53359c16-695f-4b61-836d-80f43867e842"/>
         <resource>
-            <Medication xmlns="http://hl7.org/fhir">
-                <id value="imm-PharmaceuticalProduct-05-04"/>
+            <Medication>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
                 </meta>

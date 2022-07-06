@@ -1,10 +1,9 @@
-<Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir https://hl7.org/fhir/r4/fhir-single.xsd" xmlns="http://hl7.org/fhir">
-    <id value="bundle-example-04"/>
+<Bundle xmlns="http://hl7.org/fhir">
     <type value="searchset"/>
     <entry>
+        <fullUrl value="d065576a-4acd-4b25-9409-e84dd4a0d8b3"/>
         <resource>
-            <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-04-01"/>
+            <Immunization>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
@@ -20,7 +19,7 @@
                 </vaccineCode>
                 <!-- Referentie Patient -->
                 <patient>
-                    <reference value="Patient/imm-Patient-04"/>
+                    <reference value="urn:uuid:aff945a2-1d3e-47e4-9f7d-c0960376d028"/>
                     <type value="Patient"/>
                     <display value="Patient, Annemarie (Anna) Lucasz"/>
                 </patient>
@@ -33,7 +32,7 @@
                         </coding>
                     </function>
                     <actor>
-                        <reference value="Organization/imm-HealthcareProvider-Organization-04"/>
+                        <reference value="urn:uuid:7e71e774-8e00-4cb5-9750-d47df79bb2fb"/>
                         <type value="Organization"/>
                     </actor>
                 </performer>
@@ -71,9 +70,9 @@
         </search>
     </entry>
     <entry>
+        <fullUrl value="urn:uuid:d35ab641-35ea-45ac-a1d1-6cf5f7b886e0"/>
         <resource>
-            <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-04-02"/>
+            <Immunization>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
@@ -89,7 +88,7 @@
                 </vaccineCode>
                 <!-- Referentie Patient -->
                 <patient>
-                    <reference value="Patient/imm-Patient-04"/>
+                    <reference value="urn:uuid:aff945a2-1d3e-47e4-9f7d-c0960376d028"/>
                     <type value="Patient"/>
                     <display value="Patient, Annemarie (Anna) Lucasz"/>
                 </patient>
@@ -102,7 +101,7 @@
                         </coding>
                     </function>
                     <actor>
-                        <reference value="Organization/imm-HealthcareProvider-Organization-04"/>
+                        <reference value="urn:uuid:7e71e774-8e00-4cb5-9750-d47df79bb2fb"/>
                         <type value="Organization"/>
                     </actor>
                 </performer>
@@ -127,9 +126,9 @@
         </resource>
     </entry>
     <entry>
+        <fullUrl value="urn:uuid:aff945a2-1d3e-47e4-9f7d-c0960376d028"/>
         <resource>
-            <Patient xmlns="http://hl7.org/fhir">
-                <id value="imm-Patient-04"/>
+            <Patient>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"/>
                 </meta>
@@ -164,10 +163,9 @@
     </entry>
     <entry>
         <!--  interne referentie voor de organisatie in deze bundle  -->
-        <fullUrl value="urn:uuid:local-organization"/>
+        <fullUrl value="urn:uuid:7e71e774-8e00-4cb5-9750-d47df79bb2fb"/>
         <resource>
-            <Organization xmlns="http://hl7.org/fhir">
-                <id value="imm-HealthcareProvider-Organization-04"/>
+            <Organization>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"/>
                 </meta>

@@ -1,16 +1,15 @@
-<Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir https://hl7.org/fhir/r4/fhir-single.xsd" xmlns="http://hl7.org/fhir">
-    <id value="bundle-example-03"/>
+<Bundle xmlns="http://hl7.org/fhir">
     <type value="searchset"/>
     <entry>
+        <fullUrl value="7a41d63b-bb54-4b8d-a3de-d32333438216"/>
         <resource>
-            <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-03-01"/>
+            <Immunization>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
                 <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
                     <valueReference>
-                        <reference value="Medication/imm-PharmaceuticalProduct-03-01"/>
+                        <reference value="urn:uuid:f3a50559-6e3c-4157-9e38-15c59a1f3a96"/>
                     </valueReference>
                 </extension>
                 <identifier>
@@ -26,7 +25,7 @@
                 </vaccineCode>
                 <!-- Referentie Patient -->
                 <patient>
-                    <reference value="Patient/imm-Patient-03"/>
+                    <reference value="urn:uuid:5a49df03-ce2f-4b84-b5ef-7fddfcc1e158"/>
                     <type value="Patient"/>
                     <display value="Patient, Jan Willem (Jan) Bakker"/>
                 </patient>
@@ -65,7 +64,7 @@
                         </coding>
                     </function>
                     <actor>
-                        <reference value="Organization/imm-HealthcareProvider-Organization-03"/>
+                        <reference value="urn:uuid:d963c20c-1215-4cca-931e-cd26cd2c02f3"/>
                         <type value="Organization"/>
                     </actor>
                 </performer>
@@ -93,16 +92,16 @@
         </search>
     </entry>
     <entry>
+        <fullUrl value="urn:uuid:048418a8-ee89-497a-b270-a84256a82834"/>
         <resource>
-            <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-03-02"/>
+            <Immunization>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
                 <!-- FarmaceutischProduct -->
                 <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
                     <valueReference>
-                        <reference value="Medication/imm-PharmaceuticalProduct-03-01"/>
+                        <reference value="urn:uuid:f3a50559-6e3c-4157-9e38-15c59a1f3a96"/>
                     </valueReference>
                 </extension>
                 <identifier>
@@ -118,7 +117,7 @@
                 </vaccineCode>
                 <!-- Referentie Patient -->
                 <patient>
-                    <reference value="Patient/imm-Patient-03"/>
+                    <reference value="urn:uuid:5a49df03-ce2f-4b84-b5ef-7fddfcc1e158"/>
                     <type value="Patient"/>
                     <display value="Patient, Jan Willem (Jan) Bakker"/>
                 </patient>
@@ -157,7 +156,7 @@
                         </coding>
                     </function>
                     <actor>
-                        <reference value="Organization/imm-HealthcareProvider-Organization-03"/>
+                        <reference value="urn:uuid:d963c20c-1215-4cca-931e-cd26cd2c02f3"/>
                         <type value="Organization"/>
                     </actor>
                 </performer>
@@ -182,9 +181,9 @@
         </resource>
     </entry>
     <entry>
+        <fullUrl value="urn:uuid:da445555-2cb0-47dc-acc4-373031d822eb"/>
         <resource>
-            <Immunization xmlns="http://hl7.org/fhir">
-                <id value="imm-Immunization-03-03"/>
+            <Immunization>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
                 </meta>
@@ -206,7 +205,7 @@
                 </vaccineCode>
                 <!-- Referentie Patient -->
                 <patient>
-                    <reference value="Patient/imm-Patient-03"/>
+                    <reference value="urn:uuid:5a49df03-ce2f-4b84-b5ef-7fddfcc1e158"/>
                     <type value="Patient"/>
                     <display value="Patient, Jan Willem (Jan) Bakker"/>
                 </patient>
@@ -245,7 +244,7 @@
                         </coding>
                     </function>
                     <actor>
-                        <reference value="Organization/imm-HealthcareProvider-Organization-03"/>
+                        <reference value="urn:uuid:d963c20c-1215-4cca-931e-cd26cd2c02f3"/>
                         <type value="Organization"/>
                     </actor>
                 </performer>
@@ -270,9 +269,9 @@
         </resource>
     </entry>
     <entry>
+        <fullUrl value="urn:uuid:5a49df03-ce2f-4b84-b5ef-7fddfcc1e158"/>
         <resource>
-            <Patient xmlns="http://hl7.org/fhir">
-                <id value="imm-Patient-03"/>
+            <Patient>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"/>
                 </meta>
@@ -361,10 +360,9 @@
     </entry>
     <entry>
         <!--  interne referentie voor de organisatie in deze bundle  -->
-        <fullUrl value="urn:uuid:local-organization"/>
+        <fullUrl value="urn:uuid:d963c20c-1215-4cca-931e-cd26cd2c02f3"/>
         <resource>
-            <Organization xmlns="http://hl7.org/fhir">
-                <id value="Imm-HealthcareProvider-Organization-03"/>
+            <Organization>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"/>
                 </meta>
@@ -388,9 +386,9 @@
         </search>
     </entry>
     <entry>
+        <fullUrl value="urn:uuid:f3a50559-6e3c-4157-9e38-15c59a1f3a96"/>
         <resource>
-            <Medication xmlns="http://hl7.org/fhir">
-                <id value="imm-PharmaceuticalProduct-03-01"/>
+            <Medication>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
                 </meta>
@@ -413,9 +411,9 @@
         </search>
     </entry>
     <entry>
+        <fullUrl value="6cc6057d-1a1b-42c8-8de5-c4bb552ec76b"/>
         <resource>
-            <Medication xmlns="http://hl7.org/fhir">
-                <id value="imm-PharmaceuticalProduct-03-02"/>
+            <Medication>
                 <meta>
                     <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
                 </meta>
