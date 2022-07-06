@@ -1,0 +1,153 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="bundle-example-01"/> 
+    <meta> 
+        <lastUpdated value="2022-06-20T00:00:00Z"/> 
+        <!--    when the search was executed    --> 
+    </meta>  
+    <type value="searchset"/>   
+    <!--  datumtijd van bericht staat ook in HL7v3 wrapper  -->
+    <timestamp value="2022-02-28T16:07:25+01:00" />
+    <entry>
+        <resource>
+            <Immunization xmlns="http://hl7.org/fhir">
+                <id value="Imm-Immunization-01"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
+                </meta>
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
+                    <valueReference/>
+                </extension>
+                <!-- FarmaceutischProduct -->
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct" >
+                    <valueReference >
+                        <reference value="Medication/imm-PharmaceuticalProduct-01"/>
+                    </valueReference>
+                </extension>
+                <identifier>
+                    <value value="54651"/>
+                </identifier>
+                <!-- StatusToediening -->
+                <status value="completed"/>
+                <!-- VaccineCode reflects the ProductCode in the PharmaceuticalProduct reference -->
+                <vaccineCode>
+                    <coding>
+                        <system value="2.16.840.1.113883.2.4.4.7"/>
+                        <code value="2924528"/>
+                    </coding>
+                </vaccineCode>
+                <!-- Referentie Patient -->
+                <patient>
+                    <reference value="Patient/imm-Patient-01"/>
+                    <type value="Patient"/>
+                    <display value="Patient, Johanna Petronella Maria (Jo) van Putten"/>
+                </patient>
+                <occurrenceDateTime value="2021-06-19T16:17:00+02:00"/>
+                <performer>
+                    <function>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
+                            <code value="AP"/>
+                        </coding>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+                            <code value="PRF"/>
+                        </coding>
+                    </function>
+                    <actor>
+                        <reference value="Organization/imm-HealthcareProvider-Organization-01"/>
+                        <type value="Organization"/>
+                    </actor>
+                </performer>
+            </Immunization>
+        </resource>
+        <request>
+            <method value="GET" />
+            <url value="Immunization" />
+        </request>
+    </entry>
+    <entry>
+        <resource>
+            <Patient xmlns="http://hl7.org/fhir">
+                <id value="Imm-Patient-01"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"/>
+                </meta>
+                <name>
+                    <use value="official"/>
+                    <text value="Johanna Petronella Maria (Jo) van Putten"/>
+                    <family value="van Putten">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+                            <valueString value="van"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                            <valueString value="Putten"/>
+                        </extension>
+                    </family>
+                    <given value="Johanna">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                            <valueCode value="BR"/>
+                        </extension>
+                    </given>
+                    <given value="Petronella">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                            <valueCode value="BR"/>
+                        </extension>
+                    </given>
+                    <given value="Maria">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                            <valueCode value="BR"/>
+                        </extension>
+                    </given>
+                </name>
+                <name>
+                    <use value="usual"/>
+                    <given value="Jo"/>
+                </name>
+                <birthDate value="1934-04-28"/>
+            </Patient>
+        </resource>
+        <request>
+            <method value="GET" />
+            <url value="Patient" />
+        </request>
+    </entry>
+    <entry>
+        <!--  interne referentie voor de organisatie in deze bundle  -->
+        <fullUrl value="urn:uuid:local-organization" />
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="Imm-HealthcareProvider-Organization-01"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"/>
+                </meta>
+                <identifier>
+                    <system value="http://fhir.nl/fhir/NamingSystem/ura"/>
+                    <value value="32320038"/>
+                </identifier>
+                <name value="GGD Gelderland-Zuid"/>
+            </Organization>
+            </resource>
+        <request>
+            <method value="GET" />
+            <url value="Organization" />
+        </request>
+    </entry>
+    <entry>
+        <Medication xmlns="http://hl7.org/fhir">
+            <id value="imm-PharmaceuticalProduct-01"/>
+            <meta>
+                <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
+            </meta>
+            <code>
+                <coding>
+                    <system value="2.16.840.1.113883.2.4.4.7"/>
+                    <code value="2924528"/>
+                </coding>
+            </code>
+        </Medication>
+        <request>
+            <method value="GET" />
+            <url value="Medication" />
+        </request>
+    </entry>
+</Bundle>

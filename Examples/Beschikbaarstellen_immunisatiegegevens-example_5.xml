@@ -1,0 +1,1104 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="bundle-example-05"/> 
+    <meta> 
+        <lastUpdated value="2022-06-20T00:00:00Z"/> 
+        <!--    when the search was executed    --> 
+    </meta>  
+    <type value="searchset"/>   
+    <!--  datumtijd van bericht staat ook in HL7v3 wrapper  -->
+    <timestamp value="2022-02-28T16:07:25+01:00" />
+    <entry>
+        <resource>
+            <Immunization xmlns="http://hl7.org/fhir">
+                <id value="imm-Immunization-05_01"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
+                </meta>
+                <!-- FarmaceutischProduct -->
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct" >
+                    <valueReference >
+                        <reference value="Medication/imm-PharmaceuticalProduct-05_01"/>
+                    </valueReference>
+                </extension>
+                <identifier>
+                    <value value="A21CA260A"/>
+                </identifier>
+                <status value="completed"/>
+                <occurrenceDateTime value="2007-04-12T00:00:00+02:00"/>
+                <site>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://snomed.info/sct"/>
+                                <code value="7771000"/>
+                                <display value="links"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <coding>
+                        <code value="bovenarm"/>
+                    </coding>
+                </site>
+                <route>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
+                        <code value="intramusculair"/>
+                    </coding>
+                </route>
+                <performer>
+                    <function>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
+                            <code value="AP"/>
+                        </coding>
+                    </function>
+                    <actor>
+                        <reference value="Organization/imm-HealthProfessional-PractitionerRole-05"/>
+                        <type value="PractionorRole"/>
+                    </actor>
+                </performer>
+                <note>
+                    <text value="rechterbovenarm in gips"/>
+                </note>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="159741000146107"/>
+                        <display value="Immunisatie nodig vanuit vaccinatieprogramma (situatie)"/>
+                    </coding>
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="159731000146104"/>
+                        <display value="Immunisatie nodig vanuit rijksvaccinatieprogramma (situatie)"/>
+                    </coding>
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="404904002"/>
+                        <display value="Kwetsbare oudere (bevinding)"/>
+                    </coding>
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="19829001"/>
+                        <display value="Aandoening van long (aandoening)"/>
+                    </coding>
+                </reasonCode>
+                <protocolApplied>
+                    <targetDisease>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="6142004"/>
+                            <display value="Influenza (aandoening)"/>
+                        </coding>
+                    </targetDisease>
+                    <doseNumber value="n/a"/>
+                </protocolApplied>
+                <protocolApplied>
+                    <targetDisease>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="128241005"/>
+                            <display value="Hepatitis (aandoening)"/>
+                        </coding>
+                    </targetDisease>
+                    <doseNumber value="n/a"/>
+                </protocolApplied>
+            </Immunization>
+        </resource>
+        <request>
+            <method value="GET" />
+            <url value="Immunization" />
+        </request>
+    </entry>
+    <entry>
+        <resource>
+            <Immunization xmlns="http://hl7.org/fhir">
+                <id value="imm-Immunization-05_02"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
+                </meta>
+                <!-- FarmaceutischProduct -->
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct" >
+                    <valueReference >
+                        <reference value="Medication/imm-PharmaceuticalProduct-05_02"/>
+                    </valueReference>
+                </extension>
+                <identifier>
+                    <value value="20495"/>
+                </identifier>
+                <status value="completed"/>
+                <occurrenceDateTime value="2007-04-12T00:00:00+02:00"/>
+                <site>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://snomed.info/sct"/>
+                                <code value="7771000"/>
+                                <display value="links"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <coding>
+                        <code value="bovenarm"/>
+                    </coding>
+                </site>
+                <route>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
+                        <code value="intramusculair"/>
+                    </coding>
+                </route>
+                <performer>
+                    <function>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
+                            <code value="AP"/>
+                        </coding>
+                    </function>
+                    <!-- zorgverlener -->
+                    <actor>
+                        <reference value="Organization/imm-HealthProfessional-PractitionerRole-05"/>
+                        <type value="PractionorRole"/>
+                    </actor>
+                </performer>
+                <note>
+                    <text value="rechterbovenarm in gips"/>
+                </note>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="159721000146101"/>
+                        <display value="Immunisatie nodig voor werk (situatie)"/>
+                    </coding>
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="33879002"/>
+                        <display value="Vaccinatie (verrichting)"/>
+                    </coding>
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="404904002"/>
+                        <display value="Kwetsbare oudere (bevinding)"/>
+                    </coding>
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="238131007"/>
+                        <display value="Overgewicht (bevinding)"/>
+                    </coding>
+                </reasonCode>
+                <protocolApplied>
+                    <targetDisease>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="16814004"/>
+                            <display value="Infectieziekte door Streptococcus pneumoniae (aandoening)"/>
+                        </coding>
+                    </targetDisease>
+                    <doseNumber value="n/a"/>
+                </protocolApplied>
+            </Immunization>
+        </resource>
+        <request>
+            <method value="GET" />
+            <url value="Immunization" />
+        </request>
+    </entry>
+    <entry>
+        <resource>
+            <Immunization xmlns="http://hl7.org/fhir">
+                <id value="imm-Immunization-05_03"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
+                </meta>
+                <!-- FarmaceutischProduct -->
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct" >
+                    <valueReference >
+                        <reference value="Medication/imm-PharmaceuticalProduct-05_03"/>
+                    </valueReference>
+                </extension>
+                <identifier>
+                    <value value="ABV3025"/>
+                </identifier>
+                <status value="completed"/>
+                <occurrenceDateTime value="2021-02-19T14:52:00+01:00"/>
+                <site>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://snomed.info/sct"/>
+                                <code value="7771000"/>
+                                <display value="links"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <coding>
+                        <code value="bovenarm"/>
+                    </coding>
+                </site>
+                <route>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
+                        <code value="intramusculair"/>
+                    </coding>
+                </route>
+                <doseQuantity>
+                    <value value="0.5"/>
+                    <unit value="ml"/>
+                    <system value="http://unitsofmeasure.org"/>
+                    <code value="ml"/>
+                </doseQuantity>
+                <performer>
+                    <function>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
+                            <code value="AP"/>
+                        </coding>
+                    </function>
+                    <!-- zorgverlener -->
+                    <actor>
+                        <reference value="Organization/imm-HealthProfessional-PractitionerRole-05"/>
+                        <type value="PractionorRole"/>
+                    </actor>
+                </performer>
+                <note>
+                    <text value="rechterbovenarm in gips"/>
+                </note>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="51116004"/>
+                        <display value="Passieve immunisatie (verrichting)"/>
+                    </coding>
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="14747002"/>
+                        <display value="Reizigersvaccinatie (verrichting)"/>
+                    </coding>
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="238131007"/>
+                        <display value="Overgewicht (bevinding)"/>
+                    </coding>
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="234532001"/>
+                        <display value="Immunodeficiëntie (aandoening)"/>
+                    </coding>
+                </reasonCode>
+                <protocolApplied>
+                    <targetDisease>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="840539006"/>
+                            <display value="Aandoening door infectie door 'Severe acute respiratory syndrome'-coronavirus 2 (aandoening)"/>
+                        </coding>
+                    </targetDisease>
+                    <doseNumber value="n/a"/>
+                </protocolApplied>
+            </Immunization>
+        </resource>
+        <request>
+            <method value="GET" />
+            <url value="Immunization" />
+        </request>
+    </entry>
+    <entry>
+        <resource>
+            <Immunization xmlns="http://hl7.org/fhir">
+                <id value="imm-Immunization-05_04"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
+                </meta>
+                <!-- FarmaceutischProduct -->
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct" >
+                    <valueReference >
+                        <reference value="Medication/imm-PharmaceuticalProduct-05_04"/>
+                    </valueReference>
+                </extension>
+                <identifier>
+                    <value value="PCA0021"/>
+                </identifier>
+                <status value="completed"/>
+                <occurrenceDateTime value="2021-12-30T00:00:00+01:00"/>
+                <doseQuantity>
+                    <value value="0.3"/>
+                    <unit value="ml"/>
+                    <system value="http://unitsofmeasure.org"/>
+                    <code value="ml"/>
+                </doseQuantity>
+                <performer>
+                    <function>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
+                            <code value="AP"/>
+                        </coding>
+                    </function>
+                    <!-- zorgverlener -->
+                    <actor>
+                        <reference value="Organization/imm-HealthProfessional-PractitionerRole-05"/>
+                        <type value="PractionorRole"/>
+                    </actor>
+                </performer>
+                <note>
+                    <text value="intramusculair"/>
+                </note>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="159741000146107"/>
+                        <display value="Immunisatie nodig vanuit vaccinatieprogramma (situatie)"/>
+                    </coding>
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="159721000146101"/>
+                        <display value="Immunisatie nodig voor werk (situatie)"/>
+                    </coding>
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="77386006"/>
+                        <display value="Zwangerschap (bevinding)"/>
+                    </coding>
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="416462003"/>
+                        <display value="Verwonding (aandoening)"/>
+                    </coding>
+                </reasonCode>
+                <protocolApplied>
+                    <targetDisease>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="840539006"/>
+                            <display value="Aandoening door infectie door 'Severe acute respiratory syndrome'-coronavirus 2 (aandoening)"/>
+                        </coding>
+                    </targetDisease>
+                    <doseNumber value="n/a"/>
+                </protocolApplied>
+            </Immunization>
+        </resource>
+        <request>
+            <method value="GET" />
+            <url value="Immunization" />
+        </request>
+    </entry>
+    <entry>
+        <resource>
+            <Immunization xmlns="http://hl7.org/fhir">
+                <id value="imm-Immunization-05_02"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
+                </meta>
+                <!-- FarmaceutischProduct -->
+                <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct" >
+                    <valueReference >
+                        <reference value="Medication/imm-PharmaceuticalProduct-05_02"/>
+                    </valueReference>
+                </extension>
+                <identifier>
+                    <value value="20495"/>
+                </identifier>
+                <status value="completed"/>
+                <occurrenceDateTime value="2007-04-12T00:00:00+02:00"/>
+                <site>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://snomed.info/sct"/>
+                                <code value="7771000"/>
+                                <display value="links"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <coding>
+                        <code value="bovenarm"/>
+                    </coding>
+                </site>
+                <route>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
+                        <code value="intramusculair"/>
+                    </coding>
+                </route>
+                <performer>
+                    <function>
+                        <coding>
+                            <system value="http://terminology.hl7.org/CodeSystem/v2-0443"/>
+                            <code value="AP"/>
+                        </coding>
+                    </function>
+                    <!-- zorgverlener -->
+                    <actor>
+                        <reference value="Organization/imm-HealthProfessional-PractitionerRole-05"/>
+                        <type value="PractionorRole"/>
+                    </actor>
+                </performer>
+                <note>
+                    <text value="rechterbovenarm in gips"/>
+                </note>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="159721000146101"/>
+                        <display value="Immunisatie nodig voor werk (situatie)"/>
+                    </coding>
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="33879002"/>
+                        <display value="Vaccinatie (verrichting)"/>
+                    </coding>
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="404904002"/>
+                        <display value="Kwetsbare oudere (bevinding)"/>
+                    </coding>
+                </reasonCode>
+                <reasonCode>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="238131007"/>
+                        <display value="Overgewicht (bevinding)"/>
+                    </coding>
+                </reasonCode>
+                <protocolApplied>
+                    <targetDisease>
+                        <coding>
+                            <system value="http://snomed.info/sct"/>
+                            <code value="16814004"/>
+                            <display value="Infectieziekte door Streptococcus pneumoniae (aandoening)"/>
+                        </coding>
+                    </targetDisease>
+                    <doseNumber value="n/a"/>
+                </protocolApplied>
+            </Immunization>
+        </resource>
+        <request>
+            <method value="GET" />
+            <url value="Immunization" />
+        </request>
+    </entry>
+    <entry>
+        <resource>
+            <Patient xmlns="http://hl7.org/fhir">
+                <id value="imm-Patient-05"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"/>
+                </meta>
+                <identifier>
+                    <system value="http://fhir.nl/fhir/NamingSystem/bsn"/>
+                    <value value="990003863"/>
+                </identifier>
+                <name>
+                    <use value="official"/>
+                    <text value="Helena Maria (Lena) van der Voorden-der Teeuwen"/>
+                    <family value="van der Voorden-der Teeuwen">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+                            <valueString value="van der"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                            <valueString value="Voorden"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix">
+                            <valueString value="der"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
+                            <valueString value="Teeuwen"/>
+                        </extension>
+                    </family>
+                    <given value="Helena">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                            <valueCode value="BR"/>
+                        </extension>
+                    </given>
+                    <given value="Maria">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                            <valueCode value="BR"/>
+                        </extension>
+                    </given>
+                    <prefix value="Barones"/>
+                </name>
+                <name>
+                    <use value="usual"/>
+                    <given value="Lena"/>
+                </name>
+                <telecom>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Comment">
+                        <valueString value="Bereikbaar tussen 8u-17u "/>
+                    </extension>
+                    <system value="phone">
+                        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+                                    <code value="MC"/>
+                                    <display value="Mobiel telefoonnummer"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                    </system>
+                    <value value="+31612121212"/>
+                    <use value="home"/>
+                </telecom>
+                <telecom>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Comment">
+                        <valueString value="Alleen in nood"/>
+                    </extension>
+                    <system value="phone">
+                        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+                                    <code value="MC"/>
+                                    <display value="Mobiel telefoonnummer"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                    </system>
+                    <value value="+31612121213"/>
+                    <use value="work"/>
+                </telecom>
+                <telecom>
+                    <system value="email"/>
+                    <value value="barones@testmailbarones.nl"/>
+                    <use value="home"/>
+                </telecom>
+                <telecom>
+                    <system value="email"/>
+                    <value value="barones2@testmailbarones.nl"/>
+                    <use value="home"/>
+                </telecom>
+                <birthDate value="2006-11-12"/>
+                <address>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+                                <code value="HP"/>
+                                <display value="Officieel adres"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <use value="home"/>
+                    <type value="both"/>
+                    <line value="Knolweg to 1000 A Bis">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Knolweg"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="1000"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
+                            <valueString value="A Bis"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+                            <valueString value="to"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID">
+                            <valueString value="Huize Zonneschijn"/>
+                        </extension>
+                    </line>
+                    <city value="Stitswerd"/>
+                    <district value="Het Hogeland"/>
+                    <postalCode value="9999XA"/>
+                    <country value="Nederland">
+                        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="urn:iso:std:iso:3166"/>
+                                    <version value="2020-10-26T00:00:00"/>
+                                    <code value="NL"/>
+                                    <display value="Nederland"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                    </country>
+                </address>
+                <address>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+                                <code value="HV"/>
+                                <display value="Vakantie adres"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <use value="temp"/>
+                    <line value="Knolweg by 999 hs Bis">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Knolweg"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="999"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
+                            <valueString value="hs Bis"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+                            <valueString value="by"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID">
+                            <valueString value="Huize Maneschijn"/>
+                        </extension>
+                    </line>
+                    <city value="Stitswerd"/>
+                    <district value="Het Hogeland"/>
+                    <postalCode value="9999XA"/>
+                    <country value="Nederland">
+                        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="urn:iso:std:iso:3166"/>
+                                    <version value="2020-10-26T00:00:00"/>
+                                    <code value="NL"/>
+                                    <display value="Nederland"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                    </country>
+                </address>
+            </Patient>
+        </resource>
+        <request>
+            <method value="GET" />
+            <url value="Patient" />
+        </request>
+    </entry>
+    <entry>
+        <!--  interne referentie voor de organisatie in deze bundle  -->
+        <fullUrl value="urn:uuid:local-organization" />
+        <resource>
+            <Organization xmlns="http://hl7.org/fhir">
+                <id value="imm-HealthcareProvider-Organization-05"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"/>
+                </meta>
+                <identifier>
+                    <system value="http://fhir.nl/fhir/NamingSystem/agb-z"/>
+                    <value value="48485114"/>
+                </identifier>
+                <type>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
+                        <version value="2020-10-23T00:00:00"/>
+                        <code value="3200"/>
+                        <display value="GGD's (instellingen)"/>
+                    </coding>
+                </type>
+                <type>
+                    <coding>
+                        <system value="http://nictiz.nl/fhir/NamingSystem/organization-type"/>
+                        <code value="JGZ"/>
+                        <display value="Jeugdgezondheidszorg"/>
+                    </coding>
+                </type>
+                <name value="Jong Florence"/>
+                <telecom>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Comment">
+                        <valueString value="Bereikbaar tussen 9u-17u"/>
+                    </extension>
+                    <system value="phone">
+                        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
+                                    <code value="LL"/>
+                                    <display value="Land Line"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                    </system>
+                    <value value="+31612121214"/>
+                    <use value="work"/>
+                </telecom>
+                <telecom>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Comment">
+                        <valueString value="Noodnummer"/>
+                    </extension>
+                    <system value="pager">
+                        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+                                    <code value="PG"/>
+                                    <display value="Pieper"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                    </system>
+                    <value value="+31612121215"/>
+                    <use value="work"/>
+                </telecom>
+                <telecom>
+                    <system value="email"/>
+                    <value value="hulplijn@testmailbarones.nl"/>
+                    <use value="work"/>
+                </telecom>
+                <telecom>
+                    <system value="email"/>
+                    <value value="hulplijn2@testmailbarones.nl"/>
+                    <use value="work"/>
+                </telecom>
+                <address>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+                                <code value="WP"/>
+                                <display value="Werkadres"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <use value="work"/>
+                    <line value="Hoofdstraat to 50 A 02">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Hoofdstraat"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="50"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
+                            <valueString value="A 02"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+                            <valueString value="to"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID">
+                            <valueString value="Zorghuis JF"/>
+                        </extension>
+                    </line>
+                    <city value="Stitswerd"/>
+                    <district value="Het Hogeland"/>
+                    <postalCode value="9999PT"/>
+                    <country value="Nederland">
+                        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="urn:iso:std:iso:3166"/>
+                                    <version value="2020-10-26T00:00:00"/>
+                                    <code value="NL"/>
+                                    <display value="Nederland"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                    </country>
+                </address>
+            </Organization>
+        </resource>
+        <request>
+            <method value="GET" />
+            <url value="Organization" />
+        </request>
+    </entry>
+    <entry>
+        <resource>
+            <Location xmlns="http://hl7.org/fhir">
+                <id value="imm-HealthcareProvider-05"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider"/>
+                </meta>
+                <name value="Dependance JF"/>
+                <alias value="1"/>
+                <telecom>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Comment">
+                        <valueString value="Bereikbaar tussen 9u-17u"/>
+                    </extension>
+                    <system value="phone">
+                        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1"/>
+                                    <code value="LL"/>
+                                    <display value="Land Line"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                    </system>
+                    <value value="+31612121214"/>
+                    <use value="work"/>
+                </telecom>
+                <telecom>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Comment">
+                        <valueString value="Noodnummer"/>
+                    </extension>
+                    <system value="pager">
+                        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+                                    <code value="PG"/>
+                                    <display value="Pieper"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                    </system>
+                    <value value="+31612121215"/>
+                    <use value="work"/>
+                </telecom>
+                <telecom>
+                    <system value="email"/>
+                    <value value="hulplijn@testmailbarones.nl"/>
+                    <use value="work"/>
+                </telecom>
+                <telecom>
+                    <system value="email"/>
+                    <value value="hulplijn2@testmailbarones.nl"/>
+                    <use value="work"/>
+                </telecom>
+                <address>
+                    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AddressInformation.AddressType">
+                        <valueCodeableConcept>
+                            <coding>
+                                <system value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+                                <code value="WP"/>
+                                <display value="Werkadres"/>
+                            </coding>
+                        </valueCodeableConcept>
+                    </extension>
+                    <use value="work"/>
+                    <line value="Hoofdstraat to 50 A 02">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+                            <valueString value="Hoofdstraat"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+                            <valueString value="50"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
+                            <valueString value="A 02"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+                            <valueString value="to"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID">
+                            <valueString value="Zorghuis JF"/>
+                        </extension>
+                    </line>
+                    <city value="Stitswerd"/>
+                    <district value="Het Hogeland"/>
+                    <postalCode value="9999PT"/>
+                    <country value="Nederland">
+                        <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification">
+                            <valueCodeableConcept>
+                                <coding>
+                                    <system value="urn:iso:std:iso:3166"/>
+                                    <version value="2020-10-26T00:00:00"/>
+                                    <code value="NL"/>
+                                    <display value="Nederland"/>
+                                </coding>
+                            </valueCodeableConcept>
+                        </extension>
+                    </country>
+                </address>
+                <managingOrganization>
+                    <reference value="Organization/imm-HealthcareProvider-Organization-05"/>
+                    <type value="Organization"/>
+                    <display value="Healthcare provider (organization), Jong Florence"/>
+                </managingOrganization>
+            </Location>
+        </resource>
+        <request>
+            <method value="GET" />
+            <url value="Location" />
+        </request>
+    </entry>
+    <entry>
+    <entry>
+        <resource>
+            <PractitionerRole xmlns="http://hl7.org/fhir">
+                <id value="imm-HealthProfessional-PractitionerRole-05"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"/>
+                </meta>
+                <practitioner>
+                    <reference value="Practitioner/imm-HealthProfessional-Practitioner-05"/>
+                    <type value="Practitioner"/>
+                    <display value="Healthcare professional (person), Thomas Hendrikus (Tommy) von Pickles"/>
+                </practitioner>
+                <specialty>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
+                        <version value="2020-10-23T00:00:00"/>
+                        <code value="0300"/>
+                        <display value="Medisch specialisten, niet nader gespecificeerd"/>
+                    </coding>
+                </specialty>
+            </PractitionerRole>
+        </resource>
+        <request>
+            <method value="GET" />
+            <url value="PractitionerRole" />
+        </request>
+    </entry>
+    <entry>
+        <resource>
+            <Practitioner xmlns="http://hl7.org/fhir">
+                <id value="imm-HealthProfessional-Practitioner-05"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner"/>
+                </meta>
+                <identifier>
+                    <system value="http://fhir.nl/fhir/NamingSystem/big"/>
+                    <value value="75131313"/>
+                </identifier>
+                <name>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order">
+                        <valueCode value="NL1"/>
+                    </extension>
+                    <use value="official"/>
+                    <text value="Thomas Hendrikus (Tommy) von Pickles"/>
+                    <family value="von Pickles">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+                            <valueString value="von"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                            <valueString value="Pickles"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-prefix">
+                            <valueString value="van"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-partner-name">
+                            <valueString value="Carmichael"/>
+                        </extension>
+                    </family>
+                    <given value="Thomas">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                            <valueCode value="BR"/>
+                        </extension>
+                    </given>
+                    <given value="Hendrikus">
+                        <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                            <valueCode value="BR"/>
+                        </extension>
+                    </given>
+                    <prefix value="Prof. dr."/>
+                </name>
+                <name>
+                    <use value="usual"/>
+                    <given value="Tommy"/>
+                </name>
+            </Practitioner>
+        </resource>
+        <request>
+            <method value="GET" />
+            <url value="Practitioner" />
+        </request>
+    </entry>
+    <entry>
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="imm-PharmaceuticalProduct-05_01"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
+                </meta>
+                <form>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.11"/>
+                        <code value="injectievloeistof"/>
+                    </coding>
+                </form>
+            </Medication>
+        </resource>
+        <request>
+            <method value="GET" />
+            <url value="Medication" />
+        </request>
+    </entry>
+    <entry>
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="imm-PharmaceuticalProduct-05_02"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
+                </meta>
+                <form>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.11"/>
+                        <code value="injectievloeistof"/>
+                    </coding>
+                </form>
+            </Medication>
+        </resource>
+        <request>
+            <method value="GET" />
+            <url value="Medication" />
+        </request>
+    </entry>
+    <entry>
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="imm-PharmaceuticalProduct-05_03"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
+                </meta>
+                <code>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+                        <code value="2925508"/>
+                    </coding>
+                </code>
+                <form>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.11"/>
+                        <code value="injectievloeistof"/>
+                    </coding>
+                </form>
+            </Medication>
+        </resource>
+        <request>
+            <method value="GET" />
+            <url value="Medication" />
+        </request>
+    </entry>
+    <entry>
+        <resource>
+            <Medication xmlns="http://hl7.org/fhir">
+                <id value="imm-PharmaceuticalProduct-05_04"/>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
+                </meta>
+                <code>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+                        <code value="2924528"/>
+                    </coding>
+                </code>
+                <form>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.11"/>
+                        <code value="injectievloeistof"/>
+                    </coding>
+                </form>
+            </Medication>
+        </resource>
+        <request>
+            <method value="GET" />
+            <url value="Medication" />
+        </request>
+    </entry>
+</Bundle>
