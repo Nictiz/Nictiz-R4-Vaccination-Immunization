@@ -14,13 +14,14 @@
                 </extension>
                 <identifier>
                     <system value="urn:oid:2.16.528.1.1007.3.3.1234567.1"/>
-                    <value value="216036BS"/>
+                    <value value="54661"/>
                 </identifier>
                 <status value="completed"/>
                 <vaccineCode>
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
                         <code value="2978636"/>
+                        <display value="COVID-19 VACCIN MODERNA INJVLST 0,25ML"/>
                     </coding>
                 </vaccineCode>
                 <!-- Referentie Patient -->
@@ -41,13 +42,16 @@
                         </valueCodeableConcept>
                     </extension>
                     <coding>
-                        <code value="bovenbeen"/>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="68367000"/>
+                        <display value="bovenbeen"/>
                     </coding>
                 </site>
                 <route>
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
-                        <code value="intramusculair"/>
+                        <code value="2"/>
+                        <display value="intramusculair"/>
                     </coding>
                 </route>
                 <doseQuantity>
@@ -214,14 +218,19 @@
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
                         <code value="2978636"/>
+                        <display value="COVID-19 VACCIN MODERNA INJVLST 0,25ML"/>
                     </coding>
                 </code>
                 <form>
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.11"/>
-                        <code value="injectievloeistof"/>
+                        <code value="76"/>
+                        <display value="DISPERSIE VOOR INJECTIE"></display>
                     </coding>
                 </form>
+                <batch>
+                    <lotNumber value="216036BS"/>
+                </batch>
             </Medication>
         </resource>
         <search>

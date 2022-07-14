@@ -21,6 +21,7 @@
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
                         <code value="2924536"/>
+                        <display value="COVID-19 VACCIN MODERNA INJVLST 0,5ML"/>
                     </coding>
                 </vaccineCode>
                 <!-- Referentie Patient -->
@@ -41,13 +42,16 @@
                         </valueCodeableConcept>
                     </extension>
                     <coding>
-                        <code value="bovenarm"/>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="40983000"/>
+                        <display value="bovenarm"/>
                     </coding>
                 </site>
                 <route>
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
-                        <code value="intramusculair"/>
+                        <code value="2"/>
+                        <display value="intramusculair"/>
                     </coding>
                 </route>
                 <doseQuantity>
@@ -113,6 +117,7 @@
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
                         <code value="2924536"/>
+                        <display value="COVID-19 VACCIN MODERNA INJVLST 0,5ML"/>
                     </coding>
                 </vaccineCode>
                 <!-- Referentie Patient -->
@@ -133,13 +138,16 @@
                         </valueCodeableConcept>
                     </extension>
                     <coding>
-                        <code value="bovenarm"/>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="40983000"/>
+                        <display value="bovenarm"/>
                     </coding>
                 </site>
                 <route>
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
-                        <code value="intramusculair"/>
+                        <code value="2"/>
+                        <display value="intramusculair"/>
                     </coding>
                 </route>
                 <doseQuantity>
@@ -156,7 +164,7 @@
                         </coding>
                     </function>
                     <actor>
-                        <reference value="urn:uuid:d963c20c-1215-4cca-931e-cd26cd2c02f3"/>
+                        <reference value="urn:uuid:zorgaanbieder-2"/>
                         <type value="Organization"/>
                     </actor>
                 </performer>
@@ -189,18 +197,19 @@
                 </meta>
                 <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
                     <valueReference>
-                        <reference value="Medication/imm-PharmaceuticalProduct-03-02"/>
+                        <reference value="urn:uuid:6cc6057d-1a1b-42c8-8de5-c4aa552ec34b"/>
                     </valueReference>
                 </extension>
                 <identifier>
                     <system value="urn:oid:2.16.528.1.1007.3.3.1234567.1"/>
-                    <value value="018J21ABS"/>
+                    <value value="54654"/>
                 </identifier>
                 <status value="completed"/>
                 <vaccineCode>
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
-                        <code value="2978636"/>
+                        <code value="2924536"/>
+                        <display value="COVID-19 VACCIN MODERNA INJVLST 0,5ML"/>
                     </coding>
                 </vaccineCode>
                 <!-- Referentie Patient -->
@@ -221,13 +230,16 @@
                         </valueCodeableConcept>
                     </extension>
                     <coding>
-                        <code value="bovenarm"/>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="40983000"/>
+                        <display value="bovenarm"/>
                     </coding>
                 </site>
                 <route>
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
-                        <code value="intramusculair"/>
+                        <code value="2"/>
+                        <display value="intramusculair"/>
                     </coding>
                 </route>
                 <doseQuantity>
@@ -386,6 +398,33 @@
         </search>
     </entry>
     <entry>
+        <!--  interne referentie voor de organisatie in deze bundle  -->
+        <fullUrl value="zorgaanbieder-2"/>
+        <resource>
+            <Organization>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"/>
+                </meta>
+                <identifier>
+                    <system value="http://fhir.nl/fhir/NamingSystem/agb-z"/>
+                    <value value="32320017"/>
+                </identifier>
+                <type>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>
+                        <version value="2020-10-23T00:00:00"/>
+                        <code value="4800"/>
+                        <display value="Overige instellingen"/>
+                    </coding>
+                </type>
+                <name value="Veiligheidsregio Limburg-Noord"/>
+            </Organization>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
         <fullUrl value="urn:uuid:f3a50559-6e3c-4157-9e38-15c59a1f3a96"/>
         <resource>
             <Medication>
@@ -396,14 +435,19 @@
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
                         <code value="2924536"/>
+                        <display value="COVID-19 VACCIN MODERNA INJVLST 0,5ML"/>
                     </coding>
                 </code>
                 <form>
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.11"/>
-                        <code value="injectievloeistof"/>
+                        <code value="76"/>
+                        <display value="DISPERSIE VOOR INJECTIE"/>
                     </coding>
                 </form>
+                <batch>
+                    <lotNumber value="3002184"/>
+                </batch>
             </Medication>
         </resource>
         <search>
@@ -411,7 +455,7 @@
         </search>
     </entry>
     <entry>
-        <fullUrl value="6cc6057d-1a1b-42c8-8de5-c4bb552ec76b"/>
+        <fullUrl value="urn:uuid:6cc6057d-1a1b-42c8-8de5-c4bb552ec76b"/>
         <resource>
             <Medication>
                 <meta>
@@ -420,15 +464,50 @@
                 <code>
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
-                        <code value="2978636"/>
+                        <code value="2924536"/>
+                        <display value="COVID-19 VACCIN MODERNA INJVLST 0,5ML"/>
                     </coding>
                 </code>
                 <form>
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.11"/>
-                        <code value="injectievloeistof"/>
+                        <code value="76"/>
+                        <display value="DISPERSIE VOOR INJECTIE"/>
                     </coding>
                 </form>
+                <batch>
+                    <lotNumber value="3003186"/>
+                </batch>
+            </Medication>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:6cc6057d-1a1b-42c8-8de5-c4aa552ec34b"/>
+        <resource>
+            <Medication>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
+                </meta>
+                <code>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+                        <code value="2924536"/>
+                        <display value="COVID-19 VACCIN MODERNA INJVLST 0,5ML"/>
+                    </coding>
+                </code>
+                <form>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.11"/>
+                        <code value="76"/>
+                        <display value="DISPERSIE VOOR INJECTIE"/>
+                    </coding>
+                </form>
+                <batch>
+                    <lotNumber value="018J21ABS"/>
+                </batch>
             </Medication>
         </resource>
         <search>

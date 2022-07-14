@@ -24,6 +24,7 @@
                     <coding>
                         <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
                         <code value="2924528"/>
+                        <display value="COVID-19 VACCIN PFIZER INJVLST 0,3ML"/>
                     </coding>
                 </vaccineCode>
                 <!-- Referentie Patient -->
@@ -134,6 +135,9 @@
                         <display value="COVID-19 VACCIN PFIZER INJVLST 0,3ML"/>
                     </coding>
                 </code>
+                <batch>
+                    <lotNumber value="FF4213"/>
+                </batch>
             </Medication>
         </resource>
     </entry>

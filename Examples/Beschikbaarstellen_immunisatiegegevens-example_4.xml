@@ -14,7 +14,9 @@
                 <status value="completed"/>
                 <vaccineCode>
                     <coding>
-                        <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.10"/>
+                        <code value="74691"/>
+                        <display value="Infanrix hexa Injsusp Wwsp 0,5ml"/>
                     </coding>
                 </vaccineCode>
                 <!-- Referentie Patient -->
@@ -83,7 +85,9 @@
                 <status value="completed"/>
                 <vaccineCode>
                     <coding>
-                        <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.10"/>
+                        <code value="91804"/>
+                        <display value="PNEUMOKOKKENVACCIN 13 TYPEN INJSUSP WWSP 0,5ml"/>
                     </coding>
                 </vaccineCode>
                 <!-- Referentie Patient -->
@@ -183,6 +187,52 @@
                 </type>
                 <name value="CB Middelburg"/>
             </Organization>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value=""/>
+        <resource>
+            <Medication>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
+                </meta>
+                <code>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.10"/>
+                        <code value="74691"/>
+                        <display value="Infanrix hexa Injsusp Wwsp 0,5ml"/>
+                    </coding>
+                </code>
+                <batch>
+                    <lotNumber value="A21CA210I"/>
+                </batch>
+            </Medication>
+        </resource>
+        <search>
+            <mode value="include"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value=""/>
+        <resource>
+            <Medication>
+                <meta>
+                    <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
+                </meta>
+                <code>
+                    <coding>
+                        <system value="urn:oid:2.16.840.1.113883.2.4.4.10"/>
+                        <code value="91804"/>
+                        <display value="PNEUMOKOKKENVACCIN 13 TYPEN INJSUSP WWSP 0,5ml"/>
+                    </coding>
+                </code>
+                <batch>
+                    <lotNumber value="18954"/>
+                </batch>
+            </Medication>
         </resource>
         <search>
             <mode value="include"/>
