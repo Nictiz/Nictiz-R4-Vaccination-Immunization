@@ -5,10 +5,14 @@
       <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"/>
    </meta>
    <practitioner>
-      <reference value="Practitioner/imm-HealthProfessional-Practitioner-01"/>
+      <reference value="Practitioner/imm-HealthProfessional-PractitionerRole-05"/>
       <type value="Practitioner"/>
       <display value="Healthcare professional (person), Thomas Hendrikus (Tommy) von Pickles"/>
    </practitioner>
+   <organization>
+      <reference value="Organization/imm-HealthcareProvider-Organization-05"/>
+      <type value="Organization"/>
+   </organization>
    <specialty>
       <coding>
          <system value="urn:oid:2.16.840.1.113883.2.4.6.7"/>

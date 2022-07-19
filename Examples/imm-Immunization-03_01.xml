@@ -5,17 +5,28 @@
       <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
    </meta>
    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
-      <valueReference imm-PharmaceuticalProduct-03_01/>
-   </extension>
-   <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
       <valueReference>
-         <reference value="Medication/imm-PharmaceuticalProduct-03_01" />
+         <reference value="Medication/imm-PharmaceuticalProduct-03_01"/>
       </valueReference>
    </extension>
    <identifier>
+      <system value="urn:oid:2.16.528.1.1007.3.3.1234567.1"/>
       <value value="3002184"/>
    </identifier>
    <status value="completed"/>
+   <vaccineCode>
+      <coding>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+         <code value="2924536"/>
+         <display value="COVID-19 VACCIN MODERNA INJVLST 0,5ML"/>
+      </coding>
+   </vaccineCode>
+   <!-- Referentie Patient -->
+   <patient>
+      <reference value="Patient/imm-Patient-03"/>
+      <type value="Patient"/>
+      <display value="Patient, Jan Willem (Jan) Bakker"/>
+   </patient>
    <occurrenceDateTime value="2021-05-24T14:30:00+02:00"/>
    <site>
       <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality">
@@ -28,13 +39,16 @@
          </valueCodeableConcept>
       </extension>
       <coding>
-         <code value="bovenarm"/>
+         <system value="http://snomed.info/sct"/>
+         <code value="40983000"/>
+         <display value="bovenarm"/>
       </coding>
    </site>
    <route>
       <coding>
          <system value="urn:oid:2.16.840.1.113883.2.4.4.9"/>
-         <code value="intramusculair"/>
+         <code value="2"/>
+         <display value="intramusculair"/>
       </coding>
    </route>
    <doseQuantity>
@@ -51,7 +65,7 @@
          </coding>
       </function>
       <actor>
-         <reference value="Organization/imm-HealthcareProvider-Organization-03"/>
+         <reference value="Organization/imm-HealthcareProvider-Organization-03_1"/>
          <type value="Organization"/>
       </actor>
    </performer>
@@ -70,6 +84,6 @@
             <display value="Aandoening door infectie door 'Severe acute respiratory syndrome'-coronavirus 2 (aandoening)"/>
          </coding>
       </targetDisease>
-      <doseNumber value="n/a"/>
+      <doseNumberString value="n/a"/>
    </protocolApplied>
 </Immunization>

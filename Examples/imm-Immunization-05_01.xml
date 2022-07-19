@@ -5,16 +5,35 @@
       <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
    </meta>
    <!-- FarmaceutischProduct -->
-   <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct" >
-      <valueReference >
+   <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
+      <valueReference>
          <reference value="Medication/imm-PharmaceuticalProduct-05_01"/>
       </valueReference>
    </extension>
    <identifier>
-      <value value="A21CA260A"/>
+      <system value="urn:oid:2.16.528.1.1007.3.3.1234567.1"/>
+      <value value="54657"/>
    </identifier>
    <status value="completed"/>
+   <vaccineCode>
+      <coding>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.10"/>
+         <code value="74691"/>
+         <display value="Infanrix hexa Injsusp Wwsp 0,5ml"/>
+      </coding>
+   </vaccineCode>
+   <!-- Referentie Patient -->
+   <patient>
+      <reference value="Patient/imm-Patient-05"/>
+      <type value="Patient"/>
+      <display value="Patient, Helena Maria (Lena) van der Voorden-der Teeuwen"/>
+   </patient>
    <occurrenceDateTime value="2007-04-12T00:00:00+02:00"/>
+   <location>
+      <reference value="Location/imm-HealthcareProvider-05"/>
+      <type value="Location"/>
+      <display value="Dependance JF"/>
+   </location>
    <site>
       <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality">
          <valueCodeableConcept>
@@ -26,7 +45,9 @@
          </valueCodeableConcept>
       </extension>
       <coding>
-         <code value="bovenarm"/>
+         <system value="http://snomed.info/sct"/>
+         <code value="40983000"/>
+         <display value="bovenarm"/>
       </coding>
    </site>
    <route>
@@ -35,6 +56,12 @@
          <code value="intramusculair"/>
       </coding>
    </route>
+   <doseQuantity>
+      <value value="0.5"/>
+      <unit value="ml"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="ml"/>
+   </doseQuantity>
    <performer>
       <function>
          <coding>
@@ -43,8 +70,8 @@
          </coding>
       </function>
       <actor>
-         <reference value="Organization/imm-HealthProfessional-PractitionerRole-01"/>
-         <type value="PractionorRole"/>
+         <reference value="PractionerRole/imm-HealthProfessional-PractitionerRole-05"/>
+         <type value="PractionerRole"/>
       </actor>
    </performer>
    <note>
@@ -86,7 +113,7 @@
             <display value="Influenza (aandoening)"/>
          </coding>
       </targetDisease>
-      <doseNumber value="n/a"/>
+      <doseNumberString value="n/a"/>
    </protocolApplied>
    <protocolApplied>
       <targetDisease>
@@ -96,6 +123,6 @@
             <display value="Hepatitis (aandoening)"/>
          </coding>
       </targetDisease>
-      <doseNumber value="n/a"/>
+      <doseNumberString value="n/a"/>
    </protocolApplied>
 </Immunization>

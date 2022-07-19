@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Immunization xmlns="http://hl7.org/fhir">
-    <id value="Imm-Immunization-01"/>
+    <id value="imm-Immunization-01"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
     </meta>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
-        <valueReference/>
-    </extension>
     <!-- FarmaceutischProduct -->
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct" >
-        <valueReference >
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
+        <valueReference>
             <reference value="Medication/imm-PharmaceuticalProduct-01"/>
         </valueReference>
     </extension>
     <identifier>
+        <system value="urn:oid:2.16.528.1.1007.3.3.1234567.1"/>
         <value value="54651"/>
     </identifier>
     <!-- StatusToediening -->
@@ -21,8 +19,9 @@
     <!-- VaccineCode reflects the ProductCode in the PharmaceuticalProduct reference -->
     <vaccineCode>
         <coding>
-            <system value="2.16.840.1.113883.2.4.4.7"/>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
             <code value="2924528"/>
+            <display value="COVID-19 VACCIN PFIZER INJVLST 0,3ML"/>
         </coding>
     </vaccineCode>
     <!-- Referentie Patient -->

@@ -5,16 +5,35 @@
       <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
    </meta>
    <!-- FarmaceutischProduct -->
-   <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct" >
-      <valueReference >
+   <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct">
+      <valueReference>
          <reference value="Medication/imm-PharmaceuticalProduct-05_03"/>
       </valueReference>
    </extension>
    <identifier>
-      <value value="ABV3025"/>
+      <system value="urn:oid:2.16.528.1.1007.3.3.1234567.1"/>
+      <value value="54659"/>
    </identifier>
    <status value="completed"/>
+   <vaccineCode>
+      <coding>
+         <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+         <code value="2925508"/>
+         <display value="COVID-19 VACCIN ASTRAZENECA INJVLST"/>
+      </coding>
+   </vaccineCode>
+   <!-- Referentie Patient -->
+   <patient>
+      <reference value="Patient/imm-Patient-05"/>
+      <type value="Patient"/>
+      <display value="Patient, Helena Maria (Lena) van der Voorden-der Teeuwen"/>
+   </patient>
    <occurrenceDateTime value="2021-02-19T14:52:00+01:00"/>
+   <location>
+      <reference value="Location/imm-HealthcareProvider-05"/>
+      <type value="Location"/>
+      <display value="Dependance JF"/>
+   </location>
    <site>
       <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-AnatomicalLocation.Laterality">
          <valueCodeableConcept>
@@ -26,7 +45,9 @@
          </valueCodeableConcept>
       </extension>
       <coding>
-         <code value="bovenarm"/>
+         <system value="http://snomed.info/sct"/>
+         <code value="40983000"/>
+         <display value="bovenarm"/>
       </coding>
    </site>
    <route>
@@ -50,8 +71,8 @@
       </function>
       <!-- zorgverlener -->
       <actor>
-         <reference value="Organization/imm-HealthProfessional-PractitionerRole-01"/>
-         <type value="PractionorRole"/>
+         <reference value="PractionerRole/imm-HealthProfessional-PractitionerRole-05"/>
+         <type value="PractionerRole"/>
       </actor>
    </performer>
    <note>
@@ -93,6 +114,6 @@
             <display value="Aandoening door infectie door 'Severe acute respiratory syndrome'-coronavirus 2 (aandoening)"/>
          </coding>
       </targetDisease>
-      <doseNumber value="n/a"/>
+      <doseNumberString value="n/a"/>
    </protocolApplied>
 </Immunization>

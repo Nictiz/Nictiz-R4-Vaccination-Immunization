@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Medication xmlns="http://hl7.org/fhir">
-   <id value="imm-PharmaceuticalProduct-03_01"/>
+   <id value="imm-PharmaceuticalProduct-03_03"/>
    <meta>
       <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
    </meta>
@@ -19,6 +19,6 @@
       </coding>
    </form>
    <batch>
-      <lotNumber value="3002184"/>
+      <lotNumber value="018J21ABS"/>
    </batch>
 </Medication>

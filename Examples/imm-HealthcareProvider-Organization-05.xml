@@ -91,9 +91,6 @@
          <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
             <valueString value="A 02"/>
          </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
-            <valueString value="to"/>
-         </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID">
             <valueString value="Zorghuis JF"/>
          </extension>

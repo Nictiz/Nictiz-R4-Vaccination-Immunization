@@ -8,12 +8,17 @@
       <coding>
          <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
          <code value="2978636"/>
+         <display value="COVID-19 VACCIN MODERNA INJVLST 0,25ML"/>
       </coding>
    </code>
    <form>
       <coding>
          <system value="urn:oid:2.16.840.1.113883.2.4.4.11"/>
-         <code value="injectievloeistof"/>
+         <code value="76"/>
+         <display value="DISPERSIE VOOR INJECTIE"></display>
       </coding>
    </form>
+   <batch>
+      <lotNumber value="216036BS"/>
+   </batch>
 </Medication>

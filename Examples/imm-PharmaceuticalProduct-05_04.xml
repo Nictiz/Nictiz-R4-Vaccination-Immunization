@@ -8,12 +8,18 @@
       <coding>
          <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
          <code value="2924528"/>
+         <display value="COVID-19 VACCIN PFIZER INJVLST 0,3ML"/>
       </coding>
+      <text value="COVID-19 VACCIN PFIZER INJVLST 0,3ML"/>
    </code>
    <form>
       <coding>
          <system value="urn:oid:2.16.840.1.113883.2.4.4.11"/>
-         <code value="injectievloeistof"/>
+         <code value="76"/>
+         <display value="DISPERSIE VOOR INJECTIE"/>
       </coding>
    </form>
+   <batch>
+      <lotNumber value="PCA0021"/>
+   </batch>
 </Medication>

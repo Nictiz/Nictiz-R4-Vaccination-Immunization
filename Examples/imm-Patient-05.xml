@@ -110,9 +110,6 @@
          <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
             <valueString value="A Bis"/>
          </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
-            <valueString value="to"/>
-         </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID">
             <valueString value="Huize Zonneschijn"/>
          </extension>
@@ -153,9 +150,6 @@
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix">
             <valueString value="hs Bis"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
-            <valueString value="by"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-unitID">
             <valueString value="Huize Maneschijn"/>
