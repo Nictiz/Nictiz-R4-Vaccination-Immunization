@@ -23,7 +23,7 @@
     "canonicals": null,
     "dependencies": {
         "hl7.fhir.r4.core": "4.0.1",
-        "nictiz.fhir.nl.r4.zib2020": "0.7.0-beta1"
+        "nictiz.fhir.nl.r4.zib2020": "0.7.0-beta.1"
     },
     "fhirVersions": ["4.0.1"]
 }
