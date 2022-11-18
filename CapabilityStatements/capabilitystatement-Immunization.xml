@@ -3,7 +3,7 @@
     <id value="Immunization-ClientCapabilities"/>
     <url value="http://nictiz.nl/fhir/CapabilityStatement/Immunization-ClientCapabilities"/>
     <name value="Immunization_Clientcapabilities"/>
-    <status value="draft"/>
+    <status value="active"/>
     <date value="2022-03-04"/>
     <publisher value="Nictiz"/>
     <contact>
