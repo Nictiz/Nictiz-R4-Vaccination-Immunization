@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <id value="Immunization-ClientCapabilities"/>
-    <url value="http://nictiz.nl/fhir/CapabilityStatement/Immunization-ClientCapabilities"/>
-    <name value="Immunization_Clientcapabilities"/>
+    <id value="imm-RetrieveServe"/>
+    <url value="http://nictiz.nl/fhir/CapabilityStatement/imm-RetrieveServe"/>
+    <version value="1.0.0"/>
+    <name value="ImmRetrieveServe"/>
+    <title value="imm RetrieveServe"/>
     <status value="active"/>
-    <date value="2022-03-04"/>
+    <date value="2022-11-19"/>
     <publisher value="Nictiz"/>
     <contact>
         <name value="Nictiz"/>
         <telecom>
-            <system value="email"/>
-            <value value="info@nictiz.nl"/>
+            <system value="url"/>
+            <value value="https://www.nictiz.nl"/>
             <use value="work"/>
         </telecom>
     </contact>
-    <description value="This CapabilityStatement describes the minimal requirements for a client to fulfill the Immunization use cases for exchanging information with healthcare professionals and healtcare provider."/>
+    <description value="This CapabilityStatement describes the minimal requirements for a client/server to fulfill the Vaccination-Immunization use case 'Retrieve vaccinations'."/>
+    <purpose value="This CapabilityStatement is informative in nature and does not represent the minimum or maximum set of capabilities the client or server should support. The aim is to design the CapabilityStatement as complete as possible, however for the exact set of capabilities the implementation guide of the corresponding information standard should be consulted."/>
     <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
     <kind value="requirements"/>
     <fhirVersion value="4.0.1"/>
