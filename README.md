@@ -1,6 +1,6 @@
 # Nictiz-R4-Vaccination-Immunization
 
-This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for the information standard [Vaccination-Immunization](https://informatiestandaarden.nictiz.nl/wiki/MedMij:V6/Ontwerp_Vaccinatie-Immunisatie).
+This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for the information standard [Vaccination-Immunization](https://informatiestandaarden.nictiz.nl/wiki/imm:Landingspagina_Vaccinatie_Immunisatie).
 
 This repository is maintained by the Dutch National Institute for ICT in Healthcare (Nictiz).
 
