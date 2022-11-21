@@ -2,11 +2,11 @@
 <CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <id value="imm-RetrieveServe"/>
     <url value="http://nictiz.nl/fhir/CapabilityStatement/imm-RetrieveServe"/>
-    <version value="1.0.0"/>
+    <version value="1.0.0-rc.1"/>
     <name value="ImmRetrieveServe"/>
     <title value="imm RetrieveServe"/>
     <status value="active"/>
-    <date value="2022-11-19"/>
+    <date value="2022-11-21"/>
     <publisher value="Nictiz"/>
     <contact>
         <name value="Nictiz"/>
