@@ -1,0 +1,13 @@
+main branch: origin/main
+ignored issues: known-issues.yml
+igs:
+  - resources
+  - nictiz.fhir.nl.r4.nl-core#0.7.0-beta.1
+
+patterns:
+  CapabilityStatements: resources/CapabilityStatement-*.xml
+
+steps:
+  validate CapabilityStatements:
+    description: Validate all CapabilityStatements
+    patterns: CapabilityStatements

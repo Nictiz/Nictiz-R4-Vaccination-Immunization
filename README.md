@@ -1,15 +1,17 @@
-# Nictiz-R4-Immunization
+# Nictiz-R4-Vaccination-Immunization
 
-This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for the information standard [Immunization](https://informatiestandaarden.nictiz.nl/wiki/Immu:V0.1_Ontwerpen).
+This repository contains HL7 FHIR R4 compliant profiles and related conformance materials for the information standard [Vaccination-Immunization](https://informatiestandaarden.nictiz.nl/wiki/imm:Landingspagina_Vaccinatie_Immunisatie).
 
-This repository has a dependency on the [zib2020 package](https://simplifier.net/Nictiz-R4-zib2020/~packages).
-
-This repository is maintained by the Dutch National Intitute for ICT in Healthcare (Nictiz).
+This repository is maintained by the Dutch National Institute for ICT in Healthcare (Nictiz).
 
 ## Official releases
 
-Resources in this repository should be considered unstable and not suited for immediate implementation. Stable versions will be released using the FHIR package mechanism on [Simplifier](https://simplifier.net/packages). At the moment, no stable package has been released for the current project.
+Stable versions will be released using the FHIR package mechanism on [Simplifier](https://simplifier.net/packages).
 
 ## Profiling guidelines
 
 The profiling guidelines for this project can be found at the [informatiestandaarden wiki](http://informatiestandaarden.nictiz.nl/wiki/FHIR:V1.0_FHIR_Profiling_Guidelines_R4).
+
+## Dependencies
+
+This repository has a dependency on the [R4 nl-core package](https://simplifier.net/packages/nictiz.fhir.nl.r4.nl-core).
