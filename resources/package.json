@@ -1,6 +1,6 @@
 {
     "name": "nictiz.fhir.nl.r4.vaccinationimmunization",
-    "version": "1.0.0-rc.1",
+    "version": "1.0.3",
     "homepage": "https://informatiestandaarden.nictiz.nl/wiki/imm:Landingspagina_Vaccinatie_Immunisatie",
     "title": "FHIR Implementation of Vaccination-Immunization",
     "description": "NL package of FHIR R4 conformance resources for Vaccination-Immunization.",
