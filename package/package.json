@@ -1,30 +1,30 @@
 {
-    "name": "nictiz.fhir.nl.r4.vaccinationimmunization",
-    "version": "2.0.0-beta.1",
-    "homepage": "https://informatiestandaarden.nictiz.nl/wiki/imm:Landingspagina_Vaccinatie_Immunisatie",
-    "title": "FHIR Implementation of Vaccination-Immunization",
-    "description": "NL package of FHIR R4 conformance resources for Vaccination-Immunization.",
-        "dependencies": {
-        "nictiz.fhir.nl.r4.nl-core": "0.10.0-beta.1",
-        "hl7.fhir.r4.core": "4.0.1"
-    },
-    "keywords": [
-        "nl",
-        "Nictiz",
-        "Vaccination-Immunization",
-        "Vaccination",
-        "Immunization",
-        "Vaccinatie-Immunisatie",
-        "Vaccinatie",
-        "Immunisatie",
-        "MedMij"
-    ],
-    "author": "Nictiz",
-    "maintainers": [
-        {
-            "name": "Nictiz",
-            "url": "https://www.nictiz.nl"
-        }
-    ],
-    "license": "CC0-1.0"
+  "name": "nictiz.fhir.nl.r4.vaccinationimmunization",
+  "version": "2.0.0-beta.1",
+  "description": "NL package of FHIR R4 conformance resources for Vaccination-Immunization.",
+  "author": "Nictiz",
+  "dependencies": {
+    "nictiz.fhir.nl.r4.nl-core": "0.10.0-beta.1",
+    "hl7.fhir.r4.core": "4.0.1",
+    "nictiz.fhir.nl.r4.medicationprocess9": "2.0.0-beta.5"
+  },
+  "keywords": [
+    "nl",
+    "Nictiz",
+    "Vaccination-Immunization",
+    "Vaccination",
+    "Immunization",
+    "Vaccinatie-Immunisatie",
+    "Vaccinatie",
+    "Immunisatie",
+    "MedMij"
+  ],
+  "license": "CC0-1.0",
+  "homepage": "https://informatiestandaarden.nictiz.nl/wiki/imm:Landingspagina_Vaccinatie_Immunisatie",
+  "title": "FHIR Implementation of Vaccination-Immunization",
+  "maintainers": [
+    {
+      "name": "Nictiz"
+    }
+  ]
 }
