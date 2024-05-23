@@ -50,7 +50,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/imm-ext-Vaccination.PharmaceuticalProduct" />
       </type>
     </element>
     <element id="Immunization.extension:pharmaceuticalProduct.value[x]">
@@ -76,15 +76,15 @@
     </element>
     <element id="Immunization.vaccineCode">
       <path value="Immunization.vaccineCode" />
-      <comment value="It is possible to use a reference to zib PharmaceuticalProduct to identify the used vaccine, using `Immunization.extension:pharmaceuticalProduct`. If this reference is used, `Immunization.vaccineCode` SHALL contain the same value as the MedicationCode (`Medication.code`) in the referenced resource." />
+      <comment value="It is possible to use a reference to imm PharmaceuticalProduct to identify the used vaccine, using `Immunization.extension:pharmaceuticalProduct`. If this reference is used, `Immunization.vaccineCode` SHALL contain the same value as the MedicationCode (`Medication.code`) in the referenced resource." />
       <binding>
         <strength value="extensible" />
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.131.11.7--20240507084413" />
       </binding>
       <mapping>
-        <identity value="zib-pharmaceuticalproduct-v2.1.2-2020EN" />
-        <map value="NL-CM:9.7.19927" />
-        <comment value="MedicationCode" />
+        <identity value="imm-Vaccination-Immunization-20211118" />
+        <map value="imm-dataelement-318" />
+        <comment value="ProductCode" />
       </mapping>
     </element>
     <element id="Immunization.patient">
