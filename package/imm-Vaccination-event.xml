@@ -56,7 +56,7 @@
     <element id="Immunization.extension:pharmaceuticalProduct.value[x]">
       <path value="Immunization.extension.value[x]" />
       <definition value="The pharmaceutical product of the administered vaccination." />
-      <comment value="If this reference to zib PharmaceuticalProduct is used, the MedicationCode (`Medication.code`) in the referenced resource SHALL be the same as `Immunization.vaccineCode` of the current resource." />
+      <comment value="If this reference to ImmPharmaceuticalProduct is used, the MedicationCode (`Medication.code`) in the referenced resource SHALL be the same as `Immunization.vaccineCode` of the current resource." />
     </element>
     <element id="Immunization.identifier">
       <path value="Immunization.identifier" />
