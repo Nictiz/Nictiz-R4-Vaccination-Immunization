@@ -102,6 +102,14 @@
         <comment value="Patient" />
       </mapping>
     </element>
+    <element id="Immunization.occurrence[x]">
+      <path value="Immunization.occurrence[x]" />
+      <mapping>
+        <identity value="imm-Vaccination-Immunization-20211118" />
+        <map value="imm-dataelement-292" />
+        <comment value="VaccineDate" />
+      </mapping>
+    </element>
     <element id="Immunization.location">
       <path value="Immunization.location" />
       <definition value="The healthcare center where the vaccination is or or will be carried out." />
@@ -134,6 +142,14 @@
         <identity value="imm-Vaccination-Immunization-20211118" />
         <map value="imm-dataelement-143" />
         <comment value="RouteOfAdministration" />
+      </mapping>
+    </element>
+    <element id="Immunization.doseQuantity">
+      <path value="Immunization.doseQuantity" />
+      <mapping>
+        <identity value="imm-Vaccination-Immunization-20211118" />
+        <map value="imm-dataelement-291" />
+        <comment value="Dose" />
       </mapping>
     </element>
     <element id="Immunization.performer">
@@ -171,6 +187,14 @@
         <identity value="imm-Vaccination-Immunization-20211118" />
         <map value="imm-dataelement-192" />
         <comment value="HealthProfessional" />
+      </mapping>
+    </element>
+    <element id="Immunization.note">
+      <path value="Immunization.note" />
+      <mapping>
+        <identity value="imm-Vaccination-Immunization-20211118" />
+        <map value="imm-dataelement-293" />
+        <comment value="Note" />
       </mapping>
     </element>
     <element id="Immunization.reasonCode">
