@@ -105,9 +105,9 @@
     <element id="Immunization.occurrence[x]">
       <path value="Immunization.occurrence[x]" />
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
-        <map value="imm-dataelement-292" />
-        <comment value="VaccineDate" />
+        <identity value="zib-vaccination-v4.0-2020EN" />
+        <map value="NL-CM:11.1.3" />
+        <comment value="VaccinationDate" />
       </mapping>
     </element>
     <element id="Immunization.location">
@@ -147,8 +147,8 @@
     <element id="Immunization.doseQuantity">
       <path value="Immunization.doseQuantity" />
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
-        <map value="imm-dataelement-291" />
+        <identity value="zib-vaccination-v4.0-2020EN" />
+        <map value="NL-CM:11.1.4" />
         <comment value="Dose" />
       </mapping>
     </element>
@@ -189,12 +189,12 @@
         <comment value="HealthProfessional" />
       </mapping>
     </element>
-    <element id="Immunization.note">
-      <path value="Immunization.note" />
+    <element id="Immunization.note.text">
+      <path value="Immunization.note.text" />
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
-        <map value="imm-dataelement-293" />
-        <comment value="Note" />
+        <identity value="zib-vaccination-v4.0-2020EN" />
+        <map value="NL-CM:11.1.7" />
+        <comment value="Comment" />
       </mapping>
     </element>
     <element id="Immunization.reasonCode">
