@@ -131,7 +131,9 @@
     </element>
     <element id="Immunization.site">
       <path value="Immunization.site" />
+      <short value="AnatomicalLocation" />
       <alias value="AnatomischeLocatie" />
+      <alias value="Location" />
       <type>
         <code value="CodeableConcept" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AnatomicalLocation" />
@@ -140,6 +142,11 @@
         <strength value="extensible" />
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20200901000000" />
       </binding>
+      <mapping>
+        <identity value="imm-Vaccination-Immunization-20211118" />
+        <map value="imm-dataelement-140" />
+        <comment value="AnatomicalLocation" />
+      </mapping>
     </element>
     <element id="Immunization.route">
       <path value="Immunization.route" />

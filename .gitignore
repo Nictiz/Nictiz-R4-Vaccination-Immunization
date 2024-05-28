@@ -1,1 +1,3 @@
 resources/fhirpkg.lock.json
+/package/.simplifier/folder.settings.json
+/package/fhirpkg.lock.json
