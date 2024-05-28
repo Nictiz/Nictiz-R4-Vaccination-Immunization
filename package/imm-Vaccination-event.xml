@@ -50,7 +50,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/imm-ext-Vaccination.PharmaceuticalProduct" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-imm-Vaccination.PharmaceuticalProduct" />
       </type>
     </element>
     <element id="Immunization.extension:pharmaceuticalProduct.value[x]">
