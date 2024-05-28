@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://nictiz.nl/fhir/StructureDefinition/imm-ext-Vaccination.PharmaceuticalProduct" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/ext-imm-Vaccination.PharmaceuticalProduct" />
   <version value="2.0.0-beta.1" />
-  <name value="ImmExtVaccinationPharmaceuticalProduct" />
-  <title value="imm ext Vaccination.PharmaceuticalProduct" />
+  <name value="ExtImmVaccinationPharmaceuticalProduct" />
+  <title value="ext imm Vaccination.PharmaceuticalProduct" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -34,7 +34,7 @@
   <differential>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/imm-ext-Vaccination.PharmaceuticalProduct" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/ext-imm-Vaccination.PharmaceuticalProduct" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
