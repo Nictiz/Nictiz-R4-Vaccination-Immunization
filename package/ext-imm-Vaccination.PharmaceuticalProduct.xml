@@ -46,7 +46,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/imm-PharmaceuticalProduct" />
       </type>
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
+        <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-317" />
         <comment value="PharmaceuticalProduct" />
       </mapping>

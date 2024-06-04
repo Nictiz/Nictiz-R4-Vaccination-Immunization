@@ -60,7 +60,7 @@
     <element id="Immunization.identifier">
       <path value="Immunization.identifier" />
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
+        <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-135" />
         <comment value="IdentificationNumber" />
       </mapping>
@@ -69,7 +69,7 @@
       <path value="Immunization.status" />
       <alias value="StatusToediening" />
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
+        <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-315" />
         <comment value="Status" />
       </mapping>
@@ -83,7 +83,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.131.11.7--20240507084413" />
       </binding>
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
+        <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-318" />
         <comment value="ProductCode" />
       </mapping>
@@ -98,7 +98,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
       </type>
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
+        <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-71" />
         <comment value="Patient" />
       </mapping>
@@ -123,7 +123,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider" />
       </type>
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
+        <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-262" />
         <comment value="HealthcareProvider" />
       </mapping>
@@ -142,7 +142,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20200901000000" />
       </binding>
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
+        <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-140" />
         <comment value="AnatomicalLocation" />
       </mapping>
@@ -151,7 +151,7 @@
       <path value="Immunization.route" />
       <alias value="Toedieningsweg" />
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
+        <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-143" />
         <comment value="RouteOfAdministration" />
       </mapping>
@@ -193,12 +193,12 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
       </type>
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
+        <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-163" />
         <comment value="HealthcareProvider" />
       </mapping>
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
+        <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-192" />
         <comment value="HealthProfessional" />
       </mapping>
@@ -233,7 +233,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.131.11.4--20220301181306" />
       </binding>
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
+        <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-160" />
         <comment value="VaccinationIndication" />
       </mapping>
@@ -249,7 +249,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.131.11.2--20220301153357" />
       </binding>
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
+        <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-158" />
         <comment value="VaccinationMotive" />
       </mapping>
@@ -275,7 +275,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.131.11.3--20220301175614" />
       </binding>
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
+        <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-159" />
         <comment value="VaccinationPathogen" />
       </mapping>

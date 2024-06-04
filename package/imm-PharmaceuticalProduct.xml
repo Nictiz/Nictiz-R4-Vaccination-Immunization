@@ -48,7 +48,7 @@
     <element id="Medication">
       <path value="Medication" />
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
+        <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-317" />
         <comment value="PharmaceuticalProduct" />
       </mapping>
@@ -60,12 +60,12 @@
       <alias value="IdentificationNumber" />
       <alias value="Identificatienummer" />
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
+        <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-146" />
         <comment value="SerialNumber" />
       </mapping>
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
+        <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-135" />
         <comment value="IdentificationNumber" />
       </mapping>
@@ -78,7 +78,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.131.11.7--20240507084413" />
       </binding>
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
+        <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-318" />
         <comment value="ProductCode" />
       </mapping>
@@ -88,7 +88,7 @@
       <short value="Batch/lotNumber" />
       <alias value="Batch/lotNummer" />
       <mapping>
-        <identity value="imm-Vaccination-Immunization-20211118" />
+        <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-145" />
         <comment value="Batch/lotNumber" />
       </mapping>
