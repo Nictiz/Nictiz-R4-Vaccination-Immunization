@@ -1,0 +1,84 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.4.642.3.295--20221207092123"/>
+    <meta>
+        <lastUpdated value="2024-04-18T08:32:49Z"/>
+        <source value="http://decor.nictiz.nl/fhir/4.0/imm-"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/><!--<profile value="http://hl7.org/fhir/4.0/StructureDefinition/ValueSet"/>-->
+        <tag>
+            <system value="http://hl7.org/fhir/FHIR-version"/>
+            <code value="4.0.1"/>
+        </tag>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2022-12-07T09:21:23Z"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://hl7.org/fhir/ValueSet/immunization-status"/>
+    <identifier>
+        <use value="official"/>
+        <system value="urn:ietf:rfc:3986"/>
+        <value value="urn:oid:2.16.840.1.113883.4.642.3.295"/>
+    </identifier>
+    <version value="2022-12-07T09:21:23"/>
+    <name value="ImmunizationStatusCodes"/>
+    <title value="Immunization Status Codes"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Nictiz"/>
+    <description value="Immunization Status Codes"/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="http://hl7.org/fhir/event-status"/>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="The event has now concluded."/>
+                </extension>
+                <code value="completed"/>
+                <display value="Completed"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Voltooid"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="This electronic record should never have existed, though it is possible that real-world decisions were based on it. (If real-world activity has occurred, the status should be &#34;stopped&#34; rather than &#34;entered-in-error&#34;.)."/>
+                </extension>
+                <code value="entered-in-error"/>
+                <display value="Entered in Error"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Afgebroken"/>
+                </designation>
+            </concept>
+            <concept>
+                <extension url="http://hl7.org/fhir/StructureDefinition/valueset-concept-comments">
+                    <valueString value="The event was terminated prior to any activity beyond preparation. I.e. The 'main' activity has not yet begun. The boundary between preparatory and the 'main' activity is context-specific."/>
+                </extension>
+                <code value="not-done"/>
+                <display value="Not Done"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Niet gedaan"/>
+                </designation>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>
