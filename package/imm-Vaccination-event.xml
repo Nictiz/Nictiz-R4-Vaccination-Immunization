@@ -59,6 +59,9 @@
     </element>
     <element id="Immunization.identifier">
       <path value="Immunization.identifier" />
+      <short value="IdentificationNumber" />
+      <definition value="Globally unique number that identifies the instantiation of the information model. The number is composed of an identification of the issuer organization and a unique number assigned by this organization." />
+      <alias value="Identificatienummer" />
       <mapping>
         <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-135" />
@@ -67,15 +70,19 @@
     </element>
     <element id="Immunization.status">
       <path value="Immunization.status" />
+      <short value="AdministrationStatus" />
+      <comment value="This element has no functional counterpart in the zib and cannot be implicitly mapped to other concepts. Unless a more appropriate status is recorded, it is assumed that only completed Immunization resources will be exchanged." />
       <alias value="StatusToediening" />
       <mapping>
         <identity value="imm-dataset-200-alpha3-20240604" />
         <map value="imm-dataelement-315" />
-        <comment value="Status" />
+        <comment value="AdministrationStatus" />
       </mapping>
     </element>
     <element id="Immunization.vaccineCode">
       <path value="Immunization.vaccineCode" />
+      <short value="ProductCode" />
+      <definition value="The product code of the vaccine administered. There are several possible code systems for documenting the product code. If the vaccination data is registered based on an anamnesis, coding with the ATC code is preferred. In all cases it concerns those products that fall under ATC group J07 (vaccines)." />
       <comment value="It is possible to use a reference to imm PharmaceuticalProduct to identify the used vaccine, using `Immunization.extension:pharmaceuticalProduct`. If this reference is used, `Immunization.vaccineCode` SHALL contain the same value as the MedicationCode (`Medication.code`) in the referenced resource." />
       <alias value="ProductCode" />
       <binding>
@@ -105,10 +112,30 @@
     </element>
     <element id="Immunization.occurrence[x]">
       <path value="Immunization.occurrence[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Immunization.occurrence[x]:occurrenceDateTime">
+      <path value="Immunization.occurrence[x]" />
+      <sliceName value="occurrenceDateTime" />
+      <short value="VaccinationDate" />
       <alias value="VaccinatieDatum" />
+      <type>
+        <code value="dateTime" />
+      </type>
       <mapping>
         <identity value="zib-vaccination-v4.0-2020EN" />
         <map value="NL-CM:11.1.3" />
+        <comment value="VaccinationDate" />
+      </mapping>
+      <mapping>
+        <identity value="imm-dataset-200-alpha3-20240604" />
+        <map value="imm-dataelement-292" />
         <comment value="VaccinationDate" />
       </mapping>
     </element>
