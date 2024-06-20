@@ -15,7 +15,8 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="An extension to refer to imm PharmaceuticalProduct from an imm Immunization resource." />
+  <description value="An extension to refer to PharmaceuticalProduct from an Immunization resource." />
+  <purpose value="This extension is based on the [ext Vaccination.PharmaceuticalProduct extension](http://nictiz.nl/fhir/StructureDefinition/ext-Vaccination.PharmaceuticalProduct) but has no dependency on the corresponding profile because it contains non-compatible changes to make it suitable for implementations following the information standard [Vaccination-Immunization](https://informatiestandaarden.nictiz.nl/wiki/imm:Landingspagina_Vaccinatie_Immunisatie)" />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>

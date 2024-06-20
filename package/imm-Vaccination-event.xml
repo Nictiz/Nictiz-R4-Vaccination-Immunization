@@ -15,7 +15,7 @@
     </telecom>
   </contact>
   <description value="Immunization can be defined as “Generating natural immunity against pathogens by means of vaccination (active immunization) or by administering immunoglobulins (passive immunization)”.&#xD;&#xA;&#xD;&#xA;Only the (administered and planned) vaccinations are included in this information model. Administering immunoglobulins is part of the medication overview. Vaccinations have lifelong relevance.&#xD;&#xA;&#xD;&#xA;Most vaccinations are carried out in the Netherlands as part of the RVP (Rijksvaccinatieprogramma, National Immunisation Program). RVP information is especially important for children.&#xD;&#xA;&#xD;&#xA;Vaccinations are also relevant for adult patients such as transplant patients, dialysis patients and patients with a post-splenectomy status. In addition, there are specific indications for the vaccination of risk groups, such as travelers, professionals who come into contact with blood or patients with wounds, weakened immune systems or heightened risk." />
-  <purpose value="&lt;TO DO&gt;" />
+  <purpose value="This Immunization resource represents the Vaccination building block for implementations following the information standard [Vaccination-Immunization](https://informatiestandaarden.nictiz.nl/wiki/imm:Landingspagina_Vaccinatie_Immunisatie). This profile is based on the Dutch zib (&amp;#39;Zorginformatiebouwsteen&amp;#39;, i.e. Health and Care Information Model) Immunization, but has no dependency on the corresponding nl-core profile because it contains non-compatible changes. Where compatible, mappings to zib concepts are defined. Additional concepts or concepts that are not compatible with their zib counterparts contain a mapping to the Vaccination-Immunization data set." />
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -28,11 +28,6 @@
     <uri value="https://zibs.nl/wiki/Vaccination-v4.0(2020EN)" />
     <name value="zib Vaccination-v4.0(2020EN)" />
   </mapping>
-  <mapping>
-    <identity value="zib-pharmaceuticalproduct-v2.1.2-2020EN" />
-    <uri value="https://zibs.nl/wiki/PharmaceuticalProduct-v2.1.2(2020EN)" />
-    <name value="zib PharmaceuticalProduct-v2.1.2(2020EN)" />
-  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Immunization" />
@@ -41,7 +36,7 @@
   <differential>
     <element id="Immunization">
       <path value="Immunization" />
-      <comment value="&lt;TO DO&gt;&#xD;&#xA;&#xD;&#xA;Please note that, contrary to the related zib concepts, `.vaccineCode` and `.occurrence[x]` are mandatory in FHIR and need to be recorded to exchange Immunization resources." />
+      <comment value="All administered vaccinations are covered using this Immunization profile, while all planned vaccinations are covered in the ImmunizationRecommendation (http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-request) profile.&#xD;&#xA;&#xD;&#xA;Please note that, contrary to the related zib concepts, `.vaccineCode` and `.occurrence[x]` are mandatory in FHIR and need to be recorded to exchange Immunization resources." />
     </element>
     <element id="Immunization.extension:pharmaceuticalProduct">
       <path value="Immunization.extension" />
@@ -82,7 +77,7 @@
     <element id="Immunization.vaccineCode">
       <path value="Immunization.vaccineCode" />
       <short value="ProductCode" />
-      <definition value="The product code of the vaccine administered. There are several possible code systems for documenting the product code. If the vaccination data is registered based on an anamnesis, coding with the ATC code is preferred. In all cases it concerns those products that fall under ATC group J07 (vaccines)." />
+      <definition value="Coding medication in the Netherlands is done on the basis of the G-standaard (issued by Z-index), which is filled under the direction of Royal Dutch Pharmacists Association (KNMP). The coded medication can be expressed as:&#xD;&#xA;&#xD;&#xA;ZI number&#xD;&#xA;&#xD;&#xA;Trade product code (HPK)&#xD;&#xA;&#xD;&#xA;Prescription code (PRK)&#xD;&#xA;&#xD;&#xA;Generic product code (GPK)&#xD;&#xA;&#xD;&#xA;SNOMED CT code&#xD;&#xA;&#xD;&#xA;The ZI number represents the trade product and the package size. The HPK is the trade product as registered and marketed by the manufacturer.The PRK contains all GPK information supplemented with information needed to prescribe the right product. This level is intended to facilitate generic prescription of drugs. The GPK defines the pharmaceutical characteristics of a product: ingredients, strengths, units, pharmaceutical form and route of administration.Further information about the G-Standaard levels see https://www.z-index.nl.So-called 90.000.000 numbers are used in local IT systems. The 90.000.000 number is used in accordance with national agreements.&#xD;&#xA;&#xD;&#xA;SNOMED CT can be used as an alternative coding for a pharmaceutical product, for example it is used to describe the vaccinations from the Dutch National Immunisation Programme more generically based on the combination of substances (for example DKTP vaccine). With historical vaccines, a G-Standaard code is not always present, but it is recommended to record it for current processing. The SNOMED CT code for the same product can also be registered as an alternative." />
       <comment value="It is possible to use a reference to imm PharmaceuticalProduct to identify the used vaccine, using `Immunization.extension:pharmaceuticalProduct`. If this reference is used, `Immunization.vaccineCode` SHALL contain the same value as the MedicationCode (`Medication.code`) in the referenced resource." />
       <alias value="ProductCode" />
       <binding>
@@ -141,7 +136,8 @@
     </element>
     <element id="Immunization.location">
       <path value="Immunization.location" />
-      <definition value="The healthcare center where the vaccination is or or will be carried out." />
+      <short value="Location" />
+      <definition value="hysical location where the vaccination is or will be carried out." />
       <comment value="Concept HealthcareProvider (imm-dataelement-262) is mapped to both `.location` and `.performer:administrator.actor`, to represent respectively the location where the vaccination was delivered (using [nl-core-HealthcareProvider](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider)) and the organization that delivered the vaccination (using [nl-core-HealthcareProvider-Organization](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization))." />
       <alias value="Locatie" />
       <type>
@@ -176,6 +172,8 @@
     </element>
     <element id="Immunization.route">
       <path value="Immunization.route" />
+      <short value="RouteOfAdministration" />
+      <definition value="The route by which the vaccine is came into the body." />
       <alias value="Toedieningsweg" />
       <mapping>
         <identity value="imm-dataset-200-alpha3-20240604" />
@@ -201,6 +199,14 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <short value="Performer" />
+      <definition value="The healthcare provider and/or organization where or by whom the vaccination was done or will be done." />
+      <alias value="Toediener" />
+      <mapping>
+        <identity value="imm-dataset-200-alpha3-20240604" />
+        <map value="imm-dataelement-130" />
+        <comment value="Performer" />
+      </mapping>
     </element>
     <element id="Immunization.performer:administrator">
       <path value="Immunization.performer" />
@@ -209,7 +215,6 @@
     <element id="Immunization.performer:administrator.actor">
       <path value="Immunization.performer.actor" />
       <comment value="Each occurrence of the zib HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [nl-core-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [nl-core-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.&#xD;&#xA;&#xD;&#xA;In rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the zib-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile.&#xD;&#xA;&#xD;&#xA;Concept HealthcareProvider (imm-dataelement-262) is mapped to both `.location` and `.performer:administrator.actor`, to represent respectively the location where the vaccination was delivered (using [nl-core-HealthcareProvider](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider)) and the organization that delivered the vaccination (using [nl-core-HealthcareProvider-Organization](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization))." />
-      <alias value="Toediener" />
       <type>
         <code value="Reference" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
@@ -232,10 +237,16 @@
     </element>
     <element id="Immunization.note.text">
       <path value="Immunization.note.text" />
+      <short value="Comment" />
       <alias value="Toelichting" />
       <mapping>
         <identity value="zib-vaccination-v4.0-2020EN" />
         <map value="NL-CM:11.1.7" />
+        <comment value="Comment" />
+      </mapping>
+      <mapping>
+        <identity value="imm-dataset-200-alpha3-20240604" />
+        <map value="imm-dataelement-293" />
         <comment value="Comment" />
       </mapping>
     </element>
@@ -306,10 +317,6 @@
         <map value="imm-dataelement-159" />
         <comment value="VaccinationPathogen" />
       </mapping>
-    </element>
-    <element id="Immunization.protocolApplied.doseNumber[x]">
-      <path value="Immunization.protocolApplied.doseNumber[x]" />
-      <comment value="The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose). If a value is unknown use string 'n/a' (without the quotes)." />
     </element>
   </differential>
 </StructureDefinition>
