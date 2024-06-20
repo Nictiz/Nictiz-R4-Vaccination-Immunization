@@ -120,6 +120,7 @@
       <path value="Immunization.occurrence[x]" />
       <sliceName value="occurrenceDateTime" />
       <short value="VaccinationDate" />
+      <definition value="Date (and if possible time) that the vaccine was or will be administered. In the case of a planned re-vaccination, a vague date (month, year) is allowed (Clinical reminder). If a planned vaccination cannot be administered before a certain date, the date stated (vague or not) must indicate this." />
       <alias value="VaccinatieDatum" />
       <type>
         <code value="dateTime" />
@@ -138,7 +139,7 @@
     <element id="Immunization.location">
       <path value="Immunization.location" />
       <short value="Location" />
-      <definition value="hysical location where the vaccination is or will be carried out." />
+      <definition value="Physical location where the vaccination is or will be carried out." />
       <comment value="Concept HealthcareProvider (imm-dataelement-262) is mapped to both `.location` and `.performer:administrator.actor`, to represent respectively the location where the vaccination was delivered (using [nl-core-HealthcareProvider](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider)) and the organization that delivered the vaccination (using [nl-core-HealthcareProvider-Organization](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization))." />
       <alias value="Locatie" />
       <type>
@@ -184,10 +185,18 @@
     </element>
     <element id="Immunization.doseQuantity">
       <path value="Immunization.doseQuantity" />
+      <short value="Dose" />
+      <definition value="The amount of product administered shown in milliliters. In most cases, the entire product is administered; in some cases, a described part of the product is administered." />
+      <comment value="The definition of Dose deviates slightly from the definition in the zib Vaccination; the unit of measure is not limited to mL. This difference is according to the planned modifications in the zib (https://bits.nictiz.nl/browse/ZIB-1654)." />
       <alias value="Dosis" />
       <mapping>
         <identity value="zib-vaccination-v4.0-2020EN" />
         <map value="NL-CM:11.1.4" />
+        <comment value="Dose" />
+      </mapping>
+      <mapping>
+        <identity value="imm-dataset-200-alpha3-20240604" />
+        <map value="imm-dataelement-291" />
         <comment value="Dose" />
       </mapping>
     </element>
@@ -239,6 +248,7 @@
     <element id="Immunization.note.text">
       <path value="Immunization.note.text" />
       <short value="Comment" />
+      <definition value="Free text explanation.&#xD;&#xA;Examples of commonly used explanations are: - &quot;Vaccination according to the National Immunisation Program&quot;. - &quot;Not according to the National Immunisation Program&quot;, followed by further explanation. - &quot;Unknown&quot;" />
       <alias value="Toelichting" />
       <mapping>
         <identity value="zib-vaccination-v4.0-2020EN" />
@@ -265,7 +275,7 @@
       <path value="Immunization.reasonCode" />
       <sliceName value="vaccinationIndication" />
       <short value="VaccinationIndication" />
-      <definition value="Describes the person-specific characteristics why the immunization is administered to this patient (e.g. asplenia, immunosuppression or diabetes), net immunization advice." />
+      <definition value="Displays the trigger based on what the vaccine was administered." />
       <alias value="VaccinatieIndicatie" />
       <binding>
         <strength value="required" />
@@ -307,7 +317,7 @@
       <path value="Immunization.protocolApplied.targetDisease" />
       <sliceName value="targetDisease" />
       <short value="VaccinationPathogen" />
-      <definition value="The diseases or pathogens against which the vaccination is primarily given." />
+      <definition value="The disease or pathogeen against what the vaccination is primarily given." />
       <alias value="ZiekteWaarTegenGevaccineerdWordt" />
       <binding>
         <strength value="required" />
