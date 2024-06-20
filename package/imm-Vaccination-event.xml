@@ -66,6 +66,7 @@
     <element id="Immunization.status">
       <path value="Immunization.status" />
       <short value="AdministrationStatus" />
+      <definition value="Provides the administration status:&#xD;&#xA;* Not done: The event was terminated prior to any activity beyond preparation.&#xD;&#xA;* Entered in Error: This electronic record should never have existed, though it is possible that real-world decisions were based on it.&#xD;&#xA;* Completed: The event has now concluded." />
       <comment value="This element has no functional counterpart in the zib and cannot be implicitly mapped to other concepts. Unless a more appropriate status is recorded, it is assumed that only completed Immunization resources will be exchanged." />
       <alias value="StatusToediening" />
       <mapping>
