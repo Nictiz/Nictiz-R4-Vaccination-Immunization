@@ -2,11 +2,11 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="ext-imm-Vaccination.PharmaceuticalProduct" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/ext-imm-Vaccination.PharmaceuticalProduct" />
-  <version value="2.0.0-alpha.3" />
+  <version value="2.0.0-beta.1" />
   <name value="ExtImmVaccinationPharmaceuticalProduct" />
   <title value="ext imm Vaccination.PharmaceuticalProduct" />
   <status value="draft" />
-  <date value="2024-06-20" />
+  <date value="2024-07-25" />
   <publisher value="Nictiz" />
   <contact>
     <name value="Nictiz" />
