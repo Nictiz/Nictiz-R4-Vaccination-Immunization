@@ -54,6 +54,15 @@
         <comment value="PharmaceuticalProduct" />
       </mapping>
     </element>
+    <element id="Medication.extension:description.value[x]">
+      <path value="Medication.extension" />
+      <sliceName value="description" />
+      <mapping>
+        <identity value="zib-pharmaceuticalproduct-v2.1.2-2020EN" />
+        <map value="NL-CM:9.7.19784" />
+        <comment value="Description" />
+      </mapping>
+    </element>
     <element id="Medication.identifier">
       <path value="Medication.identifier" />
       <short value="SerialNumber" />
