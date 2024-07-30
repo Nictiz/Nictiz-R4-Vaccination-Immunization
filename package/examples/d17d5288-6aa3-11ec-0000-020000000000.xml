@@ -2,7 +2,7 @@
 <Immunization xmlns="http://hl7.org/fhir">
    <id value="d17d5288-6aa3-11ec-0000-020000000000"/>
    <meta>
-      <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
+      <profile value="http://nictiz.nl/fhir/StructureDefinition/imm-Vaccination-event"/>
    </meta>
    <identifier>
       <system value="2.16.840.1.113883.2.4.3.11.60.131.2"/>

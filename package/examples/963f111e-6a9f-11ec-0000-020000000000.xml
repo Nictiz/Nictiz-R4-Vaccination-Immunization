@@ -2,7 +2,7 @@
 <Immunization xmlns="http://hl7.org/fhir">
    <id value="963f111e-6a9f-11ec-0000-020000000000"/>
    <meta>
-      <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
+      <profile value="http://nictiz.nl/fhir/StructureDefinition/imm-Vaccination-event"/>
    </meta>
    <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-imm-Vaccination.PharmaceuticalProduct">
       <valueReference>

@@ -2,7 +2,7 @@
 <Medication xmlns="http://hl7.org/fhir">
    <id value="nl-core-PhPrd--21684011138832447-2924528"/>
    <meta>
-      <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
+      <profile value="http://nictiz.nl/fhir/StructureDefinition/imm-PharmaceuticalProduct"/>
    </meta>
    <code>
       <coding>
