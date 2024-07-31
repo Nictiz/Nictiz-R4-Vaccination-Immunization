@@ -6,7 +6,7 @@
   <name value="ExtImmVaccinationPharmaceuticalProduct" />
   <title value="ext imm Vaccination.PharmaceuticalProduct" />
   <status value="draft" />
-  <date value="2024-07-25" />
+  <date value="2024-07-29" />
   <publisher value="Nictiz" />
   <contact>
     <name value="Nictiz" />
@@ -21,9 +21,9 @@
   <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
   <fhirVersion value="4.0.1" />
   <mapping>
-    <identity value="imm-dataset-200-alpha3-20240604" />
-    <uri value="https://decor.nictiz.nl/pub/immunisatie/imm-html-20240604T065227/ds-2.16.840.1.113883.2.4.3.11.60.131.1.1-2021-11-18T100634.html" />
-    <name value="ART-DECOR Dataset Vaccination-Immunization 2.0.0-alpha.3 20240604" />
+    <identity value="imm-dataset-200-beta1-20240729" />
+    <uri value="https://decor.nictiz.nl/pub/immunisatie/imm-html-20240729T142005/ds-2.16.840.1.113883.2.4.3.11.60.131.1.1-2021-11-18T100634.html" />
+    <name value="ART-DECOR Dataset Vaccination-Immunization 2.0.0-beta.1 20240729" />
   </mapping>
   <kind value="complex-type" />
   <abstract value="false" />

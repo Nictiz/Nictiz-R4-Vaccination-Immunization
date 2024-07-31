@@ -6,7 +6,7 @@
     <name value="ImmRetrieveServe"/>
     <title value="imm RetrieveServe"/>
     <status value="draft"/>
-    <date value="2024-07-25"/>
+    <date value="2024-07-29"/>
     <publisher value="Nictiz"/>
     <contact>
         <name value="Nictiz"/>
@@ -27,7 +27,7 @@
         <mode value="client"/>
         <resource>
             <type value="Immunization"/>
-            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
+            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/imm-Vaccination-event"/>
             <interaction>
                 <code value="search-type"/>
             </interaction>
@@ -69,7 +69,7 @@
         </resource>
         <resource>
             <type value="Medication"/>
-            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
+            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/imm-PharmaceuticalProduct"/>
             <interaction>
                 <code value="read"/>
             </interaction>
@@ -79,7 +79,7 @@
         <mode value="server"/>
         <resource>
             <type value="Immunization"/>
-            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-event"/>
+            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/imm-Vaccination-event"/>
             <interaction>
                 <code value="search-type"/>
             </interaction>
@@ -108,7 +108,7 @@
         </resource>
         <resource>
             <type value="Medication"/>
-            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-PharmaceuticalProduct"/>
+            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/imm-PharmaceuticalProduct"/>
         </resource>
     </rest>
 </CapabilityStatement>
