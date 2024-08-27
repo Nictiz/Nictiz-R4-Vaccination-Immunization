@@ -49,7 +49,7 @@
     <element id="Medication">
       <path value="Medication" />
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-317" />
         <comment value="PharmaceuticalProduct" />
       </mapping>
@@ -69,7 +69,7 @@
       <definition value="The serial number uniquely identifies the source of information of the dose itself. The number is constructed according to the GS1 standard AI(21)." />
       <alias value="Serienummer" />
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-146" />
         <comment value="SerialNumber" />
       </mapping>
@@ -84,7 +84,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.131.11.7--20240507084413" />
       </binding>
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-318" />
         <comment value="ProductCode" />
       </mapping>
@@ -95,7 +95,7 @@
       <definition value="The batch/lot number provides a unique identification of the origin of information such as the production batch or machine number. The number is constructed according to the GS1 standard AI(10)." />
       <alias value="Batchnummer" />
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-145" />
         <comment value="Batch/lotNumber" />
       </mapping>

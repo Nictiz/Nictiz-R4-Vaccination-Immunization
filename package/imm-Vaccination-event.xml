@@ -59,7 +59,7 @@
       <definition value="Globally unique number that identifies the instantiation of the information model. The number is composed of an identification of the issuer organization and a unique number assigned by this organization." />
       <alias value="Identificatienummer" />
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-135" />
         <comment value="IdentificationNumber" />
       </mapping>
@@ -71,7 +71,7 @@
       <comment value="This element has no functional counterpart in the zib and cannot be implicitly mapped to other concepts. Unless a more appropriate status is recorded, it is assumed that only completed Immunization resources will be exchanged." />
       <alias value="StatusToediening" />
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-315" />
         <comment value="AdministrationStatus" />
       </mapping>
@@ -87,7 +87,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.131.11.7--20240507084413" />
       </binding>
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-318" />
         <comment value="ProductCode" />
       </mapping>
@@ -102,7 +102,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
       </type>
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-71" />
         <comment value="Patient" />
       </mapping>
@@ -132,7 +132,7 @@
         <comment value="VaccinationDate" />
       </mapping>
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-292" />
         <comment value="VaccinationDate" />
       </mapping>
@@ -141,7 +141,6 @@
       <path value="Immunization.location" />
       <short value="Location" />
       <definition value="Physical location where the vaccination is or will be carried out." />
-      <comment value="Concept HealthcareProvider (imm-dataelement-262) is mapped to both `.location` and `.performer:administrator.actor`, to represent respectively the location where the vaccination was delivered (using [nl-core-HealthcareProvider](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider)) and the organization that delivered the vaccination (using [nl-core-HealthcareProvider-Organization](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization))." />
       <alias value="Locatie" />
       <type>
         <code value="Reference" />
@@ -149,7 +148,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider" />
       </type>
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-262" />
         <comment value="HealthcareProvider" />
       </mapping>
@@ -168,7 +167,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20200901000000" />
       </binding>
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-140" />
         <comment value="AnatomicalLocation" />
       </mapping>
@@ -179,7 +178,7 @@
       <definition value="The route by which the vaccine is came into the body." />
       <alias value="Toedieningsweg" />
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-143" />
         <comment value="RouteOfAdministration" />
       </mapping>
@@ -196,7 +195,7 @@
         <comment value="Dose" />
       </mapping>
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-291" />
         <comment value="Dose" />
       </mapping>
@@ -205,43 +204,53 @@
       <path value="Immunization.performer" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="function" />
+          <type value="profile" />
+          <path value="actor.resolve()" />
         </discriminator>
         <rules value="open" />
       </slicing>
       <short value="Performer" />
       <definition value="The healthcare provider and/or organization where or by whom the vaccination was done or will be done." />
       <alias value="Toediener" />
+      <min value="1" />
+      <max value="1" />
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-130" />
         <comment value="Performer" />
       </mapping>
     </element>
-    <element id="Immunization.performer:administrator">
+    <element id="Immunization.performer:healthcareProvider">
       <path value="Immunization.performer" />
-      <sliceName value="administrator" />
+      <sliceName value="healthcareProvider" />
+      <max value="1" />
     </element>
-    <element id="Immunization.performer:administrator.actor">
+    <element id="Immunization.performer:healthcareProvider.actor">
       <path value="Immunization.performer.actor" />
-      <comment value="Each occurrence of the zib HealthProfessional is normally represented by _two_ FHIR resources: a PractitionerRole resource (instance of [nl-core-HealthProfessional-PractitionerRole](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole)) and a Practitioner resource (instance of [nl-core-HealthProfessional-Practitioner](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner)). The Practitioner resource is referenced from the PractitionerRole instance. For this reason, sending systems should fill the reference to the PractitionerRole instance here, and not the Practitioner resource. Receiving systems can then retrieve the reference to the Practitioner resource from that PractitionerRole instance.&#xD;&#xA;&#xD;&#xA;In rare circumstances, there is only a Practitioner instance, in which case it is that instance which will be referenced here. However, since this should be the exception, the zib-HealthProfessional-Practitioner profile is not explicitly mentioned as a target profile.&#xD;&#xA;&#xD;&#xA;Concept HealthcareProvider (imm-dataelement-262) is mapped to both `.location` and `.performer:administrator.actor`, to represent respectively the location where the vaccination was delivered (using [nl-core-HealthcareProvider](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider)) and the organization that delivered the vaccination (using [nl-core-HealthcareProvider-Organization](http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization))." />
       <type>
         <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
       </type>
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-163" />
         <comment value="HealthcareProvider" />
       </mapping>
+    </element>
+    <element id="Immunization.performer:healthProfessional">
+      <path value="Immunization.performer" />
+      <sliceName value="healthProfessional" />
+      <max value="1" />
+    </element>
+    <element id="Immunization.performer:healthProfessional.actor">
+      <path value="Immunization.performer.actor" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
+      </type>
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-192" />
         <comment value="HealthProfessional" />
       </mapping>
@@ -257,7 +266,7 @@
         <comment value="Comment" />
       </mapping>
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-293" />
         <comment value="Comment" />
       </mapping>
@@ -283,7 +292,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.131.11.4--20220301181306" />
       </binding>
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-160" />
         <comment value="VaccinationIndication" />
       </mapping>
@@ -299,7 +308,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.131.11.2--20220301153357" />
       </binding>
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-158" />
         <comment value="VaccinationMotive" />
       </mapping>
@@ -325,7 +334,7 @@
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.131.11.3--20220301175614" />
       </binding>
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-159" />
         <comment value="VaccinationPathogen" />
       </mapping>

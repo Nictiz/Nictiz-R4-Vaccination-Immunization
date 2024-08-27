@@ -3,7 +3,7 @@
   <id value="ext-imm-Vaccination.PharmaceuticalProduct" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/ext-imm-Vaccination.PharmaceuticalProduct" />
   <version value="2.0.0-beta.1" />
-  <name value="ExtImmVaccinationPharmaceuticalProduct" />
+  <name value="ExtimmVaccinationPharmaceuticalProduct" />
   <title value="ext imm Vaccination.PharmaceuticalProduct" />
   <status value="draft" />
   <date value="2024-07-29" />
@@ -48,7 +48,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/imm-PharmaceuticalProduct" />
       </type>
       <mapping>
-        <identity value="imm-dataset-200-alpha3-20240604" />
+        <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-317" />
         <comment value="PharmaceuticalProduct" />
       </mapping>
