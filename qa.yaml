@@ -4,10 +4,11 @@ igs:
   - package
   - nictiz.fhir.nl.r4.nl-core#0.10.0-beta.1
   - nictiz.fhir.nl.r4.medicationprocess9#2.0.0-beta.5
+script dir: qa/scripts
 
 patterns:
   CapabilityStatements: package/CapabilityStatement-*.xml
-  other profiles: package/*.xml
+  StructureDefinitions: package/*.xml
   terminology: package/terminology/*.xml
   examples: package/examples/*.xml
 
@@ -15,11 +16,11 @@ steps:
   validate CapabilityStatements:
     description: Validate all CapabilityStatements
     patterns: CapabilityStatements
-  validate other profiles:
-    description: Validate the remaining profiles using the generic profile for Nictiz FHIR R4 StructureDefinitions
-    patterns: other profiles
+  validate StructureDefinitions:
+    description: Validate profiles and extensions using the generic profile for Nictiz FHIR R4 StructureDefinitions
+    patterns: StructureDefinitions
     profile: "http://nictiz.nl/fhir/StructureDefinition/ProfilingGuidelinesR4-StructureDefinitions"
-  validate other terminology:
+  validate terminology:
     description: Validate the other terminology resources
     patterns: terminology
   validate examples:
@@ -28,6 +29,6 @@ steps:
   check resource ids:
     description: Check if the .id matches the name of the file
     patterns:
-      - other profiles
+      - StructureDefinitions
       - examples
     script: check-id.sh
