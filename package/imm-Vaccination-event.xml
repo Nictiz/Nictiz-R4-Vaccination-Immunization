@@ -212,7 +212,7 @@
       <short value="Performer" />
       <definition value="The healthcare provider and/or organization where or by whom the vaccination was done or will be done." />
       <alias value="Toediener" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <mapping>
         <identity value="imm-dataset-200-beta1-20240729" />
