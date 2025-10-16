@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="qa/fhirmapping.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<dataset>
+	<record>
+		<ID></ID>
+		<naam></naam>
+		<mapping></mapping>
+		<profile></profile>
+	</record>
+</dataset>
