@@ -27,7 +27,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
     
     
-    <xsl:variable name="fhirmapping-file" select="document('../../fhirmapping-vi.xml')"/>
+    <xsl:variable name="fhirmapping-file" select="document('../../fhirmapping-vi-previous.xml')"/>
     <xsl:key name="fhirmapping-lookup" match="dataset/record" use="ID"/>
     <xsl:key name="dataset-lookup" match="//concept" use="@iddisplay/string()"/>
     
@@ -44,7 +44,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
                 <xsl:apply-templates select="." mode="createRecords"/> 
             </xsl:for-each>
         </dataset>
-        <!--now loop over all <record> elements in the already existing fhirmapping-3-2.xml 
+        <!--now loop over all <record> elements in the already existing fhirmapping .xml 
             and emit a message if you don't find it in the source (i.e dataset) xml anymore-->
         <xsl:for-each select="$fhirmapping-file/dataset/record">
             <xsl:variable name="dataset-match" select="key('dataset-lookup', ID, $dataset)"/> 
