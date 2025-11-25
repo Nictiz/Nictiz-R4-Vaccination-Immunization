@@ -4,16 +4,18 @@
          id="2.16.840.1.113883.2.4.3.11.60.131.1.1"
          effectiveDate="2021-11-18T10:06:34"
          statusCode="draft"
-         lastModifiedDate="2025-03-21T15:10:44"
+         lastModifiedDate="2025-11-06T14:30:40"
          prefix="imm-"
          shortName="vaccinatieimmunisatie"
          iddisplay="imm-dataset-1"
          url="http://decor.nictiz.nl/decor/services/"
          ident="imm-"
-         inheritanceIssues="15">
+         inheritanceIssues="24">
    <record>
-      <ID>imm-dataelement-1</ID>
-      <naam>Bundel</naam>
+      <ID>imm-dataelement-675</ID>
+      <naam>Zibs2020</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
    </record>
    <record>
       <ID>imm-dataelement-71</ID>
@@ -256,16 +258,682 @@
       <profile>to be determined</profile>
    </record>
    <record>
-      <ID>imm-dataelement-126</ID>
+      <ID>imm-dataelement-676</ID>
+      <naam>Zorgverlener</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-677</ID>
+      <naam>ZorgverlenerIdentificatienummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-678</ID>
+      <naam>Naamgegevens</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-679</ID>
+      <naam>Voornamen</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-680</ID>
+      <naam>Initialen</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-681</ID>
+      <naam>Roepnaam</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-682</ID>
+      <naam>Naamgebruik</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-683</ID>
+      <naam>Geslachtsnaam</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-684</ID>
+      <naam>Voorvoegsels</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-685</ID>
+      <naam>Achternaam</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-686</ID>
+      <naam>GeslachtsnaamPartner</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-687</ID>
+      <naam>VoorvoegselsPartner</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-688</ID>
+      <naam>AchternaamPartner</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-689</ID>
+      <naam>Titels</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-690</ID>
+      <naam>Specialisme</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-691</ID>
+      <naam>Geslacht</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-692</ID>
+      <naam>Adresgegevens</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-693</ID>
+      <naam>Straat</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-694</ID>
+      <naam>Huisnummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-695</ID>
+      <naam>Huisnummerletter</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-696</ID>
+      <naam>Huisnummertoevoeging</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-697</ID>
+      <naam>AanduidingBijNummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-698</ID>
+      <naam>Postcode</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-699</ID>
+      <naam>Woonplaats</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-700</ID>
+      <naam>Gemeente</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-701</ID>
+      <naam>Land</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-702</ID>
+      <naam>AdditioneleInformatie</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-703</ID>
+      <naam>AdresSoort</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-704</ID>
+      <naam>Contactgegevens</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-705</ID>
+      <naam>Telefoonnummers</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-706</ID>
+      <naam>Telefoonnummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-707</ID>
+      <naam>TelecomType</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-708</ID>
+      <naam>NummerSoort</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-709</ID>
+      <naam>Toelichting</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-710</ID>
+      <naam>EmailAdressen</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-711</ID>
+      <naam>EmailAdres</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-712</ID>
+      <naam>EmailSoort</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-713</ID>
+      <naam>Zorgaanbieder</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-714</ID>
+      <naam>Zorgaanbieder</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-715</ID>
+      <naam>ZorgverlenerRol</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-733</ID>
+      <naam>Zorgaanbieder</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-734</ID>
+      <naam>ZorgaanbiederIdentificatienummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-735</ID>
+      <naam>OrganisatieNaam</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-736</ID>
+      <naam>AfdelingSpecialisme</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-737</ID>
+      <naam>Contactgegevens</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-738</ID>
+      <naam>Telefoonnummers</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-739</ID>
+      <naam>Telefoonnummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-740</ID>
+      <naam>TelecomType</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-741</ID>
+      <naam>NummerSoort</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-742</ID>
+      <naam>Toelichting</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-743</ID>
+      <naam>EmailAdressen</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-744</ID>
+      <naam>EmailAdres</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-745</ID>
+      <naam>EmailSoort</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-746</ID>
+      <naam>Adresgegevens</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-747</ID>
+      <naam>Straat</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-748</ID>
+      <naam>Huisnummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-749</ID>
+      <naam>Huisnummerletter</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-750</ID>
+      <naam>Huisnummertoevoeging</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-751</ID>
+      <naam>AanduidingBijNummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-752</ID>
+      <naam>Postcode</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-753</ID>
+      <naam>Woonplaats</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-754</ID>
+      <naam>Gemeente</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-755</ID>
+      <naam>Land</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-756</ID>
+      <naam>AdditioneleInformatie</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-757</ID>
+      <naam>AdresSoort</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-758</ID>
+      <naam>OrganisatieType</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-759</ID>
+      <naam>OrganisatieLocatie</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-760</ID>
+      <naam>LocatieNaam</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-761</ID>
+      <naam>LocatieNummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-718</ID>
+      <naam>FarmaceutischProduct</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-719</ID>
+      <naam>ProductCode</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-720</ID>
+      <naam>ProductSpecificatie</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-721</ID>
+      <naam>FarmaceutischeVorm</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-722</ID>
+      <naam>ProductNaam</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-723</ID>
+      <naam>Omschrijving</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-724</ID>
+      <naam>Ingredient</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-725</ID>
+      <naam>IngredientCode</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-726</ID>
+      <naam>Sterkte</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-727</ID>
+      <naam>IngredientHoeveelheid</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-728</ID>
+      <naam>ProductHoeveelheid</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-805</ID>
       <naam>Vaccinatie</naam>
       <mapping>to be determined</mapping>
       <profile>to be determined</profile>
    </record>
    <record>
-      <ID>imm-dataelement-135</ID>
-      <naam/>
-      <mapping>Immunization.identifier</mapping>
-      <profile>ImmVaccinationevent</profile>
+      <ID>imm-dataelement-806</ID>
+      <naam>ProductCode</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-807</ID>
+      <naam>Dosis</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-808</ID>
+      <naam>VaccinatieDatum</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-809</ID>
+      <naam>Toediener</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-810</ID>
+      <naam>Zorgverlener</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-811</ID>
+      <naam>Toelichting</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-819</ID>
+      <naam>Subbouwstenen</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-802</ID>
+      <naam>AnatomischeLocatie</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-803</ID>
+      <naam>Locatie</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-804</ID>
+      <naam>Lateraliteit</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-821</ID>
+      <naam>Contactgegevens</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-822</ID>
+      <naam>Telefoonnummers</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-823</ID>
+      <naam>Telefoonnummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-824</ID>
+      <naam>TelecomType</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-825</ID>
+      <naam>NummerSoort</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-826</ID>
+      <naam>Toelichting</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-827</ID>
+      <naam>EmailAdressen</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-828</ID>
+      <naam>EmailAdres</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-829</ID>
+      <naam>EmailSoort</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-830</ID>
+      <naam>Adresgegevens</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-831</ID>
+      <naam>Straat</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-832</ID>
+      <naam>Huisnummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-833</ID>
+      <naam>Huisnummerletter</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-834</ID>
+      <naam>Huisnummertoevoeging</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-835</ID>
+      <naam>AanduidingBijNummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-836</ID>
+      <naam>Postcode</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-837</ID>
+      <naam>Woonplaats</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-838</ID>
+      <naam>Gemeente</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-839</ID>
+      <naam>Land</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-840</ID>
+      <naam>AdditioneleInformatie</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-841</ID>
+      <naam>AdresSoort</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-1</ID>
+      <naam>Bouwstenen</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
    </record>
    <record>
       <ID>imm-dataelement-317</ID>
@@ -376,16 +1044,304 @@
       <profile>ImmPharmaceuticalProduct</profile>
    </record>
    <record>
+      <ID>imm-dataelement-192</ID>
+      <naam/>
+      <mapping>Immunization.performer:healthProfessional.actor</mapping>
+      <profile>ImmVaccinationevent</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-193</ID>
+      <naam>ZorgverlenerIdentificatienummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-194</ID>
+      <naam>Naamgegevens</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-195</ID>
+      <naam>Voornamen</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-196</ID>
+      <naam>Initialen</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-197</ID>
+      <naam>Roepnaam</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-198</ID>
+      <naam>Naamgebruik</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-199</ID>
+      <naam>Geslachtsnaam</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-200</ID>
+      <naam>Voorvoegsels</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-201</ID>
+      <naam>Achternaam</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-202</ID>
+      <naam>GeslachtsnaamPartner</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-203</ID>
+      <naam>VoorvoegselsPartner</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-204</ID>
+      <naam>AchternaamPartner</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-205</ID>
+      <naam>Titels</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-206</ID>
+      <naam>Specialisme</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-207</ID>
+      <naam>Geslacht</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-208</ID>
+      <naam>Adresgegevens</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-209</ID>
+      <naam>Straat</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-210</ID>
+      <naam>Huisnummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-211</ID>
+      <naam>Huisnummerletter</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-212</ID>
+      <naam>Huisnummertoevoeging</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-213</ID>
+      <naam>AanduidingBijNummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-214</ID>
+      <naam>Postcode</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-215</ID>
+      <naam>Woonplaats</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-216</ID>
+      <naam>Gemeente</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-217</ID>
+      <naam>Land</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-218</ID>
+      <naam>AdditioneleInformatie</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-219</ID>
+      <naam>AdresSoort</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-220</ID>
+      <naam>Contactgegevens</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-221</ID>
+      <naam>Telefoonnummers</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-222</ID>
+      <naam>Telefoonnummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-223</ID>
+      <naam>TelecomType</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-224</ID>
+      <naam>NummerSoort</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-225</ID>
+      <naam>Toelichting</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-226</ID>
+      <naam>EmailAdressen</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-227</ID>
+      <naam>EmailAdres</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-228</ID>
+      <naam>EmailSoort</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-229</ID>
+      <naam>Zorgaanbieder</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-332</ID>
+      <naam>Zorgaanbieder</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-231</ID>
+      <naam>ZorgverlenerRol</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-126</ID>
+      <naam>Vaccinatie</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-135</ID>
+      <naam/>
+      <mapping>Immunization.identifier</mapping>
+      <profile>ImmVaccinationevent</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-729</ID>
+      <naam>FarmaceutischProduct</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
       <ID>imm-dataelement-291</ID>
       <naam/>
       <mapping>Immunization.doseQuantity</mapping>
       <profile>ImmVaccinationevent</profile>
    </record>
    <record>
+      <ID>imm-dataelement-812</ID>
+      <naam>ToegediendeHoeveelheid</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-813</ID>
+      <naam>Aantal</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-814</ID>
+      <naam>Eenheid</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
       <ID>imm-dataelement-292</ID>
       <naam/>
       <mapping>Immunization.occurrence[x]:occurrenceDateTime</mapping>
       <profile>ImmVaccinationevent</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-815</ID>
+      <naam>RegistratieDatumTijd</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-816</ID>
+      <naam>ToedieningsDatumTijd</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
    </record>
    <record>
       <ID>imm-dataelement-261</ID>
@@ -874,242 +1830,20 @@
       <profile>to be determined</profile>
    </record>
    <record>
-      <ID>imm-dataelement-192</ID>
-      <naam/>
-      <mapping>Immunization.performer:healthProfessional.actor</mapping>
-      <profile>ImmVaccinationevent</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-193</ID>
-      <naam>ZorgverlenerIdentificatienummer</naam>
+      <ID>imm-dataelement-732</ID>
+      <naam>Zorgverlener</naam>
       <mapping>to be determined</mapping>
       <profile>to be determined</profile>
    </record>
    <record>
-      <ID>imm-dataelement-194</ID>
-      <naam>Naamgegevens</naam>
+      <ID>imm-dataelement-817</ID>
+      <naam>Uitvoerder</naam>
       <mapping>to be determined</mapping>
       <profile>to be determined</profile>
    </record>
    <record>
-      <ID>imm-dataelement-195</ID>
-      <naam>Voornamen</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-196</ID>
-      <naam>Initialen</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-197</ID>
-      <naam>Roepnaam</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-198</ID>
-      <naam>Naamgebruik</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-199</ID>
-      <naam>Geslachtsnaam</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-200</ID>
-      <naam>Voorvoegsels</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-201</ID>
-      <naam>Achternaam</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-202</ID>
-      <naam>GeslachtsnaamPartner</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-203</ID>
-      <naam>VoorvoegselsPartner</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-204</ID>
-      <naam>AchternaamPartner</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-205</ID>
-      <naam>Titels</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-206</ID>
-      <naam>Specialisme</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-207</ID>
-      <naam>Geslacht</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-208</ID>
-      <naam>Adresgegevens</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-209</ID>
-      <naam>Straat</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-210</ID>
-      <naam>Huisnummer</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-211</ID>
-      <naam>Huisnummerletter</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-212</ID>
-      <naam>Huisnummertoevoeging</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-213</ID>
-      <naam>AanduidingBijNummer</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-214</ID>
-      <naam>Postcode</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-215</ID>
-      <naam>Woonplaats</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-216</ID>
-      <naam>Gemeente</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-217</ID>
-      <naam>Land</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-218</ID>
-      <naam>AdditioneleInformatie</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-219</ID>
-      <naam>AdresSoort</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-220</ID>
-      <naam>Contactgegevens</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-221</ID>
-      <naam>Telefoonnummers</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-222</ID>
-      <naam>Telefoonnummer</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-223</ID>
-      <naam>TelecomType</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-224</ID>
-      <naam>NummerSoort</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-225</ID>
-      <naam>Toelichting</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-226</ID>
-      <naam>EmailAdressen</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-227</ID>
-      <naam>EmailAdres</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-228</ID>
-      <naam>EmailSoort</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-229</ID>
+      <ID>imm-dataelement-818</ID>
       <naam>Zorgaanbieder</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-332</ID>
-      <naam>Zorgaanbieder</naam>
-      <mapping>to be determined</mapping>
-      <profile>to be determined</profile>
-   </record>
-   <record>
-      <ID>imm-dataelement-231</ID>
-      <naam>ZorgverlenerRol</naam>
       <mapping>to be determined</mapping>
       <profile>to be determined</profile>
    </record>
@@ -1166,5 +1900,251 @@
       <naam/>
       <mapping>Immunization.reasonCode:vaccinationIndication</mapping>
       <profile>ImmVaccinationevent</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-730</ID>
+      <naam>QueryParameters</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-762</ID>
+      <naam>Patient</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-763</ID>
+      <naam>Naamgegevens</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-764</ID>
+      <naam>Voornamen</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-765</ID>
+      <naam>Initialen</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-766</ID>
+      <naam>Roepnaam</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-767</ID>
+      <naam>Naamgebruik</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-768</ID>
+      <naam>Geslachtsnaam</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-769</ID>
+      <naam>Voorvoegsels</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-770</ID>
+      <naam>Achternaam</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-771</ID>
+      <naam>GeslachtsnaamPartner</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-772</ID>
+      <naam>VoorvoegselsPartner</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-773</ID>
+      <naam>AchternaamPartner</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-774</ID>
+      <naam>Titels</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-775</ID>
+      <naam>Adresgegevens</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-776</ID>
+      <naam>Straat</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-777</ID>
+      <naam>Huisnummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-778</ID>
+      <naam>Huisnummerletter</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-779</ID>
+      <naam>Huisnummertoevoeging</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-780</ID>
+      <naam>AanduidingBijNummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-781</ID>
+      <naam>Postcode</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-782</ID>
+      <naam>Woonplaats</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-783</ID>
+      <naam>Gemeente</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-784</ID>
+      <naam>Land</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-785</ID>
+      <naam>AdditioneleInformatie</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-786</ID>
+      <naam>AdresSoort</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-787</ID>
+      <naam>Contactgegevens</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-788</ID>
+      <naam>Telefoonnummers</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-789</ID>
+      <naam>Telefoonnummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-790</ID>
+      <naam>TelecomType</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-791</ID>
+      <naam>NummerSoort</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-792</ID>
+      <naam>Toelichting</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-793</ID>
+      <naam>EmailAdressen</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-794</ID>
+      <naam>EmailAdres</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-795</ID>
+      <naam>EmailSoort</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-796</ID>
+      <naam>Identificatienummer</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-797</ID>
+      <naam>Geboortedatum</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-798</ID>
+      <naam>Geslacht</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-799</ID>
+      <naam>MeerlingIndicator</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-800</ID>
+      <naam>OverlijdensIndicator</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
+   </record>
+   <record>
+      <ID>imm-dataelement-801</ID>
+      <naam>DatumOverlijden</naam>
+      <mapping>to be determined</mapping>
+      <profile>to be determined</profile>
    </record>
 </dataset>
