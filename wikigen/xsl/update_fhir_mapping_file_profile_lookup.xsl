@@ -20,6 +20,7 @@ The full text of the license is available at http://www.gnu.org/copyleft/lesser.
             The xml file compiled-profile-mappings.xml holds all mapping information found in the imm-profiles, and the log-messages-mapping.txt holds information about the comparison of the mapping information found for each dataset concept. 
             <xd:p><xd:b>Expected input: </xd:b>DECOR dataset xml file.</xd:p>
             <xd:p><xd:b>Expected output: </xd:b>An updated version of the existing fhirmapping information.</xd:p>
+            <xd:p><xd:b>Supplementary output: </xd:b>An xml file with all mapping information found in the imm-profiles compiled into one file. A txt file with all log messages. Both these files will be written in the qa directory. (Make sure the directory exists)</xd:p>
             <xd:p><xd:b>History: </xd:b>
                 <xd:ul>
                     <xd:li>2025-11-05 version 0.1 VG</xd:li>
