@@ -1,4 +1,5 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="imm-Vaccination-event-carenetwork" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/imm-Vaccination-event-carenetwork" />
   <version value="2.0.0-beta.1" />
   <name value="ImmVaccinationeventcarenetwork" />
@@ -38,7 +39,7 @@
       <path value="Immunization" />
       <comment value="All administered vaccinations are covered using this Immunization profile, while all planned vaccinations are covered in the [nl-core-Vaccination-request](http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-request) profile.&#xD;&#xA;&#xD;&#xA;Please note that, contrary to the related zib concepts, `.vaccineCode` and `.occurrence[x]` are mandatory in FHIR and need to be recorded to exchange Immunization resources." />
       <constraint>
-        <key value="imm-1"/>
+        <key value="imm-carenetwork-1"/>
         <severity value="error"/>
         <human value="If occurrenceDateTime is not present, recorded must be present."/>
         <expression value="occurrence.ofType(dateTime).exists() or recorded.exists()"/>
@@ -131,6 +132,7 @@
       <type>
         <code value="dateTime" />
       </type>
+      <condition value="imm-carenetwork-1"/>
       <mapping>
         <identity value="zib-vaccination-v4.0-2020EN" />
         <map value="NL-CM:11.1.3" />
@@ -141,7 +143,6 @@
         <map value="imm-dataelement-292" />
         <comment value="VaccinationDate" />
       </mapping>
-      <condition value="imm-1"/>
     </element>
     <element id="Immunization.occurrence[x]:occurrenceDateTime.value">
       <path value="Immunization.occurrence[x].value" />
@@ -177,7 +178,7 @@
     <element id="Immunization.recorded">
       <path value="Immunization.recorded" />
       <alias value="RegistratieDatumTijd" />
-      <condition value="imm-1"/>
+      <condition value="imm-carenetwork-1"/>
       <mapping>
         <identity value="imm-dataset-210" />
         <map value="imm-dataelement-815" />
