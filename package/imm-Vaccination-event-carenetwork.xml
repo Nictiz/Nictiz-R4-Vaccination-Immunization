@@ -222,18 +222,15 @@
       <short value="RouteOfAdministration" />
       <definition value="The route by which the vaccine is came into the body." />
       <alias value="Toedieningsweg" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.13.2--20200901000000" />
+      </binding>
       <mapping>
         <identity value="imm-dataset-200-beta1-20240729" />
         <map value="imm-dataelement-143" />
         <comment value="Toedieningsweg" />
       </mapping>
-    </element>
-    <element id="Immunization.route.coding">
-      <path value="Immunization.route.coding" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.13.2--20200901000000" />
-      </binding>
     </element>
     <element id="Immunization.doseQuantity">
       <path value="Immunization.doseQuantity" />
@@ -261,9 +258,14 @@
         <comment value="ToegediendeHoeveelheid" />
       </mapping>
     </element>
+    <element id="Immunization.doseQuantity.extension">
+      <path value="Immunization.doseQuantity.extension" />
+      <min value="1" />
+    </element>
     <element id="Immunization.doseQuantity.extension:gstdSimpleQuantity">
       <path value="Immunization.doseQuantity.extension" />
       <sliceName value="gstdSimpleQuantity" />
+      <min value="1" />
     </element>
     <element id="Immunization.doseQuantity.extension:gstdSimpleQuantity.value[x].value">
       <path value="Immunization.doseQuantity.extension.value[x].value" />
@@ -273,8 +275,8 @@
         <comment value="Aantal" />
       </mapping>
     </element>
-    <element id="Immunization.doseQuantity.extension:gstdSimpleQuantity.value[x].unit">
-      <path value="Immunization.doseQuantity.extension.value[x].unit" />
+    <element id="Immunization.doseQuantity.extension:gstdSimpleQuantity.value[x].code">
+      <path value="Immunization.doseQuantity.extension.value[x].code" />
       <mapping>
         <identity value="imm-dataset-210" />
         <map value="imm-dataelement-814" />
@@ -289,8 +291,8 @@
         <comment value="Aantal" />
       </mapping>
     </element>
-    <element id="Immunization.doseQuantity.unit">
-      <path value="Immunization.doseQuantity.unit" />
+    <element id="Immunization.doseQuantity.code">
+      <path value="Immunization.doseQuantity.code" />
       <mapping>
         <identity value="imm-dataset-210" />
         <map value="imm-dataelement-814" />
