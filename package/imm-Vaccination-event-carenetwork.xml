@@ -7,7 +7,7 @@
   <status value="draft" />
   <date value="2024-07-29" />
   <publisher value="Nictiz" />
-  <contact> 
+  <contact>
     <name value="Nictiz" />
     <telecom>
       <system value="url" />
@@ -39,10 +39,10 @@
       <path value="Immunization" />
       <comment value="All administered vaccinations are covered using this Immunization profile, while all planned vaccinations are covered in the [nl-core-Vaccination-request](http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-request) profile.&#xD;&#xA;&#xD;&#xA;Please note that, contrary to the related zib concepts, `.vaccineCode` and `.occurrence[x]` are mandatory in FHIR and need to be recorded to exchange Immunization resources." />
       <constraint>
-        <key value="imm-carenetwork-1"/>
-        <severity value="error"/>
-        <human value="If occurrenceDateTime is not present, recorded must be present."/>
-        <expression value="occurrence.ofType(dateTime).exists() or recorded.exists()"/>
+        <key value="imm-carenetwork-1" />
+        <severity value="error" />
+        <human value="If the ToedieningsDatumTijd is not known, the dataAbsentReason extension SHOULD be used on occurence[x] and the RegistratieDatumTijd MUST be provided in Immunization.recorded." />
+        <expression value="occurrence.ofType(dateTime).extension(&quot;http://hl7.org/fhir/StructureDefinition/data-absent-reason&quot;).value as code = 'unknown' implies recorded.exists()" />
       </constraint>
     </element>
     <element id="Immunization.extension:pharmaceuticalProduct">
@@ -128,11 +128,13 @@
       <sliceName value="occurrenceDateTime" />
       <short value="VaccinationDate" />
       <definition value="Date (and if possible time) that the vaccine was or will be administered. In the case of a planned re-vaccination, a vague date (month, year) is allowed (Clinical reminder). If a planned vaccination cannot be administered before a certain date, the date stated (vague or not) must indicate this." />
+      <comment value="When immunizations are given a specific date and time should always be known. When immunizations are patient reported, a specific date might not be known.  Although partial dates are allowed, an adult patient might not be able to recall the year a childhood immunization was given. An exact date is always preferable, but the use of the String data type is acceptable when an exact date is not known. A small number of vaccines (e.g. live oral typhoid vaccine) are given as a series of patient self-administered dose over a span of time. In cases like this, often, only the first dose (typically a provider supervised dose) is recorded with the occurrence indicating the date/time of the first dose. If the ToedieningsDatumTijd is not known, the dataAbsentReason extension SHOULD be used on occurence[x] and the RegistratieDatumTijd MUST be provided in Immunization.recorded." />
       <alias value="ToedieningsDatumTijd" />
+      <min value="1" />
       <type>
         <code value="dateTime" />
       </type>
-      <condition value="imm-carenetwork-1"/>
+      <condition value="imm-carenetwork-1" />
       <mapping>
         <identity value="zib-vaccination-v4.0-2020EN" />
         <map value="NL-CM:11.1.3" />
@@ -143,6 +145,24 @@
         <map value="imm-dataelement-292" />
         <comment value="VaccinationDate" />
       </mapping>
+      <mapping>
+        <identity value="imm-dataset-210" />
+        <map value="imm-dataelement-816" />
+        <comment value="ToedieningsDatumTijd" />
+      </mapping>
+    </element>
+    <element id="Immunization.occurrence[x]:occurrenceDateTime.extension">
+      <path value="Immunization.occurrence[x].extension" />
+      <max value="1" />
+    </element>
+    <element id="Immunization.occurrence[x]:occurrenceDateTime.extension:dataAbsentReason">
+      <path value="Immunization.occurrence[x].extension" />
+      <sliceName value="dataAbsentReason" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/data-absent-reason" />
+      </type>
+      <isModifier value="false" />
     </element>
     <element id="Immunization.occurrence[x]:occurrenceDateTime.value">
       <path value="Immunization.occurrence[x].value" />
@@ -152,33 +172,10 @@
         <comment value="ToedieningsDatumTijd" />
       </mapping>
     </element>
-    <element id="Immunization.occurrence[x]:occurrenceString">
-      <path value="Immunization.occurrence[x]" />
-      <sliceName value="occurrenceString" />
-      <definition value="In case date of occurence is unknown, use this slice to send a NullFlavor" />
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="Immunization.occurrence[x]:occurrenceString.extension">
-      <path value="Immunization.occurrence[x].extension" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Immunization.occurrence[x]:occurrenceString.extension:nullFlavor">
-      <path value="Immunization.occurrence[x].extension" />
-      <sliceName value="nullFlavor" />
-      <min value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor" />
-      </type>
-      <isModifier value="false" />
-    </element>
     <element id="Immunization.recorded">
       <path value="Immunization.recorded" />
       <alias value="RegistratieDatumTijd" />
-      <condition value="imm-carenetwork-1"/>
+      <condition value="imm-carenetwork-1" />
       <mapping>
         <identity value="imm-dataset-210" />
         <map value="imm-dataelement-815" />
@@ -231,8 +228,8 @@
         <comment value="Toedieningsweg" />
       </mapping>
     </element>
-    <element id="Immunization.route.coding.system">
-      <path value="Immunization.route.coding.system" />
+    <element id="Immunization.route.coding">
+      <path value="Immunization.route.coding" />
       <binding>
         <strength value="required" />
         <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.13.2--20200901000000" />
@@ -241,10 +238,13 @@
     <element id="Immunization.doseQuantity">
       <path value="Immunization.doseQuantity" />
       <short value="Dose" />
-      <definition value="The amount of product administered shown in milliliters. In most cases, the entire product is administered; in some cases, a described part of the product is administered." />
+      <definition value="The amount of product administered. In most cases, the entire product is administered; in some cases, a described part of the product is administered. If doseQuantity is provided, a value and corresponding unit MUST be populated. The preferred system for doseQuantity.unit is &quot;http://unitsofmeasure.org&quot; (UCUM). For the carenetwork data exchange the extension gstdSimpleQuantity MUST always be populated." />
       <comment value="The definition of Dose deviates slightly from the definition in the zib Vaccination; the unit of measure is not limited to mL. This difference is according to the planned modifications in the zib (https://bits.nictiz.nl/browse/ZIB-1654)." />
       <alias value="Toegediende hoeveelheid" />
-      <min value="1" />
+      <type>
+        <code value="Quantity" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-GstdSimpleQuantity" />
+      </type>
       <mapping>
         <identity value="zib-vaccination-v4.0-2020EN" />
         <map value="NL-CM:11.1.4" />
@@ -264,18 +264,6 @@
     <element id="Immunization.doseQuantity.extension:gstdSimpleQuantity">
       <path value="Immunization.doseQuantity.extension" />
       <sliceName value="gstdSimpleQuantity" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation" />
-      </type>
-      <isModifier value="false" />
-    </element>
-    <element id="Immunization.doseQuantity.extension:gstdSimpleQuantity.value[x]">
-      <path value="Immunization.doseQuantity.extension.value[x]" />
-      <binding>
-        <strength value="extensible" />
-        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.20.77.11.27--20160830202453" />
-      </binding>
     </element>
     <element id="Immunization.doseQuantity.extension:gstdSimpleQuantity.value[x].value">
       <path value="Immunization.doseQuantity.extension.value[x].value" />
@@ -321,7 +309,6 @@
       <short value="Performer" />
       <definition value="The healthcare provider and/or organization where or by whom the vaccination was done or will be done." />
       <alias value="Uitvoerder" />
-      <min value="1" />
       <max value="1" />
       <mapping>
         <identity value="imm-dataset-200-beta1-20240729" />
@@ -337,6 +324,7 @@
     <element id="Immunization.performer:healthcareProvider">
       <path value="Immunization.performer" />
       <sliceName value="healthcareProvider" />
+      <comment value="For the carenetwork data exchange, the slice healthcareProvider MUST be used for the Immunization.performer." />
       <alias value="Uitvoerder" />
       <min value="1" />
       <max value="1" />
@@ -356,24 +344,6 @@
         <identity value="imm-dataset-210" />
         <map value="imm-dataelement-818" />
         <comment value="HealthcareProvider" />
-      </mapping>
-    </element>
-    <element id="Immunization.performer:healthProfessional">
-      <path value="Immunization.performer" />
-      <sliceName value="healthProfessional" />
-      <max value="1" />
-    </element>
-    <element id="Immunization.performer:healthProfessional.actor">
-      <path value="Immunization.performer.actor" />
-      <type>
-        <code value="Reference" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-NlCoreHealthProfessionalReference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole" />
-      </type>
-      <mapping>
-        <identity value="imm-dataset-200-beta1-20240729" />
-        <map value="imm-dataelement-192" />
-        <comment value="HealthProfessional" />
       </mapping>
     </element>
     <element id="Immunization.note.text">
