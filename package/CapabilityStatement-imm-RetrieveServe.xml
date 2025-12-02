@@ -2,11 +2,11 @@
 <CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <id value="imm-RetrieveServe"/>
     <url value="http://nictiz.nl/fhir/CapabilityStatement/imm-RetrieveServe"/>
-    <version value="2.0.0-beta.1"/>
+    <version value="2.1.0-alpha.1"/>
     <name value="ImmRetrieveServe"/>
     <title value="imm RetrieveServe"/>
     <status value="draft"/>
-    <date value="2024-07-29"/>
+    <date value="2025-12-01"/>
     <publisher value="Nictiz"/>
     <contact>
         <name value="Nictiz"/>
@@ -28,6 +28,7 @@
         <resource>
             <type value="Immunization"/>
             <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/imm-Vaccination-event"/>
+            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/imm-Vaccination-event-carenetwork"/>
             <interaction>
                 <code value="search-type"/>
             </interaction>
@@ -80,6 +81,7 @@
         <resource>
             <type value="Immunization"/>
             <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/imm-Vaccination-event"/>
+            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/imm-Vaccination-event-carenetwork"/>
             <interaction>
                 <code value="search-type"/>
             </interaction>
