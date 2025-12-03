@@ -220,7 +220,7 @@
     <element id="Immunization.route">
       <path value="Immunization.route" />
       <short value="RouteOfAdministration" />
-      <definition value="The route by which the vaccine is came into the body." />
+      <definition value="The route by which the vaccine is administered into the body." />
       <alias value="Toedieningsweg" />
       <binding>
         <strength value="required" />
