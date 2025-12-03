@@ -42,12 +42,18 @@
         <key value="imm-carenetwork-1" />
         <severity value="error" />
         <human value="If the ToedieningsDatumTijd is not known, the dataAbsentReason extension SHOULD be used on occurence[x] and the RegistratieDatumTijd MUST be provided in Immunization.recorded." />
-        <expression value="occurrence.ofType(dateTime).extension(&quot;http://hl7.org/fhir/StructureDefinition/data-absent-reason&quot;).value as code = 'unknown' implies recorded.exists()" />
+        <expression value="occurrence.extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists() implies recorded.exists()" />
       </constraint>
+    </element>
+    <element id="Immunization.extension">
+      <path value="Immunization.extension" />
+      <min value="1" />
     </element>
     <element id="Immunization.extension:pharmaceuticalProduct">
       <path value="Immunization.extension" />
       <sliceName value="pharmaceuticalProduct" />
+      <min value="1" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-imm-Vaccination.PharmaceuticalProduct" />
@@ -153,6 +159,9 @@
     </element>
     <element id="Immunization.occurrence[x]:occurrenceDateTime.extension">
       <path value="Immunization.occurrence[x].extension" />
+      <slicing>
+        <rules value="closed" />
+      </slicing>
       <max value="1" />
     </element>
     <element id="Immunization.occurrence[x]:occurrenceDateTime.extension:dataAbsentReason">
@@ -328,7 +337,6 @@
       <sliceName value="healthcareProvider" />
       <comment value="For the carenetwork data exchange, the slice healthcareProvider MUST be used for the Immunization.performer." />
       <alias value="Uitvoerder" />
-      <min value="1" />
       <max value="1" />
     </element>
     <element id="Immunization.performer:healthcareProvider.actor">
