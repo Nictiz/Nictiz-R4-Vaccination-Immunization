@@ -87,6 +87,11 @@
             </interaction>
             <searchInclude value="Immunization:patient"/>
             <searchInclude value="Immunization:performer"/>
+            <searchParam>
+                <name value="patient"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
+                <type value="reference"/>
+            </searchParam>
         </resource>
         <resource>
             <type value="Patient"/>
