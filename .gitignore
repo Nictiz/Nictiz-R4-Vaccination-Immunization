@@ -1,7 +1,3 @@
 resources/fhirpkg.lock.json
 /package/.simplifier/folder.settings.json
 /package/fhirpkg.lock.json
-/package/project.yaml
-package/.simplifier/connection.settings.json
-package.backup.zip
-package/.simplifier/project.snapshot.json
