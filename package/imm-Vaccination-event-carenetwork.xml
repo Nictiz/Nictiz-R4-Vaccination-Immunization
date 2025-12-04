@@ -338,7 +338,6 @@
       <path value="Immunization.performer" />
       <sliceName value="healthcareProvider" />
       <comment value="For the carenetwork data exchange, the slice healthcareProvider MUST be used for the Immunization.performer." />
-      <alias value="Uitvoerder" />
       <max value="1" />
     </element>
     <element id="Immunization.performer:healthcareProvider.actor">
@@ -347,11 +346,6 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
       </type>
-      <mapping>
-        <identity value="imm-dataset-210-alpha1-20251204" />
-        <map value="imm-dataelement-163" />
-        <comment value="HealthcareProvider" />
-      </mapping>
       <mapping>
         <identity value="imm-dataset-210-alpha1-20251204" />
         <map value="imm-dataelement-818" />
