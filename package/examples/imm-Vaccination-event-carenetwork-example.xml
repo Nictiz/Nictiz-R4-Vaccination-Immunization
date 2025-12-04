@@ -1,0 +1,50 @@
+<Immunization xmlns="http://hl7.org/fhir">
+  <id value="imm-Vaccination-event-carenetwork-example" />
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/imm-Vaccination-event-carenetwork" />
+  </meta>
+  <extension url="http://nictiz.nl/fhir/StructureDefinition/ext-imm-Vaccination.PharmaceuticalProduct">
+    <valueReference>
+      <reference value="Medication/nl-core-PhPrd-example" />
+      <type value="Medication" />
+      <display value="DKTP vaccin" />
+    </valueReference>
+  </extension>
+  <identifier>
+    <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.131.2" />
+    <value value="example-vaccination-001" />
+  </identifier>
+  <status value="completed" />
+  <vaccineCode>
+    <coding>
+      <system value="urn:oid:2.16.840.1.113883.2.4.4.10" />
+      <code value="130745" />
+      <display value="DKTP VACCIN (TRIAXIS POLIO)" />
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="871878002" />
+      <display value="vaccin met uitsluitend antigenen van Corynebacterium diphtheriae, Bordetella pertussis, Clostridium tetani en humaan poliovirus" />
+    </coding>
+  </vaccineCode>
+  <patient>
+    <reference value="Patient/nl-core-Patient-example" />
+    <type value="Patient" />
+    <display value="Patient, Jan de Vries" />
+  </patient>
+  <occurrenceDateTime value="2024-03-15" />
+  <doseQuantity>
+    <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-PQ-translation">
+      <valueQuantity>
+        <value value="0.5" />
+        <unit value="milliliter" />
+        <system value="urn:oid:2.16.840.1.113883.2.4.4.1.900.2" />
+        <code value="233" />
+      </valueQuantity>
+    </extension>
+    <value value="0.5" />
+    <unit value="ml" />
+    <system value="http://unitsofmeasure.org" />
+    <code value="mL" />
+  </doseQuantity>
+</Immunization>

@@ -1,0 +1,440 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="imm-Vaccination-event-carenetwork" />
+  <text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+  </text>
+  <url value="http://nictiz.nl/fhir/StructureDefinition/imm-Vaccination-event-carenetwork" />
+  <version value="2.1.0-alpha.1" />
+  <name value="ImmVaccinationeventcarenetwork" />
+  <title value="imm Vaccination event carenetwork" />
+  <status value="draft" />
+  <date value="2025-12-04" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Immunization can be defined as “Generating natural immunity against pathogens by means of vaccination (active immunization) or by administering immunoglobulins (passive immunization)”.&#xD;&#xA;&#xD;&#xA;Only the (administered and planned) vaccinations are included in this information model. Administering immunoglobulins is part of the medication overview. Vaccinations have lifelong relevance.&#xD;&#xA;&#xD;&#xA;Most vaccinations are carried out in the Netherlands as part of the RVP (Rijksvaccinatieprogramma, National Immunisation Program). RVP information is especially important for children.&#xD;&#xA;&#xD;&#xA;Vaccinations are also relevant for adult patients such as transplant patients, dialysis patients and patients with a post-splenectomy status. In addition, there are specific indications for the vaccination of risk groups, such as travelers, professionals who come into contact with blood or patients with wounds, weakened immune systems or heightened risk." />
+  <purpose value="This Immunization resource represents the Vaccination building block for implementations following the information standard [Vaccination-Immunization](https://informatiestandaarden.nictiz.nl/wiki/imm:Landingspagina_Vaccinatie_Immunisatie). This profile is based on the Dutch zib (&amp;#39;Zorginformatiebouwsteen&amp;#39;, i.e. Health and Care Information Model) Immunization, but has no dependency on the corresponding nl-core profile because it contains non-compatible changes. Where compatible, mappings to zib concepts are defined. Additional concepts or concepts that are not compatible with their zib counterparts contain a mapping to the Vaccination-Immunization data set." />
+  <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="imm-dataset-210-alpha1-20251204" />
+    <uri value="https://decor.nictiz.nl/pub/immunisatie/imm-html-20251202T093626/ds-2.16.840.1.113883.2.4.3.11.60.131.1.1-2021-11-18T100634.html" />
+    <name value="ART-DECOR Dataset Vaccination-Immunization 2.1.0-alpha.1 20251204" />
+  </mapping>
+  <mapping>
+    <identity value="zib-vaccination-v4.0-2020EN" />
+    <uri value="https://zibs.nl/wiki/Vaccination-v4.0(2020EN)" />
+    <name value="zib Vaccination-v4.0(2020EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Immunization" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Immunization" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Immunization">
+      <path value="Immunization" />
+      <comment value="All administered vaccinations are covered using this Immunization profile, while all planned vaccinations are covered in the [nl-core-Vaccination-request](http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-request) profile.&#xD;&#xA;&#xD;&#xA;Please note that, contrary to the related zib concepts, `.vaccineCode` and `.occurrence[x]` are mandatory in FHIR and need to be recorded to exchange Immunization resources." />
+      <constraint>
+        <key value="imm-carenetwork-1" />
+        <severity value="error" />
+        <human value="If the ToedieningsDatumTijd is not known, the dataAbsentReason extension SHOULD be used on occurrence[x] and the RegistratieDatumTijd MUST be provided in Immunization.recorded." />
+        <expression value="occurrence.extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists() implies recorded.exists()" />
+      </constraint>
+    </element>
+    <element id="Immunization.extension">
+      <path value="Immunization.extension" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.extension:pharmaceuticalProduct">
+      <path value="Immunization.extension" />
+      <sliceName value="pharmaceuticalProduct" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-imm-Vaccination.PharmaceuticalProduct" />
+      </type>
+    </element>
+    <element id="Immunization.extension:pharmaceuticalProduct.value[x]">
+      <path value="Immunization.extension.value[x]" />
+      <definition value="The pharmaceutical product of the administered vaccination." />
+      <comment value="If this reference to ImmPharmaceuticalProduct is used, the MedicationCode (`Medication.code`) in the referenced resource SHALL be the same as `Immunization.vaccineCode` of the current resource." />
+    </element>
+    <element id="Immunization.identifier">
+      <path value="Immunization.identifier" />
+      <short value="IdentificationNumber" />
+      <definition value="Globally unique number that identifies the instantiation of the information model. The number is composed of an identification of the issuer organization and a unique number assigned by this organization." />
+      <alias value="Identificatienummer" />
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-135" />
+        <comment value="IdentificationNumber" />
+      </mapping>
+    </element>
+    <element id="Immunization.status">
+      <path value="Immunization.status" />
+      <short value="AdministrationStatus" />
+      <definition value="Provides the administration status:&#xD;&#xA;* Not done: The event was terminated prior to any activity beyond preparation.&#xD;&#xA;* Entered in Error: This electronic record should never have existed, though it is possible that real-world decisions were based on it.&#xD;&#xA;* Completed: The event has now concluded." />
+      <comment value="This element has no functional counterpart in the zib and cannot be implicitly mapped to other concepts. Unless a more appropriate status is recorded, it is assumed that only completed Immunization resources will be exchanged." />
+      <alias value="StatusToediening" />
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-315" />
+        <comment value="AdministrationStatus" />
+      </mapping>
+    </element>
+    <element id="Immunization.vaccineCode">
+      <path value="Immunization.vaccineCode" />
+      <short value="ProductCode" />
+      <definition value="Coding medication in the Netherlands is done on the basis of the G-standaard (issued by Z-index), which is filled under the direction of Royal Dutch Pharmacists Association (KNMP). The coded medication can be expressed as:&#xD;&#xA;* ZI number&#xD;&#xA;* Trade product code (HPK)&#xD;&#xA;* Prescription code (PRK)&#xD;&#xA;* Generic product code (GPK)&#xD;&#xA;* SNOMED CT code&#xD;&#xA;&#xD;&#xA;The ZI number represents the trade product and the package size. The HPK is the trade product as registered and marketed by the manufacturer.The PRK contains all GPK information supplemented with information needed to prescribe the right product. This level is intended to facilitate generic prescription of drugs. The GPK defines the pharmaceutical characteristics of a product: ingredients, strengths, units, pharmaceutical form and route of administration.Further information about the G-Standaard levels see https://www.z-index.nl. So-called 90.000.000 numbers are used in local IT systems. The 90.000.000 number is used in accordance with national agreements.&#xD;&#xA;&#xD;&#xA;SNOMED CT can be used as an alternative coding for a pharmaceutical product, for example it is used to describe the vaccinations from the Dutch National Immunisation Programme more generically based on the combination of substances (for example DKTP vaccine). With historical vaccines, a G-Standaard code is not always present, but it is recommended to record it for current processing. The SNOMED CT code for the same product can also be registered as an alternative." />
+      <comment value="A G-Standaard code is preferred over a SNOMED CT code. If both codes are available, a SNOMED CT code can be used as an alternative coding.&#xD;&#xA;&#xD;&#xA;Eg. SNOMED CT code “871878002 | vaccin met uitsluitend antigenen van Corynebacterium diphtheriae, Bordetella pertussis, Clostridium tetani en humaan poliovirus (farmaceutisch product)” can be used as an alternative code for GPK code &quot;130745 | DKTP VACCIN (TRIAXIS POLIO)&quot;. The concepts may not differ from each other, but one code may be more generic than the other. So &quot;137006 | CHOLERAVACCIN ORAAL&quot; (GPK) met &quot;991000221105 | vaccin met uitsluitend antigeen van Vibrio cholerae (farmaceutisch product)&quot; (SNOMED CT) is allowed, but &quot;176397 | DTK vaccin&quot; (GPK) may not be alternative of &quot;130745 | DKTP VACCIN (TRIAXIS POLIO)&quot;, because these are different vaccines (with and without Polio).&#xD;&#xA;&#xD;&#xA;It is possible to use a reference to imm PharmaceuticalProduct to identify the used vaccine, using `Immunization.extension:pharmaceuticalProduct`. If this reference is used, `Immunization.vaccineCode` SHALL contain the same value as the MedicationCode (`Medication.code`) in the referenced resource." />
+      <alias value="ProductCode" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.131.11.7--20240507084413" />
+      </binding>
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-318" />
+        <comment value="ProductCode" />
+      </mapping>
+    </element>
+    <element id="Immunization.patient">
+      <path value="Immunization.patient" />
+      <short value="Patient" />
+      <alias value="Patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient" />
+      </type>
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-71" />
+        <comment value="Patient" />
+      </mapping>
+    </element>
+    <element id="Immunization.occurrence[x]">
+      <path value="Immunization.occurrence[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Immunization.occurrence[x]:occurrenceDateTime">
+      <path value="Immunization.occurrence[x]" />
+      <sliceName value="occurrenceDateTime" />
+      <short value="VaccinationDate" />
+      <definition value="Date (and if possible time) that the vaccine was or will be administered. In the case of a planned re-vaccination, a vague date (month, year) is allowed (Clinical reminder). If a planned vaccination cannot be administered before a certain date, the date stated (vague or not) must indicate this." />
+      <comment value="When immunizations are given a specific date and time should always be known. When immunizations are patient reported, a specific date might not be known.  Although partial dates are allowed, an adult patient might not be able to recall the year a childhood immunization was given. An exact date is always preferable, but the use of the String data type is acceptable when an exact date is not known. A small number of vaccines (e.g. live oral typhoid vaccine) are given as a series of patient self-administered dose over a span of time. In cases like this, often, only the first dose (typically a provider supervised dose) is recorded with the occurrence indicating the date/time of the first dose. If the ToedieningsDatumTijd is not known, the dataAbsentReason extension SHOULD be used on occurrence[x] and the RegistratieDatumTijd MUST be provided in Immunization.recorded." />
+      <alias value="ToedieningsDatumTijd" />
+      <min value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <condition value="imm-carenetwork-1" />
+      <mapping>
+        <identity value="zib-vaccination-v4.0-2020EN" />
+        <map value="NL-CM:11.1.3" />
+        <comment value="VaccinationDate" />
+      </mapping>
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-292" />
+        <comment value="VaccinationDate" />
+      </mapping>
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-816" />
+        <comment value="ToedieningsDatumTijd" />
+      </mapping>
+    </element>
+    <element id="Immunization.occurrence[x]:occurrenceDateTime.extension">
+      <path value="Immunization.occurrence[x].extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="1" />
+    </element>
+    <element id="Immunization.occurrence[x]:occurrenceDateTime.extension:dataAbsentReason">
+      <path value="Immunization.occurrence[x].extension" />
+      <sliceName value="dataAbsentReason" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/data-absent-reason" />
+      </type>
+      <isModifier value="false" />
+    </element>
+    <element id="Immunization.occurrence[x]:occurrenceDateTime.value">
+      <path value="Immunization.occurrence[x].value" />
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-816" />
+        <comment value="ToedieningsDatumTijd" />
+      </mapping>
+    </element>
+    <element id="Immunization.recorded">
+      <path value="Immunization.recorded" />
+      <alias value="RegistratieDatumTijd" />
+      <condition value="imm-carenetwork-1" />
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-815" />
+        <comment value="RegistratieDatumTijd" />
+      </mapping>
+    </element>
+    <element id="Immunization.location">
+      <path value="Immunization.location" />
+      <short value="Location" />
+      <definition value="Physical location where the vaccination is or will be carried out." />
+      <alias value="Locatie" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider" />
+      </type>
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-262" />
+        <comment value="HealthcareProvider" />
+      </mapping>
+    </element>
+    <element id="Immunization.site">
+      <path value="Immunization.site" />
+      <short value="AnatomicalLocation" />
+      <alias value="AnatomischeLocatie" />
+      <alias value="Location" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-AnatomicalLocation" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.121.11.11--20200901000000" />
+      </binding>
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-140" />
+        <comment value="AnatomicalLocation" />
+      </mapping>
+    </element>
+    <element id="Immunization.route">
+      <path value="Immunization.route" />
+      <short value="RouteOfAdministration" />
+      <definition value="The route by which the vaccine is administered into the body." />
+      <alias value="Toedieningsweg" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.9.13.2--20200901000000" />
+      </binding>
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-143" />
+        <comment value="Toedieningsweg" />
+      </mapping>
+    </element>
+    <element id="Immunization.doseQuantity">
+      <path value="Immunization.doseQuantity" />
+      <short value="Dose" />
+      <definition value="The amount of product administered. In most cases, the entire product is administered; in some cases, a described part of the product is administered. If doseQuantity is provided, a value and corresponding unit MUST be populated. The preferred system for doseQuantity.unit is &quot;http://unitsofmeasure.org&quot; (UCUM). For the carenetwork data exchange the extension gstdSimpleQuantity MUST always be populated." />
+      <comment value="The definition of Dose deviates slightly from the definition in the zib Vaccination; the unit of measure is not limited to mL. This difference is according to the planned modifications in the zib (https://bits.nictiz.nl/browse/ZIB-1654)." />
+      <alias value="Toegediende hoeveelheid" />
+      <type>
+        <code value="Quantity" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/pattern-GstdSimpleQuantity" />
+      </type>
+      <mapping>
+        <identity value="zib-vaccination-v4.0-2020EN" />
+        <map value="NL-CM:11.1.4" />
+        <comment value="Dose" />
+      </mapping>
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-291" />
+        <comment value="Dose" />
+      </mapping>
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-812" />
+        <comment value="ToegediendeHoeveelheid" />
+      </mapping>
+    </element>
+    <element id="Immunization.doseQuantity.extension">
+      <path value="Immunization.doseQuantity.extension" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.doseQuantity.extension:gstdSimpleQuantity">
+      <path value="Immunization.doseQuantity.extension" />
+      <sliceName value="gstdSimpleQuantity" />
+      <min value="1" />
+    </element>
+    <element id="Immunization.doseQuantity.extension:gstdSimpleQuantity.value[x].value">
+      <path value="Immunization.doseQuantity.extension.value[x].value" />
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-813" />
+        <comment value="Aantal" />
+      </mapping>
+    </element>
+    <element id="Immunization.doseQuantity.extension:gstdSimpleQuantity.value[x].code">
+      <path value="Immunization.doseQuantity.extension.value[x].code" />
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-814" />
+        <comment value="Eenheid" />
+      </mapping>
+    </element>
+    <element id="Immunization.doseQuantity.value">
+      <path value="Immunization.doseQuantity.value" />
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-813" />
+        <comment value="Aantal" />
+      </mapping>
+    </element>
+    <element id="Immunization.doseQuantity.code">
+      <path value="Immunization.doseQuantity.code" />
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-814" />
+        <comment value="Eenheid" />
+      </mapping>
+    </element>
+    <element id="Immunization.performer">
+      <path value="Immunization.performer" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="actor.resolve()" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <short value="Performer" />
+      <definition value="The healthcare provider and/or organization where or by whom the vaccination was done or will be done." />
+      <alias value="Uitvoerder" />
+      <max value="1" />
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-817" />
+        <comment value="Uitvoerder" />
+      </mapping>
+    </element>
+    <element id="Immunization.performer:healthcareProvider">
+      <path value="Immunization.performer" />
+      <sliceName value="healthcareProvider" />
+      <comment value="For the carenetwork data exchange, the slice healthcareProvider MUST be used for the Immunization.performer." />
+      <max value="1" />
+    </element>
+    <element id="Immunization.performer:healthcareProvider.actor">
+      <path value="Immunization.performer.actor" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization" />
+      </type>
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-818" />
+        <comment value="HealthcareProvider" />
+      </mapping>
+    </element>
+    <element id="Immunization.note.text">
+      <path value="Immunization.note.text" />
+      <short value="Comment" />
+      <definition value="Free text explanation.&#xD;&#xA;Examples of commonly used explanations are: - &quot;Vaccination according to the National Immunisation Program&quot;. - &quot;Not according to the National Immunisation Program&quot;, followed by further explanation. - &quot;Unknown&quot;" />
+      <alias value="Toelichting" />
+      <mapping>
+        <identity value="zib-vaccination-v4.0-2020EN" />
+        <map value="NL-CM:11.1.7" />
+        <comment value="Comment" />
+      </mapping>
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-293" />
+        <comment value="Comment" />
+      </mapping>
+    </element>
+    <element id="Immunization.reasonCode">
+      <path value="Immunization.reasonCode" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Immunization.reasonCode:vaccinationIndication">
+      <path value="Immunization.reasonCode" />
+      <sliceName value="vaccinationIndication" />
+      <short value="VaccinationIndication" />
+      <definition value="Displays the trigger based on what the vaccine was administered." />
+      <alias value="VaccinatieIndicatie" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.131.11.4--20220301181306" />
+      </binding>
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-160" />
+        <comment value="VaccinationIndication" />
+      </mapping>
+    </element>
+    <element id="Immunization.reasonCode:vaccinationMotive">
+      <path value="Immunization.reasonCode" />
+      <sliceName value="vaccinationMotive" />
+      <short value="VaccinationMotive" />
+      <definition value="Displays the trigger based on what the vaccine was administered." />
+      <alias value="VaccinatieAanleiding" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.131.11.2--20220301153357" />
+      </binding>
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-158" />
+        <comment value="VaccinationMotive" />
+      </mapping>
+    </element>
+    <element id="Immunization.protocolApplied.targetDisease">
+      <path value="Immunization.protocolApplied.targetDisease" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Immunization.protocolApplied.targetDisease:targetDisease">
+      <path value="Immunization.protocolApplied.targetDisease" />
+      <sliceName value="targetDisease" />
+      <short value="VaccinationPathogen" />
+      <definition value="The disease or pathogeen against what the vaccination is primarily given." />
+      <alias value="ZiekteWaarTegenGevaccineerdWordt" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.131.11.3--20220301175614" />
+      </binding>
+      <mapping>
+        <identity value="imm-dataset-210-alpha1-20251204" />
+        <map value="imm-dataelement-159" />
+        <comment value="VaccinationPathogen" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

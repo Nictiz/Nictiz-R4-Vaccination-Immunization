@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <id value="imm-RetrieveServe"/>
+    <text>
+        <status value="empty" />
+        <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+    </text>
     <url value="http://nictiz.nl/fhir/CapabilityStatement/imm-RetrieveServe"/>
-    <version value="2.0.0-beta.1"/>
+    <version value="2.1.0-alpha.1"/>
     <name value="ImmRetrieveServe"/>
     <title value="imm RetrieveServe"/>
     <status value="draft"/>
-    <date value="2024-07-29"/>
+    <date value="2025-12-04"/>
     <publisher value="Nictiz"/>
     <contact>
         <name value="Nictiz"/>
@@ -21,16 +25,24 @@
     <copyright value="Copyright and related rights waived via CC0, https://creativecommons.org/publicdomain/zero/1.0/. This does not apply to information from third parties, for example a medical terminology system. The implementer alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize third party IP in connection with the specification or otherwise."/>
     <kind value="requirements"/>
     <fhirVersion value="4.0.1"/>
-    <format value="xml"/>
-    <format value="json"/>
+    <format value="application/fhir+xml"/>
+    <format value="application/fhir+json"/>
     <rest>
         <mode value="client"/>
         <resource>
             <type value="Immunization"/>
             <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/imm-Vaccination-event"/>
+            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/imm-Vaccination-event-carenetwork"/>
             <interaction>
                 <code value="search-type"/>
             </interaction>
+            <searchInclude value="Immunization:patient"/>
+            <searchInclude value="Immunization:performer"/>
+            <searchParam>
+                <name value="patient"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
+                <type value="reference"/>
+            </searchParam>
         </resource>
         <resource>
             <type value="Patient"/>
@@ -80,35 +92,59 @@
         <resource>
             <type value="Immunization"/>
             <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/imm-Vaccination-event"/>
+            <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/imm-Vaccination-event-carenetwork"/>
             <interaction>
                 <code value="search-type"/>
             </interaction>
             <searchInclude value="Immunization:patient"/>
             <searchInclude value="Immunization:performer"/>
+            <searchParam>
+                <name value="patient"/>
+                <definition value="http://hl7.org/fhir/SearchParameter/clinical-patient"/>
+                <type value="reference"/>
+            </searchParam>
         </resource>
         <resource>
             <type value="Patient"/>
             <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-Patient"/>
+            <interaction>
+                <code value="read"/>
+            </interaction>
         </resource>
         <resource>
             <type value="Organization"/>
             <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider-Organization"/>
+            <interaction>
+                <code value="read"/>
+            </interaction>
         </resource>
         <resource>
             <type value="Location"/>
             <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthcareProvider"/>
+            <interaction>
+                <code value="read"/>
+            </interaction>
         </resource>
         <resource>
             <type value="Practitioner"/>
             <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-Practitioner"/>
+            <interaction>
+                <code value="read"/>
+            </interaction>
         </resource>
         <resource>
             <type value="PractitionerRole"/>
             <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-HealthProfessional-PractitionerRole"/>
+            <interaction>
+                <code value="read"/>
+            </interaction>
         </resource>
         <resource>
             <type value="Medication"/>
             <supportedProfile value="http://nictiz.nl/fhir/StructureDefinition/imm-PharmaceuticalProduct"/>
+            <interaction>
+                <code value="read"/>
+            </interaction>
         </resource>
     </rest>
 </CapabilityStatement>

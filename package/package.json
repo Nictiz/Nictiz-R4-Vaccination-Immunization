@@ -1,6 +1,6 @@
 {
   "name": "nictiz.fhir.nl.r4.vaccinationimmunization",
-  "version": "2.0.0",
+  "version": "2.1.0-alpha.1",
   "description": "NL package of FHIR R4 conformance resources for Vaccination-Immunization.",
   "author": "Nictiz",
   "dependencies": {
@@ -8,6 +8,8 @@
     "hl7.fhir.r4.core": "4.0.1",
     "nictiz.fhir.nl.r4.medicationprocess9": "2.0.0-beta.5"
   },
+  "fhirVersions": [
+    "4.0.1"],
   "keywords": [
     "nl",
     "Nictiz",
