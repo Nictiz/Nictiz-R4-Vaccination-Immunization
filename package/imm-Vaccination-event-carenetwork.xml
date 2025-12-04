@@ -330,11 +330,6 @@
       <max value="1" />
       <mapping>
         <identity value="imm-dataset-210-alpha1-20251204" />
-        <map value="imm-dataelement-130" />
-        <comment value="Uitvoerder" />
-      </mapping>
-      <mapping>
-        <identity value="imm-dataset-210-alpha1-20251204" />
         <map value="imm-dataelement-817" />
         <comment value="Uitvoerder" />
       </mapping>
