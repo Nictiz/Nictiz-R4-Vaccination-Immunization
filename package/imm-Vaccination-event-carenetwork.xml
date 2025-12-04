@@ -1,7 +1,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="imm-Vaccination-event-carenetwork" />
   <text>
-    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
+    <status value="empty" />
+    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
+  </text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/imm-Vaccination-event-carenetwork" />
   <version value="2.1.0-alpha.1" />
   <name value="ImmVaccinationeventcarenetwork" />
@@ -161,6 +163,10 @@
     <element id="Immunization.occurrence[x]:occurrenceDateTime.extension">
       <path value="Immunization.occurrence[x].extension" />
       <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
         <rules value="closed" />
       </slicing>
       <max value="1" />
@@ -322,11 +328,6 @@
       <definition value="The healthcare provider and/or organization where or by whom the vaccination was done or will be done." />
       <alias value="Uitvoerder" />
       <max value="1" />
-      <mapping>
-        <identity value="imm-dataset-210-alpha1-20251204" />
-        <map value="imm-dataelement-130" />
-        <comment value="Uitvoerder" />
-      </mapping>
       <mapping>
         <identity value="imm-dataset-210-alpha1-20251204" />
         <map value="imm-dataelement-817" />
