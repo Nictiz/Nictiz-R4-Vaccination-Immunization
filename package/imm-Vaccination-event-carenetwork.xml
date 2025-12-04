@@ -163,6 +163,10 @@
     <element id="Immunization.occurrence[x]:occurrenceDateTime.extension">
       <path value="Immunization.occurrence[x].extension" />
       <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
         <rules value="closed" />
       </slicing>
       <max value="1" />
