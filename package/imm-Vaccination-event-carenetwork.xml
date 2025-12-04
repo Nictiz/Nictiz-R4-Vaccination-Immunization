@@ -131,7 +131,6 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <alias value="ToedieningsDatumTijd" />
     </element>
     <element id="Immunization.occurrence[x]:occurrenceDateTime">
       <path value="Immunization.occurrence[x]" />
