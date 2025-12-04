@@ -45,7 +45,7 @@
       <constraint>
         <key value="imm-carenetwork-1" />
         <severity value="error" />
-        <human value="If the ToedieningsDatumTijd is not known, the dataAbsentReason extension SHOULD be used on occurence[x] and the RegistratieDatumTijd MUST be provided in Immunization.recorded." />
+        <human value="If the ToedieningsDatumTijd is not known, the dataAbsentReason extension SHOULD be used on occurrence[x] and the RegistratieDatumTijd MUST be provided in Immunization.recorded." />
         <expression value="occurrence.extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists() implies recorded.exists()" />
       </constraint>
     </element>
@@ -137,7 +137,7 @@
       <sliceName value="occurrenceDateTime" />
       <short value="VaccinationDate" />
       <definition value="Date (and if possible time) that the vaccine was or will be administered. In the case of a planned re-vaccination, a vague date (month, year) is allowed (Clinical reminder). If a planned vaccination cannot be administered before a certain date, the date stated (vague or not) must indicate this." />
-      <comment value="When immunizations are given a specific date and time should always be known. When immunizations are patient reported, a specific date might not be known.  Although partial dates are allowed, an adult patient might not be able to recall the year a childhood immunization was given. An exact date is always preferable, but the use of the String data type is acceptable when an exact date is not known. A small number of vaccines (e.g. live oral typhoid vaccine) are given as a series of patient self-administered dose over a span of time. In cases like this, often, only the first dose (typically a provider supervised dose) is recorded with the occurrence indicating the date/time of the first dose. If the ToedieningsDatumTijd is not known, the dataAbsentReason extension SHOULD be used on occurence[x] and the RegistratieDatumTijd MUST be provided in Immunization.recorded." />
+      <comment value="When immunizations are given a specific date and time should always be known. When immunizations are patient reported, a specific date might not be known.  Although partial dates are allowed, an adult patient might not be able to recall the year a childhood immunization was given. An exact date is always preferable, but the use of the String data type is acceptable when an exact date is not known. A small number of vaccines (e.g. live oral typhoid vaccine) are given as a series of patient self-administered dose over a span of time. In cases like this, often, only the first dose (typically a provider supervised dose) is recorded with the occurrence indicating the date/time of the first dose. If the ToedieningsDatumTijd is not known, the dataAbsentReason extension SHOULD be used on occurrence[x] and the RegistratieDatumTijd MUST be provided in Immunization.recorded." />
       <alias value="ToedieningsDatumTijd" />
       <min value="1" />
       <type>
