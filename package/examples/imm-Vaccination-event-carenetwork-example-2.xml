@@ -83,6 +83,14 @@
       <display value="bovenbeen" />
     </coding>
   </site>
+  <!--a performer can be populated as follows:-->
+<!--  <performer>
+    <actor>
+      <reference value="Organization/nl-core-HPrv-Org-\-Org-2165281100733-32320011" />
+      <type value="Organization" />
+      <display value="Healthcare provider (organization), organisation-id 32320011 in system 2.16.528.1.1007.3.3" />
+    </actor>
+  </performer>-->
   <reasonCode>
     <coding>
       <system value="http://snomed.info/sct" />
