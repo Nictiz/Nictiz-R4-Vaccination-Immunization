@@ -142,10 +142,10 @@
         <code value="dateTime" />
       </type>
       <constraint>
-        <key value="imm-carenetwork-1" />
-        <severity value="error" />
-        <human value="If the value for occurenceDateTime is not populated then the extension of type dataAbsentReason MUST be used." />
-        <expression value="occurrence.value.exists.not() implies occurrence.extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()" />
+        <key value="imm-carenetwork-1"/>
+        <severity value="error"/>
+        <human value="If the value for occurrenceDateTime is not populated then the extension of type dataAbsentReason MUST be used."/>
+        <expression value="$this.hasValue() or extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"/>
       </constraint>
       <mapping>
         <identity value="zib-vaccination-v4.0-2020EN" />
