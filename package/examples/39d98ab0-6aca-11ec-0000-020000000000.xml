@@ -69,18 +69,4 @@
          <display value="Healthcare provider (organization), Huisartsenpraktijk test 06"/>
       </actor>
    </performer>
-   <reasonCode>
-      <coding>
-         <system value="http://snomed.info/sct"/>
-         <code value="404904002"/>
-         <display value="Kwetsbare oudere (bevinding)"/>
-      </coding>
-   </reasonCode>
-   <reasonCode>
-      <coding>
-         <system value="http://snomed.info/sct"/>
-         <code value="159741000146107"/>
-         <display value="Immunisatie nodig vanuit vaccinatieprogramma (situatie)"/>
-      </coding>
-   </reasonCode>
 </Immunization>
