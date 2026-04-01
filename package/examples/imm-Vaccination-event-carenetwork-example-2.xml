@@ -91,18 +91,4 @@
       <display value="Healthcare provider (organization), organisation-id 32320011 in system 2.16.528.1.1007.3.3" />
     </actor>
   </performer>-->
-  <reasonCode>
-    <coding>
-      <system value="http://snomed.info/sct" />
-      <code value="19829001" />
-      <display value="Aandoening van long (aandoening)" />
-    </coding>
-  </reasonCode>
-  <reasonCode>
-    <coding>
-      <system value="http://snomed.info/sct" />
-      <code value="159741000146107" />
-      <display value="Immunisatie nodig vanuit vaccinatieprogramma (situatie)" />
-    </coding>
-  </reasonCode>
 </Immunization>

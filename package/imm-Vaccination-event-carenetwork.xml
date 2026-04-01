@@ -1,9 +1,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="imm-Vaccination-event-carenetwork" />
   <text>
-    <status value="empty" />
-    <div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div>
-  </text>
+    <status value="empty" /><div xmlns="http://www.w3.org/1999/xhtml">No narrative is provided for definitional resources. A human-readable rendering can be found in the implementation guide(s) where this resource is used.</div></text>
   <url value="http://nictiz.nl/fhir/StructureDefinition/imm-Vaccination-event-carenetwork" />
   <version value="2.1.0-alpha.1" />
   <name value="ImmVaccinationeventcarenetwork" />
@@ -43,9 +41,9 @@
       <path value="Immunization" />
       <comment value="All administered vaccinations are covered using this Immunization profile, while all planned vaccinations are covered in the [nl-core-Vaccination-request](http://nictiz.nl/fhir/StructureDefinition/nl-core-Vaccination-request) profile.&#xD;&#xA;&#xD;&#xA;Please note that, contrary to the related zib concepts, `.vaccineCode` and `.occurrence[x]` are mandatory in FHIR and need to be recorded to exchange Immunization resources." />
       <constraint>
-        <key value="imm-carenetwork-1" />
+        <key value="imm-carenetwork-2" />
         <severity value="error" />
-        <human value="If the ToedieningsDatumTijd is not known, the dataAbsentReason extension SHOULD be used on occurrence[x] and the RegistratieDatumTijd MUST be provided in Immunization.recorded." />
+        <human value="If the dataAbsentReason extension has been used on occurrence[x] then the RegistratieDatumTijd MUST be provided in Immunization.recorded." />
         <expression value="occurrence.extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists() implies recorded.exists()" />
       </constraint>
     </element>
@@ -143,7 +141,12 @@
       <type>
         <code value="dateTime" />
       </type>
-      <condition value="imm-carenetwork-1" />
+      <constraint>
+        <key value="imm-carenetwork-1"/>
+        <severity value="error"/>
+        <human value="If the value for occurrenceDateTime is not populated then the extension of type dataAbsentReason MUST be used."/>
+        <expression value="$this.hasValue() or extension('http://hl7.org/fhir/StructureDefinition/data-absent-reason').exists()"/>
+      </constraint>
       <mapping>
         <identity value="zib-vaccination-v4.0-2020EN" />
         <map value="NL-CM:11.1.3" />
@@ -170,6 +173,7 @@
         <rules value="closed" />
       </slicing>
       <max value="1" />
+      <condition value="imm-carenetwork-1" />
     </element>
     <element id="Immunization.occurrence[x]:occurrenceDateTime.extension:dataAbsentReason">
       <path value="Immunization.occurrence[x].extension" />
@@ -182,6 +186,7 @@
     </element>
     <element id="Immunization.occurrence[x]:occurrenceDateTime.value">
       <path value="Immunization.occurrence[x].value" />
+      <condition value="imm-carenetwork-1" />
       <mapping>
         <identity value="imm-dataset-210-alpha1-20251204" />
         <map value="imm-dataelement-816" />
@@ -191,7 +196,7 @@
     <element id="Immunization.recorded">
       <path value="Immunization.recorded" />
       <alias value="RegistratieDatumTijd" />
-      <condition value="imm-carenetwork-1" />
+      <condition value="imm-carenetwork-2" />
       <mapping>
         <identity value="imm-dataset-210-alpha1-20251204" />
         <map value="imm-dataelement-815" />
